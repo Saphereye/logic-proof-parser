@@ -15,12 +15,24 @@ class Stack {
             _stack = new T[_MAX];
         };
 
-        bool push(T x);
+        bool push(T newElement) {
+            if (_top >= (_MAX - 1)) {
+                cout << "Stack Overflow" << endl;
+                return false;
+            }
+
+            _top++;
+            _stack[_top] = newElement;
+            return true;
+            
+        };
 
         T pop() {
             // Removes the top most element of stack and return it
             if (_top < 0) {
                 cout << "Stack Underflow" << endl;
+            } else {
+                return _stack[_top--];
             }
         };
 

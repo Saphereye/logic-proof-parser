@@ -2,18 +2,16 @@
 #include <string>
 #include "operators.h"
 #include "parseTree.h"
+#include "logic.h"
 
 using namespace std;
 
 int main() {
-    cout << "Hello World" << endl;
-
-    string infix = "3+4";
-    string prefix = "+34";
-    ParseTree pTree;
-
-    cout << infix << endl;
-    cout << prefix << endl;
+    string infix = "a*b>a+c";
+    string prefix = "+ab";
+    //ParseTree pTree;
     //cout << pTree << endl;
+
+    cout << Logic::infixToPrefix(infix) <<endl;
     return 0;
 }
