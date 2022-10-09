@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run make
-      run: ./make
+    - name: compile test
+      run: g++ -o test.exe test.cpp
+    - name: run tests
+      run: ./test.exe
