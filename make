@@ -1,14 +1,18 @@
 #!/usr/bin/bash
-echo "[Compiling...]"
+echo "[Compiling Tests...]"
 
-if g++ -o main.exe main.cpp; then
+if g++ -o test.exe test.cpp; then
 
-echo "[Success :)]";
-echo "[Executing...]";
-./main.exe;
+	echo "[Compilation Successful]";
+	echo "[Testing...]";
+	if ./test.exe; then
+		echo "[Tests Succesful]"
+	else
+		echo "[Tests Failed :(]"
+	fi
 
-else
+	else
 
-echo "[Failure :(]";
+		echo "[Compilation Failure :(]";
 
-fi
+	fi
