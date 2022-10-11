@@ -12,15 +12,20 @@ void testLogic() {
 }
 
 void testOperators() {
-    Operator neg('~', true);
-    Operator conjunc('*', true, false);
-    Operator disjunc('+', true, false);
-    Operator impl('>', true, false);
+    bool val[] = {true, false};
+    for(int leftIndex = 0; leftIndex < 2; leftIndex++) {
+	for(int rightIndex = 0; rightIndex < 2; rightIndex++) {
+	    Operator neg('~', val[rightIndex]);
+	    Operator conjunc('*', val[leftIndex], val[rightIndex]);
+	    Operator disjunc('+', val[leftIndex], val[rightIndex]);
+	    Operator impl('>', val[leftIndex], val[rightIndex]);
 
-    assert(neg.getTruthValue() == false);
-    assert(conjunc.getTruthValue() == false);
-    assert(disjunc.getTruthValue() == true);
-    assert(impl.getTruthValue() == false);
+	    assert(neg.getTruthValue() == (!val[rightIndex]));
+	    assert(conjunc.getTruthValue() == (val[leftIndex] && val[rightIndex]));
+	    assert(disjunc.getTruthValue() == (val[leftIndex] || val[rightIndex]));
+	    assert(impl.getTruthValue() == ((!val[leftIndex]) || val[rightIndex]));
+	}
+    }
 }
 int main() {
     testLogic();
