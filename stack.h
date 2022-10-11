@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-template < typename T >
+template <typename T>
 class Stack {
     private:
         int _top;
@@ -10,7 +10,7 @@ class Stack {
     
     public:
         Stack(int stackSize) {
-            _top = -1; // TODO : Make it generic
+            _top = -1;
             _MAX = stackSize;
             _stack = new T[_MAX];
         };

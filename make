@@ -11,8 +11,8 @@ if g++ -o test.exe test.cpp; then
 		echo "[Tests Failed :(]"
 	fi
 
-	else
+else
 
-		echo "[Compilation Failure :(]";
+	echo "[Compilation Failure :(]";
 
-	fi
+fi

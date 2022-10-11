@@ -45,7 +45,7 @@ class Logic {
 	};
 
 
-#include "parseTree.h"
+	#include "parseTree.h"
 	static ParseTree prefixToParseTree(string prefix);
 
 	static string parseTreeToInfix(ParseTree pTree);
