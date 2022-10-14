@@ -4,42 +4,38 @@ using namespace std;
 
 class Operator {
     private:
-	char _operator;
-	bool _leftOperand;
-	bool _rightOperand;
+	char symbol;
+	Operator* leftChild;
+	Operator* rightChild;
 
     public:
-	Operator(char op, bool rightOp) {
-	    //Operator only for ~
-	    _operator = op;
-	    _rightOperand = rightOp;
+	/**
+	 * Contructor.
+	 * For propositional atoms
+	 */
+	Operator(char sym) {
+	    symbol = sym;
+	    leftChild = NULL;
+	    rightChild = NULL;
 	}
 
-	Operator(char op, bool leftOp, bool rightOp) {
-	    // Operator for *, + and >
-	    _operator = op;
-	    _leftOperand = leftOp;
-	    _rightOperand = rightOp;
+	/**
+	 * Contructor.
+	 * For Negation operator
+	 */
+	Operator(char sym, Operator* rChild) {
+	    symbol = sym;
+	    leftChild = NULL;
+	    rightChild = rChild;
 	}
 
-
-	bool getTruthValue() {
-	    switch (_operator) {
-		case '~':
-		    return (!_rightOperand);
-		    break;
-		case '*':
-		    return (_leftOperand && _rightOperand);
-		    break;
-		case '+':
-		    return (_leftOperand || _rightOperand);
-		    break;
-		case '>':
-		    return ((!_leftOperand) || _rightOperand);
-		    break;
-		default:
-		    cout <<  "Incorrenct operator" << endl;
-		    break;
-	    }
+	/**
+	 * Contructor.
+	 * For * + and > operator
+	 */
+	Operator(char sym, Operator* lChild, Operator* rChild) {
+	    symbol = sym;
+	    leftChild = lChild;
+	    rightChild = rChild;
 	}
 };

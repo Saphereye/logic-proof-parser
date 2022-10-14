@@ -26,8 +26,8 @@ class Logic {
 		if (infix[index] == '(') {
 		    char stackElement = stck.pop();
 		    while(stackElement != ')') {
-			outputPrefix = stackElement  + outputPrefix;
-			stackElement = stck.pop();
+				outputPrefix = stackElement  + outputPrefix;
+				stackElement = stck.pop();
 		    }
 
 		}
@@ -45,7 +45,7 @@ class Logic {
 	};
 
 
-	#include "parseTree.h"
+#include "parseTree.h"
 	static ParseTree prefixToParseTree(string prefix);
 
 	static string parseTreeToInfix(ParseTree pTree);
