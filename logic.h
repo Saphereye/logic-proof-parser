@@ -81,35 +81,19 @@ class Logic {
 		};
 
 		/**
-		 * @brief Get the Parse Tree Height object
+		 * @brief Get the Parse Tree Height object. Performs recursive evaluation on each child in O(n).
 		 * 
 		 * @param op 
 		 * @return int 
 		 */
 		static int getParseTreeHeight(Operator* op) {
-			int height = 0;
-			return calcParseTreeHeight(op, &height);
-		}
-
-		/**
-		 * @brief Gets the Parse Tree Height object but requires integer pointer to update to
-		 * 
-		 * @param op 
-		 * @param height 
-		 * @return int 
-		 */
-		static int calcParseTreeHeight(Operator* op, int* height) {
 			if (op->isAtom()) {
-				*height += 1;
-				return 1;
+				return 0;
 			}
-			int leftTreeHeight = calcParseTreeHeight(op->getLeftChild(), height);
-			int rightTreeHeight = calcParseTreeHeight(op->getRightChild(), height);
-			debug("left", leftTreeHeight);
-			debug("right", rightTreeHeight);
-			
-			return *height;
-		};
+			int leftChildHeight = getParseTreeHeight(op->getLeftChild());
+			int rightChildHeight = getParseTreeHeight(op->getRightChild());
+			return max(leftChildHeight, rightChildHeight) + 1;
+		}
 
 		static bool getParseTreeVal(Operator* op);
 };
