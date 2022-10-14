@@ -38,3 +38,6 @@
 *.css
 *.png
 *.dot
+
+# Profiler outputs
+*.output

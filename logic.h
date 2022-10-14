@@ -31,7 +31,6 @@ class Logic {
 					outputPrefix = stackElement  + outputPrefix;
 					stackElement = stck.pop();
 				}
-
 			}
 			else if(isalpha(infix[index])) {
 				outputPrefix = infix[index] + outputPrefix;

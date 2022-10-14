@@ -16,6 +16,11 @@
     # (-Og) - Optmizing for debugging.
     #     Enables all optimization that does not conflicts with debugging. It can be used with the (-g) flag for enabling debugging symbols.
 
+# running the profiler
+# first compile with -pg flag
+# This gives gmon.out
+# The run gprof <executable-filename> gmon.out > <output-filename>
+# E.g. gprof test.exe gmon.out > logic.output
 echo "[Compiling Tests...]"
 
 if g++ -pipe -O0 -Wall -o test.exe test.cpp; then
