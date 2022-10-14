@@ -9,12 +9,24 @@ class Stack {
         int _MAX;
     
     public:
+        /**
+         * @brief Construct a new Stack object
+         * 
+         * @param stackSize 
+         */
         Stack(int stackSize) {
             _top = -1;
             _MAX = stackSize;
             _stack = new T[_MAX];
         };
 
+        /**
+         * @brief Pushes object of type T on stack
+         * 
+         * @param newElement 
+         * @return true 
+         * @return false 
+         */
         bool push(T newElement) {
             if (_top >= (_MAX - 1)) {
                 cout << "Stack Overflow" << endl;
@@ -27,8 +39,12 @@ class Stack {
             
         };
 
+        /**
+         * @brief Removes and returns top most objec of stack
+         * 
+         * @return T 
+         */
         T pop() {
-            // Removes the top most element of stack and return it
             if (_top < 0) {
                 cout << "Stack Underflow" << endl;
             } else {
@@ -36,16 +52,32 @@ class Stack {
             }
         };
 
+        /**
+         * @brief Returns top most object of stack
+         * 
+         * @return T 
+         */
         T peek() {
-            // Returns top most element of stack
             return _stack[_top];
         };
 
+        /**
+         * @brief Return true if stack is empty
+         * 
+         * @return true 
+         * @return false 
+         */
         bool isEmpty() {
             // If _top is -1, the stack is empty
             return _top < 0;
         };
 
+        /**
+         * @brief Returns true if stack ios full
+         * 
+         * @return true 
+         * @return false 
+         */
         bool isFull() {
             // If _top is pointing to the top-most index
             return _top == (_MAX - 1); // TODO : Make this comparison more generic

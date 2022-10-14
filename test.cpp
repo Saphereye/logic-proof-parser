@@ -16,7 +16,8 @@ void testOperators() {
 	Logic::Operator c('c');
 	Logic::Operator con('*', &a, &b);
 	Logic::Operator impl('>', &con, &a);
-	Logic::Operator head('+', &impl, &c);
+	Logic::Operator dis('+', &c, &c);
+	Logic::Operator head('+', &impl, &dis);
 
 	debug("Infix from parse tree", Logic::parseTreeToInfix(&head));
 	debug("Height", Logic::getParseTreeHeight(&head));
@@ -27,6 +28,5 @@ int main() {
     testLogic();
     testOperators();
     return 0;
-
 }
 
