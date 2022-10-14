@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cassert>
 #include "logic.h"
-#include "operators.h"
 
 using namespace std;
 
@@ -19,12 +18,8 @@ void testOperators() {
 	Logic::Operator impl('>', &con, &a);
 	Logic::Operator head('+', &impl, &c);
 
-	string infix;
-	Logic::parseTreeToInfix(&head, &infix);
-	debug("Infix from parse tree", infix);
-
-	int height = Logic::getParseTreeHeight(&head);
-	debug("Height", height);
+	debug("Infix from parse tree", Logic::parseTreeToInfix(&head));
+	debug("Height", Logic::getParseTreeHeight(&head));
 	
 
 }

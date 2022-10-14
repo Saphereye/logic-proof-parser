@@ -49,17 +49,22 @@ class Logic {
 		#include "operators.h"
 		static Operator prefixToParseTree(string prefix);
 
-		static void parseTreeToInfix(Operator* op, string* output) {
+		static string parseTreeToInfix(Operator* op) {
+			string output;
+			calcparseTreeToInfix(op, &output);
+			return output;
+		}
+
+		static void calcparseTreeToInfix(Operator* op, string* output) {
 			if (op->isAtom()) {
 				*output += op->getSymbol();
 				return;
-			} else {
-				*output += '(';
-				parseTreeToInfix(op->getLeftChild(), output);
-				*output += op->getSymbol();
-				parseTreeToInfix(op->getRightChild(), output);
-				*output += ')';
 			}
+			*output += '(';
+			calcparseTreeToInfix(op->getLeftChild(), output);
+			*output += op->getSymbol();
+			calcparseTreeToInfix(op->getRightChild(), output);
+			*output += ')';
 		};
 
 		static int getParseTreeHeight(Operator* op) {
@@ -71,10 +76,9 @@ class Logic {
 			if (op->isAtom()) {
 				*height += 1;
 				return 1;
-			} else {
-				int leftTreeHeight = calcParseTreeHeight(op->getLeftChild(), height);
-				int rightTreeHeight = calcParseTreeHeight(op->getRightChild(), height);
 			}
+			int leftTreeHeight = calcParseTreeHeight(op->getLeftChild(), height);
+			int rightTreeHeight = calcParseTreeHeight(op->getRightChild(), height);
 			
 			return *height;
 		};
