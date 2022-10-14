@@ -12,7 +12,18 @@ void testLogic() {
 }
 
 void testOperators() {
-    // TODO
+	Logic::Operator a('a');
+	Logic::Operator b('b');
+	Logic::Operator c('c');
+	Logic::Operator con('*', &a, &b);
+	Logic::Operator dis('+', &a, &c);
+	Logic::Operator head('>', &con, &dis);
+
+	string infix;
+	Logic::parseTreeToInfix(&head, &infix);
+	cout << infix << endl;
+	
+
 }
 int main() {
     testLogic();
