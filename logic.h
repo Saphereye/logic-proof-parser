@@ -1,6 +1,7 @@
 #include <string>
 #include "stack.h"
 #include <map>
+#include "helper.h"
 
 using namespace std;
 
@@ -53,13 +54,30 @@ class Logic {
 				*output += op->getSymbol();
 				return;
 			} else {
+				*output += '(';
 				parseTreeToInfix(op->getLeftChild(), output);
 				*output += op->getSymbol();
 				parseTreeToInfix(op->getRightChild(), output);
+				*output += ')';
 			}
 		};
 
-		static int getParseTreeHeight(Operator op);
+		static int getParseTreeHeight(Operator* op) {
+			int height = 0;
+			return calcParseTreeHeight(op, &height);
+		}
+
+		static int calcParseTreeHeight(Operator* op, int* height) {
+			if (op->isAtom()) {
+				*height += 1;
+				return 1;
+			} else {
+				int leftTreeHeight = calcParseTreeHeight(op->getLeftChild(), height);
+				int rightTreeHeight = calcParseTreeHeight(op->getRightChild(), height);
+			}
+			
+			return *height;
+		};
 
 		static bool getParseTreeVal(Operator);
 };

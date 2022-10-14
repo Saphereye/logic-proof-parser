@@ -16,12 +16,15 @@ void testOperators() {
 	Logic::Operator b('b');
 	Logic::Operator c('c');
 	Logic::Operator con('*', &a, &b);
-	Logic::Operator dis('+', &a, &c);
-	Logic::Operator head('>', &con, &dis);
+	Logic::Operator impl('>', &con, &a);
+	Logic::Operator head('+', &impl, &c);
 
 	string infix;
 	Logic::parseTreeToInfix(&head, &infix);
-	cout << infix << endl;
+	debug("Infix from parse tree", infix);
+
+	int height = Logic::getParseTreeHeight(&head);
+	debug("Height", height);
 	
 
 }
