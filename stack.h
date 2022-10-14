@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief Generic stack implementation using array
+ * 
+ * @tparam T 
+ */
 template <typename T>
 class Stack {
     private:

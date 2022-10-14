@@ -9,7 +9,7 @@ using namespace std;
  * @param comment 
  * @param data 
  */
-template <class T>
+template <typename T>
 inline void debug(string comment, T data) {
 	cout << "[DEBUG!] " << comment << " : " << data << endl;
 }
