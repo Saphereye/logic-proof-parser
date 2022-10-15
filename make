@@ -18,9 +18,10 @@
 
 # running the profiler
 # first compile with -pg flag
+# run the generated executable (e.g. ./test.exe)
 # This gives gmon.out
 # The run gprof <executable-filename> gmon.out > <output-filename>
-# E.g. gprof test.exe gmon.out > logic.output
+# (e.g. gprof test.exe gmon.out > logic.output)
 echo "[Compiling Tests...]"
 
 if g++ -pipe -O0 -Wall -o test.exe test.cpp; then

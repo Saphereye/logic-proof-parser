@@ -36,22 +36,22 @@ class Logic {
 			Stack<char> stck(int(infix.length()));
 
 			while(index >= -1) {
-			if (infix[index] == '(') {
-				char stackElement = stck.pop();
-				while(stackElement != ')') {
-					outputPrefix = stackElement  + outputPrefix;
-					stackElement = stck.pop();
+				if (infix[index] == '(') {
+					char stackElement = stck.pop();
+					while(stackElement != ')') {
+						outputPrefix = stackElement  + outputPrefix;
+						stackElement = stck.pop();
+					}
 				}
-			}
-			else if(isalpha(infix[index])) {
-				outputPrefix = infix[index] + outputPrefix;
-			} else if (stck.isEmpty() || (precedenceMap(infix[index]) >= precedenceMap(stck.peek())) || (infix[index] == ')')) {
-				stck.push(infix[index]);
-			} else {
-				outputPrefix = stck.pop() + outputPrefix;
-				continue;
-			}
-			index--;
+				else if(isalpha(infix[index])) {
+					outputPrefix = infix[index] + outputPrefix;
+				} else if (stck.isEmpty() || (precedenceMap(infix[index]) >= precedenceMap(stck.peek())) || (infix[index] == ')')) {
+					stck.push(infix[index]);
+				} else {
+					outputPrefix = stck.pop() + outputPrefix;
+					continue;
+				}
+				index--;
 			}
 			return outputPrefix;
 		};
