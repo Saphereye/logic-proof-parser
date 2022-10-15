@@ -5,12 +5,23 @@
 
 using namespace std;
 
-map<char, int> precedenceMap = {
-    {'>', 1},
-    {'+', 2},
-    {'*', 3},
-    {'~', 4},
-};
+// map<char, int> precedenceMap = {
+//     {'>', 1},
+//     {'+', 2},
+//     {'*', 3},
+//     {'~', 4},
+// };
+
+int precedenceMap(char symbol) {
+	switch (symbol) {
+		case '~' : return 4; break;
+		case '*' : return 3; break;
+		case '+' : return 2; break;
+		case '>' : return 1; break;
+		default: return 0; break;
+	}
+}
+
 class Logic {
     public:
 		/**
@@ -34,7 +45,7 @@ class Logic {
 			}
 			else if(isalpha(infix[index])) {
 				outputPrefix = infix[index] + outputPrefix;
-			} else if (stck.isEmpty() || (precedenceMap[infix[index]] >= precedenceMap[stck.peek()]) || (infix[index] == ')')) {
+			} else if (stck.isEmpty() || (precedenceMap(infix[index]) >= precedenceMap(stck.peek())) || (infix[index] == ')')) {
 				stck.push(infix[index]);
 			} else {
 				outputPrefix = stck.pop() + outputPrefix;

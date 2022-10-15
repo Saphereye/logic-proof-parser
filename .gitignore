@@ -32,12 +32,6 @@
 *.app
 
 
-# Doxyfile stuff
-*.html
-*.js
-*.css
-*.png
-*.dot
-
-# Profiler outputs
-*.output
+Dox
+logic.output
+.vscode
