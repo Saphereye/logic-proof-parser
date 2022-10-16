@@ -79,29 +79,25 @@ class Logic {
 		 * @param output 
 		 */
 		static void calcparseTreeToInfix(Operator* op, string* output) {
-			debug("output per step", *output);
 			if (op->isAtom()) {
 				*output += op->getSymbol();
+				debug("output per step", *output);
 				return;
 			}
 			*output += '(';
-
 			debug("output per step", *output);
 
-			if (op->getLeftChild() != NULL)
-				calcparseTreeToInfix(op->getLeftChild(), output);
-
+			if (!op->isUnaryOperator()) calcparseTreeToInfix(op->getLeftChild(), output);
 			debug("output per step", *output);
 
 			*output += op->getSymbol();
-
 			debug("output per step", *output);
 
-			if (op->getRightChild() != NULL)
-				calcparseTreeToInfix(op->getRightChild(), output);
-
+			calcparseTreeToInfix(op->getRightChild(), output);
 			debug("output per step", *output);
+
 			*output += ')';
+			debug("output per step", *output);
 		};
 
 		/**
@@ -114,8 +110,15 @@ class Logic {
 			if (op->isAtom()) {
 				return 0;
 			}
-			int leftChildHeight = getParseTreeHeight(op->getLeftChild());
-			int rightChildHeight = getParseTreeHeight(op->getRightChild());
+			int leftChildHeight = 0;
+			int rightChildHeight = 0;
+
+			if (!op->isUnaryOperator()) {
+				leftChildHeight = getParseTreeHeight(op->getLeftChild());
+			}
+
+			rightChildHeight = getParseTreeHeight(op->getRightChild());
+			
 			return max(leftChildHeight, rightChildHeight) + 1;
 		}
 

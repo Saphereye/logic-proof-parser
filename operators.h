@@ -108,4 +108,8 @@ class Operator {
 		bool isAtom() {
 			return (_leftChild == NULL) && (_rightChild == NULL);
 		}
+
+		bool isUnaryOperator() {
+			return (_leftChild == NULL) && (_rightChild != NULL);
+		}
 };
