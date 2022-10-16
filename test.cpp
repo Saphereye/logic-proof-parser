@@ -19,6 +19,14 @@ void testOperators() {
 	Logic::Operator dis('+', &c, &c);
 	Logic::Operator dis2('+', &dis, &c);
 	Logic::Operator head('+', &impl, &dis2);
+	// Logic::Operator p('p');
+	// Logic::Operator q('q');
+	// Logic::Operator negp('~', &p);
+	// Logic::Operator negq('~', &q);
+	// Logic::Operator impl('>', &negq, &negp);
+	// Logic::Operator head('*', &p, &impl);
+
+
 
 	debug("Infix from parse tree", Logic::parseTreeToInfix(&head));
 	debug("Height", Logic::getParseTreeHeight(&head));

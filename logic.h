@@ -79,14 +79,28 @@ class Logic {
 		 * @param output 
 		 */
 		static void calcparseTreeToInfix(Operator* op, string* output) {
+			debug("output per step", *output);
 			if (op->isAtom()) {
 				*output += op->getSymbol();
 				return;
 			}
 			*output += '(';
-			calcparseTreeToInfix(op->getLeftChild(), output);
+
+			debug("output per step", *output);
+
+			if (op->getLeftChild() != NULL)
+				calcparseTreeToInfix(op->getLeftChild(), output);
+
+			debug("output per step", *output);
+
 			*output += op->getSymbol();
-			calcparseTreeToInfix(op->getRightChild(), output);
+
+			debug("output per step", *output);
+
+			if (op->getRightChild() != NULL)
+				calcparseTreeToInfix(op->getRightChild(), output);
+
+			debug("output per step", *output);
 			*output += ')';
 		};
 

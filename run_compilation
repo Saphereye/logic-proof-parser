@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+echo "[Compiling Tests...]"
+
+if g++ -pipe -O3 -Wall -o main.exe main.cpp; then
+
+    echo "[Compilation Successful :)]";
+    echo "[Executing...]";
+
+    if ./main.exe; then
+	    echo "[Execution Succesful :)]"
+    else
+	    echo "[Execution Failed :(]"
+    fi
+
+else
+
+    echo "[Compilation Failure :(]";
+
+fi

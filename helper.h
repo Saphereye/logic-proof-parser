@@ -2,6 +2,8 @@
 
 using namespace std;
 
+bool isDebugMode = true;
+
 /**
  * @brief Prints debug info
  * 
@@ -11,7 +13,7 @@ using namespace std;
  */
 template <typename T>
 inline void debug(string comment, T data) {
-	cout << "[DEBUG!] " << comment << " : " << data << endl;
+	if (isDebugMode) cout << "[DEBUG!] " << comment << " : " << data << endl;
 }
 
 /**
@@ -20,7 +22,7 @@ inline void debug(string comment, T data) {
  * @param comment 
  */
 inline void trace(string comment) {
-	cout << "[TRACE!]" << " : " <<  comment << endl;
+	if (isDebugMode) cout << "[TRACE!]" << " : " <<  comment << endl;
 }
 
 /**
@@ -29,5 +31,5 @@ inline void trace(string comment) {
  * @param comment 
  */
 inline void todo(string comment) {
-    cout << "[TODO!!]" << " : " <<  comment << endl;
+    if (isDebugMode) cout << "[TODO!!]" << " : " <<  comment << endl;
 }

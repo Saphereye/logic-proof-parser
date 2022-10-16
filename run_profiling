@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+# running the profiler
+# first compile with -pg flag
+# run the generated executable (e.g. ./test.exe)
+# This gives gmon.out
+# The run gprof <executable-filename> gmon.out > <output-filename>
+# The run gprof <executable-filename> gmon.out > <output-filename> -p for only flat-profile
+# (e.g. gprof test.exe gmon.out > logic.output)
+echo "[Compiling Tests...]"
+
+if g++ -pipe -O0 -Wall -o prof.exe test.cpp -pg; then
+    echo "[Compilation Successful :)]";
+    echo "[Generating gmon.out...]";
+
+    if ./prof.exe; then
+	    echo "[Generation Succesful :)]";
+        echo "[Writing to file...]";
+
+        if gprof prof.exe gmon.out > logic.output -p; then
+            echo "[Writing to file succesful :)]"
+        else
+            echo "[Writing to file unsuccesful :()]"
+        fi
+    else
+	    echo "[Generation Failed :(]";
+    fi
+
+else
+
+    echo "[Compilation Failure :(]";
+
+fi
