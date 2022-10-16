@@ -10,32 +10,49 @@ void testLogic() {
     assert(Logic::infixToPrefix("(a*b>a)+c") == "+>*abac");
 }
 
-void testOperators() {
-	// Logic::Operator a('a');
-	// Logic::Operator b('b');
-	// Logic::Operator c('c');
-	// Logic::Operator con('*', &a, &b);
-	// Logic::Operator impl('>', &con, &a);
-	// Logic::Operator dis('+', &c, &c);
-	// Logic::Operator dis2('+', &dis, &c);
-	// Logic::Operator head('+', &impl, &dis2);
+void testParseTreeToInfix() {
+	Logic::Operator a('a');
+	Logic::Operator b('b');
+	Logic::Operator c('c');
+	Logic::Operator con('*', new Logic::Operator('~', &a), &b);
+	Logic::Operator impl('>', &con, &a);
+	Logic::Operator dis('+', &c, &c);
+	Logic::Operator dis2('+', &dis, &c);
+	Logic::Operator head('+', &impl, &dis2);
+	debug("Infix from parse tree", Logic::parseTreeToInfix(&head));
+}
+
+void testParseTreeHeight() {
+	Logic::Operator a('a');
+	Logic::Operator b('b');
+	Logic::Operator c('c');
+	Logic::Operator con('*', new Logic::Operator('~', &a), &b);
+	Logic::Operator impl('>', &con, &a);
+	Logic::Operator dis('+', &c, &c);
+	Logic::Operator dis2('+', &dis, &c);
+	Logic::Operator head('+', &impl, &dis2);
+	debug("Height", Logic::getParseTreeHeight(&head));
+}
+
+void testParseTreeVal() {
 	Logic::Operator p('p');
 	Logic::Operator q('q');
-	Logic::Operator negp('~', &p);
-	Logic::Operator negq('~', &q);
-	Logic::Operator impl('>', &negq, &negp);
-	Logic::Operator head('*', &p, &impl);
+	Logic::Operator head('~', &p, &q);
 
-
-
-	debug("Infix from parse tree", Logic::parseTreeToInfix(&head));
-	debug("Height", Logic::getParseTreeHeight(&head));
-	
-
+	map<char, bool> valueMap = {
+		{'p', true},
+		{'q', false},
+	};
+	debug("Value", Logic::getParseTreeVal(&head, valueMap));
 }
+
+
+
 int main() {
     testLogic();
-    testOperators();
+    testParseTreeToInfix();
+	testParseTreeHeight();
+	testParseTreeVal();
     return 0;
 }
 

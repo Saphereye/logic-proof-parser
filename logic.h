@@ -85,19 +85,10 @@ class Logic {
 				return;
 			}
 			*output += '(';
-			debug("output per step", *output);
-
 			if (!op->isUnaryOperator()) calcparseTreeToInfix(op->getLeftChild(), output);
-			debug("output per step", *output);
-
 			*output += op->getSymbol();
-			debug("output per step", *output);
-
 			calcparseTreeToInfix(op->getRightChild(), output);
-			debug("output per step", *output);
-
 			*output += ')';
-			debug("output per step", *output);
 		};
 
 		/**
@@ -118,9 +109,28 @@ class Logic {
 			}
 
 			rightChildHeight = getParseTreeHeight(op->getRightChild());
-			
+
 			return max(leftChildHeight, rightChildHeight) + 1;
 		}
 
-		static bool getParseTreeVal(Operator* op);
+		static bool getParseTreeVal(Operator* op, map<char, bool> valueMap) {
+			debug("Symbol", op->getSymbol());
+			debug("Value", valueMap[op->getSymbol()]);
+			if (op->isAtom()) {
+				return valueMap[op->getSymbol()];
+			}
+			
+			switch (op->getSymbol()) {
+				case '~':
+					return !getParseTreeVal(op->getRightChild(), valueMap);	
+				case '*':
+					return (getParseTreeVal(op->getLeftChild(), valueMap) && getParseTreeVal(op->getRightChild(), valueMap));
+				case '+':
+					return (getParseTreeVal(op->getLeftChild(), valueMap) || getParseTreeVal(op->getRightChild(), valueMap));
+				case '>':
+					return (!getParseTreeVal(op->getLeftChild(), valueMap) && getParseTreeVal(op->getRightChild(), valueMap));
+				default:
+					return false;
+			}
+		};
 };

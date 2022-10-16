@@ -109,6 +109,12 @@ class Operator {
 			return (_leftChild == NULL) && (_rightChild == NULL);
 		}
 
+		/**
+		 * @brief Returns if it's a unary operator, i.e. is of the form <none> <operator> <operand>, unlike common operators <left operand> <operator> <right operand>
+		 * 
+		 * @return true 
+		 * @return false 
+		 */
 		bool isUnaryOperator() {
 			return (_leftChild == NULL) && (_rightChild != NULL);
 		}
