@@ -31,7 +31,6 @@
 *.out
 *.app
 
-doxygen_css
 Dox
 logic.output
 .vscode

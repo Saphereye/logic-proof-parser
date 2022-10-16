@@ -85,4 +85,4 @@ LATEX = NO
 GENERATE_TREEVIEW      = YES # optional. Also works without treeview
 DISABLE_INDEX = NO
 FULL_SIDEBAR = NO
-HTML_EXTRA_STYLESHEET  = doxygen_css/main.css
+HTML_EXTRA_STYLESHEET  = doxygen_css/basic.css
