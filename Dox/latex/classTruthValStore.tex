@@ -1,0 +1,125 @@
+\hypertarget{classTruthValStore}{}\doxysection{Truth\+Val\+Store Class Reference}
+\label{classTruthValStore}\index{TruthValStore@{TruthValStore}}
+
+
+{\ttfamily \#include $<$truth\+Val\+Store.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTruthValStore_a8408b635d2018a0935d44ed6c289b165}{Truth\+Val\+Store}} (string atom\+Array, int truth\+Val\+Array)
+\begin{DoxyCompactList}\small\item\em Construct a new Truth Val Store object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}{Truth\+Val\+Store}} (string atom\+Array)
+\item 
+void \mbox{\hyperlink{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}{set\+Atom\+Array}} (string atom\+Array)
+\begin{DoxyCompactList}\small\item\em Set the Atom Array object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}{get\+Atom\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Get the Atom Array object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}{get\+Truth\+Val}} (char atom)
+\begin{DoxyCompactList}\small\item\em Get the truth value of corresoponding atom in O(n) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTruthValStore_af19f38162365e1a365c4d4785663e789}{set\+Truth\+Val}} (char atom, bool truth\+Val)
+\begin{DoxyCompactList}\small\item\em Set the truth value of corresoponding atom in O(n) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTruthValStore_a8408b635d2018a0935d44ed6c289b165}\label{classTruthValStore_a8408b635d2018a0935d44ed6c289b165}} 
+\index{TruthValStore@{TruthValStore}!TruthValStore@{TruthValStore}}
+\index{TruthValStore@{TruthValStore}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{TruthValStore()}{TruthValStore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Truth\+Val\+Store\+::\+Truth\+Val\+Store (\begin{DoxyParamCaption}\item[{string}]{atom\+Array,  }\item[{int}]{truth\+Val\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Truth Val Store object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom\+Array} & \\
+\hline
+{\em truth\+Val\+Array} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}\label{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}} 
+\index{TruthValStore@{TruthValStore}!TruthValStore@{TruthValStore}}
+\index{TruthValStore@{TruthValStore}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{TruthValStore()}{TruthValStore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Truth\+Val\+Store\+::\+Truth\+Val\+Store (\begin{DoxyParamCaption}\item[{string}]{atom\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}\label{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}} 
+\index{TruthValStore@{TruthValStore}!getAtomArray@{getAtomArray}}
+\index{getAtomArray@{getAtomArray}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{getAtomArray()}{getAtomArray()}}
+{\footnotesize\ttfamily string Truth\+Val\+Store\+::get\+Atom\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Atom Array object. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}\label{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}} 
+\index{TruthValStore@{TruthValStore}!getTruthVal@{getTruthVal}}
+\index{getTruthVal@{getTruthVal}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{getTruthVal()}{getTruthVal()}}
+{\footnotesize\ttfamily bool Truth\+Val\+Store\+::get\+Truth\+Val (\begin{DoxyParamCaption}\item[{char}]{atom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the truth value of corresoponding atom in O(n) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}\label{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}} 
+\index{TruthValStore@{TruthValStore}!setAtomArray@{setAtomArray}}
+\index{setAtomArray@{setAtomArray}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{setAtomArray()}{setAtomArray()}}
+{\footnotesize\ttfamily void Truth\+Val\+Store\+::set\+Atom\+Array (\begin{DoxyParamCaption}\item[{string}]{atom\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Atom Array object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom\+Array} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTruthValStore_af19f38162365e1a365c4d4785663e789}\label{classTruthValStore_af19f38162365e1a365c4d4785663e789}} 
+\index{TruthValStore@{TruthValStore}!setTruthVal@{setTruthVal}}
+\index{setTruthVal@{setTruthVal}!TruthValStore@{TruthValStore}}
+\doxysubsubsection{\texorpdfstring{setTruthVal()}{setTruthVal()}}
+{\footnotesize\ttfamily void Truth\+Val\+Store\+::set\+Truth\+Val (\begin{DoxyParamCaption}\item[{char}]{atom,  }\item[{bool}]{truth\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the truth value of corresoponding atom in O(n) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom} & \\
+\hline
+{\em truth\+Val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{truthValStore_8h}{truth\+Val\+Store.\+h}}\end{DoxyCompactItemize}

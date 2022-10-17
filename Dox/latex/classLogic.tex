@@ -1,0 +1,168 @@
+\hypertarget{classLogic}{}\doxysection{Logic Class Reference}
+\label{classLogic}\index{Logic@{Logic}}
+
+
+Implementation of logic methods.  
+
+
+
+
+{\ttfamily \#include $<$logic.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classLogic_a9b397f8e92ada8dadcd3ddf52d82f552}{infix\+To\+Prefix}} (string infix)
+\begin{DoxyCompactList}\small\item\em Converts infix into prefix using stack. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classLogic_af106176cce748456c93ff9654255fb04}{prefix\+To\+Parse\+Tree}} (string prefix)
+\item 
+static \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}{calcprefix\+To\+Parse\+Tree}} (string prefix, long unsigned int $\ast$index)
+\begin{DoxyCompactList}\small\item\em Prefix to parse tree. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classLogic_aeac16e179a2dfcf4a76f546291670428}{parse\+Tree\+To\+Infix}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
+\begin{DoxyCompactList}\small\item\em Traverses binary tree in order and evaluates infix. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classLogic_a57bfe3e96789275045a98503c484e2b6}{calcparse\+Tree\+To\+Infix}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, string $\ast$output)
+\begin{DoxyCompactList}\small\item\em Traverses binary tree in order and evaluates infix, but requires string pointer to write to. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}{get\+Parse\+Tree\+Height}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
+\begin{DoxyCompactList}\small\item\em Get the Parse Tree Height object. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}{get\+Parse\+Tree\+Val}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, \mbox{\hyperlink{classTruthValStore}{Truth\+Val\+Store}} value\+Map)
+\begin{DoxyCompactList}\small\item\em Get the Parse Tree Val object using a dictionary of symbols and their values. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}{display\+Parse\+Tree}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of logic methods. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogic_a57bfe3e96789275045a98503c484e2b6}\label{classLogic_a57bfe3e96789275045a98503c484e2b6}} 
+\index{Logic@{Logic}!calcparseTreeToInfix@{calcparseTreeToInfix}}
+\index{calcparseTreeToInfix@{calcparseTreeToInfix}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{calcparseTreeToInfix()}{calcparseTreeToInfix()}}
+{\footnotesize\ttfamily static void Logic\+::calcparse\+Tree\+To\+Infix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op,  }\item[{string $\ast$}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Traverses binary tree in order and evaluates infix, but requires string pointer to write to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & \\
+\hline
+{\em output} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}\label{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}} 
+\index{Logic@{Logic}!calcprefixToParseTree@{calcprefixToParseTree}}
+\index{calcprefixToParseTree@{calcprefixToParseTree}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{calcprefixToParseTree()}{calcprefixToParseTree()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classOperator}{Operator}}$\ast$ Logic\+::calcprefix\+To\+Parse\+Tree (\begin{DoxyParamCaption}\item[{string}]{prefix,  }\item[{long unsigned int $\ast$}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Prefix to parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operator$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}\label{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}} 
+\index{Logic@{Logic}!displayParseTree@{displayParseTree}}
+\index{displayParseTree@{displayParseTree}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{displayParseTree()}{displayParseTree()}}
+{\footnotesize\ttfamily static void Logic\+::display\+Parse\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}\label{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}} 
+\index{Logic@{Logic}!getParseTreeHeight@{getParseTreeHeight}}
+\index{getParseTreeHeight@{getParseTreeHeight}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{getParseTreeHeight()}{getParseTreeHeight()}}
+{\footnotesize\ttfamily static int Logic\+::get\+Parse\+Tree\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the Parse Tree Height object. 
+
+Performs recursive evaluation on each child in O(n).
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}\label{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}} 
+\index{Logic@{Logic}!getParseTreeVal@{getParseTreeVal}}
+\index{getParseTreeVal@{getParseTreeVal}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{getParseTreeVal()}{getParseTreeVal()}}
+{\footnotesize\ttfamily static bool Logic\+::get\+Parse\+Tree\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op,  }\item[{\mbox{\hyperlink{classTruthValStore}{Truth\+Val\+Store}}}]{value\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the Parse Tree Val object using a dictionary of symbols and their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & Pointer to parse tree \\
+\hline
+{\em value\+Map} & Dictionary mappiing symbols to their truth values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_a9b397f8e92ada8dadcd3ddf52d82f552}\label{classLogic_a9b397f8e92ada8dadcd3ddf52d82f552}} 
+\index{Logic@{Logic}!infixToPrefix@{infixToPrefix}}
+\index{infixToPrefix@{infixToPrefix}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{infixToPrefix()}{infixToPrefix()}}
+{\footnotesize\ttfamily static string Logic\+::infix\+To\+Prefix (\begin{DoxyParamCaption}\item[{string}]{infix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts infix into prefix using stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infix} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_aeac16e179a2dfcf4a76f546291670428}\label{classLogic_aeac16e179a2dfcf4a76f546291670428}} 
+\index{Logic@{Logic}!parseTreeToInfix@{parseTreeToInfix}}
+\index{parseTreeToInfix@{parseTreeToInfix}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{parseTreeToInfix()}{parseTreeToInfix()}}
+{\footnotesize\ttfamily static string Logic\+::parse\+Tree\+To\+Infix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Traverses binary tree in order and evaluates infix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_af106176cce748456c93ff9654255fb04}\label{classLogic_af106176cce748456c93ff9654255fb04}} 
+\index{Logic@{Logic}!prefixToParseTree@{prefixToParseTree}}
+\index{prefixToParseTree@{prefixToParseTree}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{prefixToParseTree()}{prefixToParseTree()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classOperator}{Operator}}$\ast$ Logic\+::prefix\+To\+Parse\+Tree (\begin{DoxyParamCaption}\item[{string}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logic_8h}{logic.\+h}}\end{DoxyCompactItemize}

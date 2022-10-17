@@ -1,0 +1,176 @@
+\hypertarget{helper_8h}{}\doxysection{helper.\+h File Reference}
+\label{helper_8h}\index{helper.h@{helper.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for helper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{helper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{helper_8h_ab702106cf3b3e96750b6845ded4e0299}{R\+E\+S\+ET}}~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{helper_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\+L\+A\+CK}}~\char`\"{}\textbackslash{}033\mbox{[}30m\char`\"{}      /$\ast$ Black $\ast$/
+\item 
+\#define \mbox{\hyperlink{helper_8h_a8d23feea868a983c8c2b661e1e16972f}{R\+ED}}~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}      /$\ast$ Red $\ast$/
+\item 
+\#define \mbox{\hyperlink{helper_8h_acfbc006ea433ad708fdee3e82996e721}{G\+R\+E\+EN}}~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}      /$\ast$ Green $\ast$/
+\item 
+\#define \mbox{\hyperlink{helper_8h_abf681265909adf3d3e8116c93c0ba179}{Y\+E\+L\+L\+OW}}~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}      /$\ast$ Yellow $\ast$/
+\item 
+\#define \mbox{\hyperlink{helper_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\+L\+UE}}~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}      /$\ast$ Blue $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{helper_8h_ad013e682fb854cb635040199b0c56dcc}{debug}} (string comment, T data)
+\begin{DoxyCompactList}\small\item\em Prints debug info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{helper_8h_ae97399243e32acf4347dbd18fcf722fb}{trace}} (string comment)
+\begin{DoxyCompactList}\small\item\em Prints out comments/trace info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{helper_8h_a8901b2fbbbdd8977801a3e60a8ebed3d}{todo}} (string comment)
+\begin{DoxyCompactList}\small\item\em Prints out any todo comments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{helper_8h_a3fcb7fed725c63c53fa1f15aa88f3854}{error}} (string comment)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{helper_8h_a5b72bc7d89749e9e93d79cbe153c940f}{error}} (string comment, T data)
+\item 
+void \mbox{\hyperlink{helper_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{helper_8h_ae2e4f755cc94cf35e88fabd5da2572f5}{is\+Debug\+Mode}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{helper_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{helper_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
+\index{helper.h@{helper.h}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily \#define B\+L\+A\+CK~\char`\"{}\textbackslash{}033\mbox{[}30m\char`\"{}      /$\ast$ Black $\ast$/}
+
+\mbox{\Hypertarget{helper_8h_a79d10e672abb49ad63eeaa8aaef57c38}\label{helper_8h_a79d10e672abb49ad63eeaa8aaef57c38}} 
+\index{helper.h@{helper.h}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
+{\footnotesize\ttfamily \#define B\+L\+UE~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}      /$\ast$ Blue $\ast$/}
+
+\mbox{\Hypertarget{helper_8h_acfbc006ea433ad708fdee3e82996e721}\label{helper_8h_acfbc006ea433ad708fdee3e82996e721}} 
+\index{helper.h@{helper.h}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily \#define G\+R\+E\+EN~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}      /$\ast$ Green $\ast$/}
+
+\mbox{\Hypertarget{helper_8h_a8d23feea868a983c8c2b661e1e16972f}\label{helper_8h_a8d23feea868a983c8c2b661e1e16972f}} 
+\index{helper.h@{helper.h}!RED@{RED}}
+\index{RED@{RED}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \#define R\+ED~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}      /$\ast$ Red $\ast$/}
+
+\mbox{\Hypertarget{helper_8h_ab702106cf3b3e96750b6845ded4e0299}\label{helper_8h_ab702106cf3b3e96750b6845ded4e0299}} 
+\index{helper.h@{helper.h}!RESET@{RESET}}
+\index{RESET@{RESET}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily \#define R\+E\+S\+ET~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}}
+
+\mbox{\Hypertarget{helper_8h_abf681265909adf3d3e8116c93c0ba179}\label{helper_8h_abf681265909adf3d3e8116c93c0ba179}} 
+\index{helper.h@{helper.h}!YELLOW@{YELLOW}}
+\index{YELLOW@{YELLOW}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{YELLOW}{YELLOW}}
+{\footnotesize\ttfamily \#define Y\+E\+L\+L\+OW~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}      /$\ast$ Yellow $\ast$/}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{helper_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{helper_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}} 
+\index{helper.h@{helper.h}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{helper_8h_ad013e682fb854cb635040199b0c56dcc}\label{helper_8h_ad013e682fb854cb635040199b0c56dcc}} 
+\index{helper.h@{helper.h}!debug@{debug}}
+\index{debug@{debug}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void debug (\begin{DoxyParamCaption}\item[{string}]{comment,  }\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints debug info. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{helper_8h_a3fcb7fed725c63c53fa1f15aa88f3854}\label{helper_8h_a3fcb7fed725c63c53fa1f15aa88f3854}} 
+\index{helper.h@{helper.h}!error@{error}}
+\index{error@{error}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{string}]{comment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{helper_8h_a5b72bc7d89749e9e93d79cbe153c940f}\label{helper_8h_a5b72bc7d89749e9e93d79cbe153c940f}} 
+\index{helper.h@{helper.h}!error@{error}}
+\index{error@{error}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void error (\begin{DoxyParamCaption}\item[{string}]{comment,  }\item[{T}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{helper_8h_a8901b2fbbbdd8977801a3e60a8ebed3d}\label{helper_8h_a8901b2fbbbdd8977801a3e60a8ebed3d}} 
+\index{helper.h@{helper.h}!todo@{todo}}
+\index{todo@{todo}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{todo()}{todo()}}
+{\footnotesize\ttfamily void todo (\begin{DoxyParamCaption}\item[{string}]{comment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints out any todo comments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{helper_8h_ae97399243e32acf4347dbd18fcf722fb}\label{helper_8h_ae97399243e32acf4347dbd18fcf722fb}} 
+\index{helper.h@{helper.h}!trace@{trace}}
+\index{trace@{trace}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily void trace (\begin{DoxyParamCaption}\item[{string}]{comment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints out comments/trace info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{helper_8h_ae2e4f755cc94cf35e88fabd5da2572f5}\label{helper_8h_ae2e4f755cc94cf35e88fabd5da2572f5}} 
+\index{helper.h@{helper.h}!isDebugMode@{isDebugMode}}
+\index{isDebugMode@{isDebugMode}!helper.h@{helper.h}}
+\doxysubsubsection{\texorpdfstring{isDebugMode}{isDebugMode}}
+{\footnotesize\ttfamily bool is\+Debug\+Mode = false}
+

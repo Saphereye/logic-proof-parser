@@ -1,0 +1,147 @@
+\hypertarget{classStack}{}\doxysection{Stack$<$ T $>$ Class Template Reference}
+\label{classStack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+Generic stack implementation using array.  
+
+
+
+
+{\ttfamily \#include $<$stack.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStack_adaae7700876392c39fd797d685463b86}{Stack}} (int stack\+Size)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classStack}{Stack}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStack_a5a2ea647b801e0cbac7baa190f35e50c}{push}} (T new\+Element)
+\begin{DoxyCompactList}\small\item\em Pushes object of type T on stack. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classStack_aa2ea0e8c3293648589dd734d52487408}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Removes and returns top most objec of stack. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns top most object of stack. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Return true if stack is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStack_a08446a1871fc17691ce0be249100fc9f}{is\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if stack ios full. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Stack$<$ T $>$}
+
+Generic stack implementation using array. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStack_adaae7700876392c39fd797d685463b86}\label{classStack_adaae7700876392c39fd797d685463b86}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::\mbox{\hyperlink{classStack}{Stack}} (\begin{DoxyParamCaption}\item[{int}]{stack\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classStack}{Stack}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}\label{classStack_ad0db0d9b249e871bb7504ed89a99d3a7}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return true if stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStack_a08446a1871fc17691ce0be249100fc9f}\label{classStack_a08446a1871fc17691ce0be249100fc9f}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!isFull@{isFull}}
+\index{isFull@{isFull}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if stack ios full. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}\label{classStack_adcb4774ac8aa94cbc19b461da9bdee3a}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns top most object of stack. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStack_aa2ea0e8c3293648589dd734d52487408}\label{classStack_aa2ea0e8c3293648589dd734d52487408}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes and returns top most objec of stack. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStack_a5a2ea647b801e0cbac7baa190f35e50c}\label{classStack_a5a2ea647b801e0cbac7baa190f35e50c}} 
+\index{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}
+\index{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classStack}{Stack}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T}]{new\+Element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes object of type T on stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stack_8h}{stack.\+h}}\end{DoxyCompactItemize}
