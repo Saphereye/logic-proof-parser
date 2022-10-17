@@ -1,5 +1,9 @@
 #include <iostream>
 
+/**
+ * @brief Node of parse tree. Contains a symbol, pointer to left child, poitner to right child
+ * 
+ */
 class Operator {
     private:
 		char _symbol;

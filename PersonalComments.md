@@ -1,10 +1,5 @@
 # Personal Comments
 
-[Adarsh Das](#adarsh-das)  
-[Prachi Shah](#prachi-shah)  
-[Maheshwar Bora](#maheshwar-bora)  
-[Anushka Agnihotri](#anushka-agnihotri)  
-
 ## Adarsh Das
 
 This project was fun...
@@ -23,6 +18,11 @@ This project was fun...
 
 ### Thought behind Operator class
 - `private` variables to stop malicious access
+
+### Thoughts behind TruthValStore class
+- My initial thoughts were to use a map, sadly that's in stl library
+- SO I made a new class with truth values stored in a binary number
+- Example : `p`, `q`, `r` are `F`, `F`, and `T`. Then the binary number would be `0b100` where rightmost digit belongs to `p`
 
 
 ## Prachi Shah

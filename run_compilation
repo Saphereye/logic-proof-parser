@@ -1,16 +1,14 @@
 #!/usr/bin/bash
-
 echo "[Compiling Tests...]"
 
-if g++ -pipe -O3 -Wall -o main.exe main.cpp; then
+if g++ -pipe -O0 -Wall -o main.exe main.cpp; then
 
     echo "[Compilation Successful :)]";
-    echo "[Executing...]";
-
+    echo "[Execution...]";
     if ./main.exe; then
-	    echo "[Execution Succesful :)]"
+	echo "[Execution Succesful :)]"
     else
-	    echo "[Execution Failed :(]"
+	echo "[Execution Failed :(]"
     fi
 
 else

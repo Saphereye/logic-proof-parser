@@ -4,7 +4,8 @@
         "ostream": "cpp",
         "string": "cpp",
         "*.tcc": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "stdexcept": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
 }

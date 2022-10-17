@@ -1,16 +1,9 @@
 #include <string>
 #include "stack.h"
-#include <map>
 #include "helper.h"
+#include "truthValStore.h"
 
 using namespace std;
-
-// map<char, int> precedenceMap = {
-//     {'>', 1},
-//     {'+', 2},
-//     {'*', 3},
-//     {'~', 4},
-// };
 
 int precedenceMap(char symbol) {
 	switch (symbol) {
@@ -22,6 +15,10 @@ int precedenceMap(char symbol) {
 	}
 }
 
+/**
+ * @brief Implementation of logic methods
+ * 
+ */
 class Logic {
     public:
 		/**
@@ -36,7 +33,10 @@ class Logic {
 			Stack<char> stck(int(infix.length()));
 
 			while(index >= -1) {
-				if (infix[index] == '(') {
+				if (infix[index] == ' ') {
+					index--;
+					continue;
+				} else if (infix[index] == '(') {
 					char stackElement = stck.pop();
 					while(stackElement != ')') {
 						outputPrefix = stackElement  + outputPrefix;
@@ -58,7 +58,43 @@ class Logic {
 
 		
 		#include "operators.h"
-		static Operator prefixToParseTree(string prefix);
+		static Operator* prefixToParseTree(string prefix) {
+			long unsigned int index = 0;
+			return calcprefixToParseTree(prefix, &index);
+		}
+		
+		/**
+		 * @brief Prefix to parse tree
+		 * 
+		 * @param prefix 
+		 * @return Operator* 
+		 */
+		static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
+			debug("prefix", prefix);
+			debug("index", *index);
+
+			if (*index == prefix.length()) {
+				return NULL;
+			}
+			char currentCharacter = prefix[*index];
+			Operator* head = new Operator(currentCharacter);
+
+			*index+=1;
+
+			switch (currentCharacter) {
+				case '~':
+					head->addRightChild(calcprefixToParseTree(prefix, index));
+					break;
+				case '>':
+				case '+':
+				case '*':
+					head->addLeftChild(calcprefixToParseTree(prefix, index));
+					head->addRightChild(calcprefixToParseTree(prefix, index));
+				default:
+					break;
+			}
+			return head;
+		};
 
 		/**
 		 * @brief Traverses binary tree in order and evaluates infix
@@ -113,13 +149,21 @@ class Logic {
 			return max(leftChildHeight, rightChildHeight) + 1;
 		}
 
-		static bool getParseTreeVal(Operator* op, map<char, bool> valueMap) {
+		/**
+		 * @brief Get the Parse Tree Val object using a dictionary of symbols and their values
+		 * 
+		 * @param op Pointer to parse tree
+		 * @param valueMap Dictionary mappiing symbols to their truth values
+		 * @return true 
+		 * @return false 
+		 */
+		static bool getParseTreeVal(Operator* op, TruthValStore valueMap) {
 			debug("Symbol", op->getSymbol());
-			debug("Value", valueMap[op->getSymbol()]);
+			debug("Value", valueMap.getTruthVal(op->getSymbol()));
 			if (op->isAtom()) {
-				return valueMap[op->getSymbol()];
+				return valueMap.getTruthVal(op->getSymbol());
 			}
-			
+
 			switch (op->getSymbol()) {
 				case '~':
 					return !getParseTreeVal(op->getRightChild(), valueMap);	
@@ -133,4 +177,8 @@ class Logic {
 					return false;
 			}
 		};
+		
+		static void displayParseTree(Operator* op) {
+			todo("Make function to display parse tree");
+		}
 };

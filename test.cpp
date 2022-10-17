@@ -39,20 +39,42 @@ void testParseTreeVal() {
 	Logic::Operator q('q');
 	Logic::Operator head('~', &p, &q);
 
-	map<char, bool> valueMap = {
-		{'p', true},
-		{'q', false},
-	};
-	debug("Value", Logic::getParseTreeVal(&head, valueMap));
+	// map<char, bool> valueMap = {
+	// 	{'p', true},
+	// 	{'q', false},
+	// };
+	TruthValStore tvs("pq", 0b01);
+	debug("Value", Logic::getParseTreeVal(&head, tvs));
+}
+
+void testValStore() {
+	// p=F q=T r=T
+	TruthValStore tvs("pqr", 0b110);
+	tvs.setTruthVal('q', false);
+	debug("Truth val of p", tvs.getTruthVal('p'));
+	debug("Truth val of q", tvs.getTruthVal('q'));
+	debug("Truth val of r", tvs.getTruthVal('r'));
+	//debug("Truth val of z", tvs.getTruthVal('z'));
+}
+
+void testprefixToParseTree() {
+	string test = "~(a+b)";
+	debug(test, Logic::parseTreeToInfix(Logic::prefixToParseTree(Logic::infixToPrefix(test))));
 }
 
 
 
 int main() {
+	debug("debug", 69);
+	trace("trace");
+	todo("todo");
+	error("error");
     testLogic();
     testParseTreeToInfix();
 	testParseTreeHeight();
 	testParseTreeVal();
+	testValStore();
+	testprefixToParseTree();
     return 0;
 }
 
