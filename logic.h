@@ -5,6 +5,12 @@
 
 using namespace std;
 
+/**
+ * @brief Returns precedence map of symbol
+ * 
+ * @param symbol 
+ * @return int 
+ */
 int precedenceMap(char symbol) {
 	switch (symbol) {
 		case '~' : return 4; break;
@@ -28,11 +34,11 @@ class Logic {
 		 * @return string 
 		 */
 		static string infixToPrefix(string infix) {
-			int index = infix.length() - 1;
+			size_t index = infix.length() - 1;
 			string outputPrefix = "";
 			Stack<char> stck(int(infix.length()));
 
-			while(index >= -1) {
+			while(int(index) >= -1) {
 				if (infix[index] == ' ') {
 					index--;
 					continue;
@@ -58,20 +64,26 @@ class Logic {
 
 		
 		#include "operators.h"
+		/**
+		 * @brief Prefic to parse tree
+		 * 
+		 * @param prefix 
+		 * @return Operator* 
+		 */
 		static Operator* prefixToParseTree(string prefix) {
 			long unsigned int index = 0;
 			return calcprefixToParseTree(prefix, &index);
 		}
 		
 		/**
-		 * @brief Prefix to parse tree
+		 * @brief calc Prefix to parse tree
 		 * 
 		 * @param prefix 
 		 * @return Operator* 
 		 */
 		static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
-			debug("prefix", prefix);
-			debug("index", *index);
+			debug("prefix coming to calcprefixToParseTree", prefix);
+			debug("index coming to calcprefixToParseTree", *index);
 
 			if (*index == prefix.length()) {
 				return NULL;
@@ -177,7 +189,20 @@ class Logic {
 					return false;
 			}
 		};
-		
+
+		/**
+		 * @brief Displays parse tree
+		 * 
+		 * @param op 
+		 * 
+		 * Example: (a+(b*(c>d))) with Height = 3
+		 * 
+		 * + ─┐
+		 * │  * ─┐
+		 * a  │  > ─┐
+		 *    b  │  d
+		 *       c
+		 */
 		static void displayParseTree(Operator* op) {
 			todo("Make function to display parse tree");
 		}

@@ -18,8 +18,8 @@ class Operator {
 		 */
 		Operator(char sym) {
 			_symbol = sym;
-			_leftChild = NULL;
-			_rightChild = NULL;
+			_leftChild = nullptr;
+			_rightChild = nullptr;
 		}
 
 		/**
@@ -30,7 +30,7 @@ class Operator {
 		 */
 		Operator(char sym, Operator* rChild) {
 			_symbol = sym;
-			_leftChild = NULL;
+			_leftChild = nullptr;
 			_rightChild = rChild;
 		}
 
@@ -110,7 +110,7 @@ class Operator {
 		 * @return false 
 		 */
 		bool isAtom() {
-			return (_leftChild == NULL) && (_rightChild == NULL);
+			return (_leftChild == nullptr) && (_rightChild == nullptr);
 		}
 
 		/**
@@ -120,6 +120,6 @@ class Operator {
 		 * @return false 
 		 */
 		bool isUnaryOperator() {
-			return (_leftChild == NULL) && (_rightChild != NULL);
+			return (_leftChild == nullptr) && (_rightChild != nullptr);
 		}
 };

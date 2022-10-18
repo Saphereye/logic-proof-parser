@@ -23,19 +23,19 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "LogicAssignment", "index.html", [
-    [ "Personal Comments", "md_PersonalComments.html", [
-      [ "Adarsh Das", "md_PersonalComments.html#autotoc_md1", [
-        [ "Thought behind selecting C++", "md_PersonalComments.html#autotoc_md2", null ],
-        [ "Adventures With Profiling", "md_PersonalComments.html#autotoc_md3", null ],
-        [ "Thought behind Operator class", "md_PersonalComments.html#autotoc_md4", null ],
-        [ "Thoughts behind TruthValStore class", "md_PersonalComments.html#autotoc_md5", null ]
+    [ "Personal Comments", "md_markdown_PersonalComments.html", [
+      [ "Adarsh Das", "md_markdown_PersonalComments.html#autotoc_md1", [
+        [ "Thought behind selecting C++", "md_markdown_PersonalComments.html#autotoc_md2", null ],
+        [ "Adventures With Profiling", "md_markdown_PersonalComments.html#autotoc_md3", null ],
+        [ "Thought behind Operator class", "md_markdown_PersonalComments.html#autotoc_md4", null ],
+        [ "Thoughts behind TruthValStore class", "md_markdown_PersonalComments.html#autotoc_md5", null ]
       ] ],
-      [ "Prachi Shah", "md_PersonalComments.html#autotoc_md6", null ],
-      [ "Maheshwar Bora", "md_PersonalComments.html#autotoc_md7", null ],
-      [ "Anushka Agnihotri", "md_PersonalComments.html#autotoc_md8", null ]
+      [ "Prachi Shah", "md_markdown_PersonalComments.html#autotoc_md6", null ],
+      [ "Maheswar Bora", "md_markdown_PersonalComments.html#autotoc_md7", null ],
+      [ "Anushka Agnihotri", "md_markdown_PersonalComments.html#autotoc_md8", null ]
     ] ],
-    [ "Profiling", "md_Profiing.html", [
-      [ "Flat Profile", "md_Profiing.html#autotoc_md9", null ]
+    [ "Profiling", "md_markdown_Profiing.html", [
+      [ "Flat Profile", "md_markdown_Profiing.html#autotoc_md9", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

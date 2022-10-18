@@ -8,6 +8,10 @@ class TruthValStore {
         int _truthValArray = 0b0; 
         
     public:
+        TruthValStore() {
+
+        }
+
         /**
          * @brief Construct a new Truth Val Store object
          * 
@@ -19,6 +23,11 @@ class TruthValStore {
             _truthValArray = truthValArray;
         }
 
+        /**
+         * @brief Construct a new Truth Val Store object
+         * 
+         * @param atomArray 
+         */
         TruthValStore(string atomArray) {
             _atomArray = atomArray;
         }
@@ -78,5 +87,30 @@ class TruthValStore {
             _truthValArray = (_truthValArray & ~mask) | ((truthVal << index) & mask);
         }
 
+        void setTruthVal(size_t index, bool truthVal) {
+            // Make mask to help replace
+            int mask = 1 << index;
 
+            // Set value in truthValArray using bitwise magic
+            _truthValArray = (_truthValArray & ~mask) | ((truthVal << index) & mask);
+
+            debug("Index to setter", index);
+            debug("truth val array to setter", _truthValArray);
+        }
+
+        void addAtom(char atom) {
+            _atomArray += atom;
+        }
+
+        char getAtom(size_t index) {
+            return _atomArray[index];
+        }
+
+        int getTruthValArray() {
+            return _truthValArray;
+        }
+
+        size_t getAtomIndex(char atom) {
+            return _atomArray.find(atom);
+        }
 };

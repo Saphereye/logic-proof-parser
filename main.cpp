@@ -31,7 +31,7 @@ int main() {
         cout << "5. Evaluate Parse Tree"                   << endl;
         cout << "6. Restart"                               << endl;
         cout << "7. Quit"                                  << endl;
-        cout << "Choose option : ";
+        cout << YELLOW << "Choose option : " << RESET;
         cin  >> choice;
 
         // Clear screen, linux only, don't know what to do for windows
@@ -73,9 +73,48 @@ int main() {
             case 5:
                 {
                     todo("Take inputs of truth values of the atoms");
+                    TruthValStore tvs;
+
+                    debug("Infix", infix);
+
                     // Calculate what atoms are there
-                    // Ak for their values and store
+                    for(size_t index = 0; index < infix.length(); index++) {
+                        if (isalpha(infix[index]) && (tvs.getAtomIndex(infix[index]) == string::npos)) {
+                            tvs.addAtom(infix[index]);
+                        }
+                    }
+
+                    // Ask for their values and store
+                    char userAnswer;
+                    for (size_t index = 0; index < tvs.getAtomArray().length(); index++) {
+                        cout << "Enter truth value for " << tvs.getAtom(index) << " : ";
+                        cin >> userAnswer;
+                        debug("Atoms", tvs.getAtomArray());
+                        debug("Value", tvs.getTruthValArray());
+                        switch (userAnswer) {
+                            case 'T':
+                            case '1':
+                            case 't':
+                                tvs.setTruthVal(index, true);
+                                break;
+                            case 'F':
+                            case '0':
+                            case 'f':
+                                tvs.setTruthVal(index, false);
+                                break;
+                            default:
+                                break;
+                        }
+                        debug("Atoms", tvs.getAtomArray());
+                        debug("Value", tvs.getTruthValArray());
+                    }
+                    debug("Atoms", tvs.getAtomArray());
+                    debug("Value", tvs.getTruthValArray());
+                    debug("Final infix", infix);
+
                     // Evaluate the tree
+                    cout << GREEN << "The truth value of the tree is : " << Logic::getParseTreeVal(Logic::prefixToParseTree(Logic::infixToPrefix(infix)), tvs) << RESET <<  endl;
+
                     break;
                 }
             

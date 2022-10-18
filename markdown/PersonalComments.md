@@ -27,6 +27,6 @@ This project was fun...
 
 ## Prachi Shah
 
-## Maheshwar Bora
+## Maheswar Bora
 
 ## Anushka Agnihotri

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['personal_20comments_32',['Personal Comments',['../md_PersonalComments.html',1,'']]],
-  ['profiling_33',['Profiling',['../md_Profiing.html',1,'']]],
+  ['personal_20comments_32',['Personal Comments',['../md_markdown_PersonalComments.html',1,'']]],
+  ['profiling_33',['Profiling',['../md_markdown_Profiing.html',1,'']]],
   ['parsetreetoinfix_34',['parseTreeToInfix',['../classLogic.html#aeac16e179a2dfcf4a76f546291670428',1,'Logic']]],
   ['peek_35',['peek',['../classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a',1,'Stack']]],
   ['personalcomments_2emd_36',['PersonalComments.md',['../PersonalComments_8md.html',1,'']]],
