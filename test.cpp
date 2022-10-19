@@ -57,6 +57,19 @@ void testValStore() {
 	//debug("Truth val of z", tvs.getTruthVal('z'));
 }
 
+void testPrinting() {
+	Logic::Operator a('a');
+	Logic::Operator b('b');
+	Logic::Operator c('c');
+	Logic::Operator con('*', new Logic::Operator('~', &a), &b);
+	Logic::Operator impl('>', &con, &a);
+	Logic::Operator dis('+', &c, &c);
+	Logic::Operator dis2('+', &dis, &c);
+	Logic::Operator head('+', &impl, &dis2);
+
+	Logic::displayParseTree(&head);
+}
+
 void testprefixToParseTree() {
 	string test = "~(a+b)";
 	debug(test, Logic::parseTreeToInfix(Logic::prefixToParseTree(Logic::infixToPrefix(test))));
@@ -75,6 +88,7 @@ int main() {
 	testParseTreeVal();
 	testValStore();
 	testprefixToParseTree();
+	testPrinting();
     return 0;
 }
 

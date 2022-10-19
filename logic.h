@@ -203,7 +203,45 @@ class Logic {
 		 *    b  │  d
 		 *       c
 		 */
+		
 		static void displayParseTree(Operator* op) {
-			todo("Make function to display parse tree");
+			int rec[Logic::getParseTreeHeight(op)];
+			printParseTree(op, 0, rec);
+			
+		}
+
+		static void printParseTree(Operator* op, int depth, int* rec) {
+			if(op == nullptr)
+				return;
+			
+			cout << "     ";
+
+			for(int childIndex = 0; childIndex < depth; childIndex++) {
+				if(childIndex == depth - 1) {
+					if ((rec[depth - 1] == 1) && !(op->isUnaryOperator())) {
+						cout << "├───";
+					} else {
+						cout << "└───";
+					}
+				}
+				else {
+					if (rec[childIndex] == 1) {
+						cout << "│   ";
+					} else {
+						cout << "     ";
+					}
+				}
+			}
+				
+			
+			cout << "[" << YELLOW << op->getSymbol() << RESET << "]" << endl;
+
+			rec[depth]=1;
+
+			printParseTree(op->getRightChild(), depth+1, rec);
+
+			rec[depth]=0;
+
+			printParseTree(op->getLeftChild(), depth+1, rec);
 		}
 };

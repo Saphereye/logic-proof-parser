@@ -16,6 +16,7 @@ using namespace std;
 int main() {
     string infix = "";
     int choice = -1;
+    clearScreen();
     cout << "Welcome to logic assignment."             << endl;
     cout << "Please enter the input infix expression." << endl;
     cout << BLUE << "Enter infix : " << RESET;
@@ -49,9 +50,6 @@ int main() {
                     string prefix = Logic::infixToPrefix(infix);
                     Logic::Operator* op = Logic::prefixToParseTree(prefix);
                     cout << GREEN << "The Parse Tree of given infix is : " << RESET << endl;
-
-                    todo("Figure out whether display is returning string or void");
-
                     Logic::displayParseTree(op);
                     break;
                 }
@@ -72,9 +70,7 @@ int main() {
             
             case 5:
                 {
-                    todo("Take inputs of truth values of the atoms");
                     TruthValStore tvs;
-
                     debug("Infix", infix);
 
                     // Calculate what atoms are there

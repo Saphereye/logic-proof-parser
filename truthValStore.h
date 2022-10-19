@@ -5,7 +5,7 @@ using namespace std;
 class TruthValStore {
     private:
         string _atomArray = "";
-        int _truthValArray = 0b0; 
+        size_t _truthValArray = 0b0; 
         
     public:
         TruthValStore() {
@@ -59,7 +59,7 @@ class TruthValStore {
          */
         bool getTruthVal(char atom) {
             // Get index of atom in atom array
-            int index = _atomArray.find(atom);
+            size_t index = _atomArray.find(atom);
 
             // All cases where atom is not 
 
@@ -78,10 +78,10 @@ class TruthValStore {
          */
         void setTruthVal(char atom, bool truthVal) {
             // Get index of atom in array
-            int index = _atomArray.find(atom);
+            size_t index = _atomArray.find(atom);
 
             // Make mask to help replace
-            int mask = 1 << index;
+            size_t mask = 1 << index;
 
             // Set value in truthValArray using bitwise magic
             _truthValArray = (_truthValArray & ~mask) | ((truthVal << index) & mask);
@@ -89,7 +89,7 @@ class TruthValStore {
 
         void setTruthVal(size_t index, bool truthVal) {
             // Make mask to help replace
-            int mask = 1 << index;
+            size_t mask = 1 << index;
 
             // Set value in truthValArray using bitwise magic
             _truthValArray = (_truthValArray & ~mask) | ((truthVal << index) & mask);
@@ -106,7 +106,7 @@ class TruthValStore {
             return _atomArray[index];
         }
 
-        int getTruthValArray() {
+        size_t getTruthValArray() {
             return _truthValArray;
         }
 
