@@ -8,7 +8,7 @@
 # (e.g. gprof test.exe gmon.out > logic.output)
 echo "[Compiling Tests...]"
 
-if g++ -pipe -Ofast -Wall -o prof.exe main.cpp -pg; then
+if g++ -pipe -O0 -Wall -o prof.exe main.cpp -pg; then
     echo "[Compilation Successful :)]";
     echo "[Generating gmon.out...]";
 

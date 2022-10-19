@@ -5,10 +5,35 @@ Each sample counts as 0.01 seconds.
 
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
-  0.00      0.00     0.00        4     0.00     0.00  Logic::printParseTree(Logic::Operator*, int, int*)
-  0.00      0.00     0.00        4     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
+  0.00      0.00     0.00    32736     0.00     0.00  precedenceMap(char)
+  0.00      0.00     0.00    16380     0.00     0.00  Stack<char>::isEmpty()
+  0.00      0.00     0.00    16380     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      0.00     0.00    16368     0.00     0.00  Stack<char>::peek()
+  0.00      0.00     0.00     8354     0.00     0.00  void debug<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.00     0.00     8192     0.00     0.00  Stack<char>::push(char)
+  0.00      0.00     0.00     8188     0.00     0.00  Stack<char>::pop()
+  0.00      0.00     0.00     7275     0.00     0.00  void debug<unsigned long>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long)
+  0.00      0.00     0.00     7275     0.00     0.00  Logic::Operator::isAtom()
+  0.00      0.00     0.00     7275     0.00     0.00  Logic::Operator::Operator(char)
+  0.00      0.00     0.00     6463     0.00     0.00  Logic::Operator::getRightChild()
+  0.00      0.00     0.00     5659     0.00     0.00  Logic::Operator::getLeftChild()
+  0.00      0.00     0.00     5384     0.00     0.00  Logic::Operator::isUnaryOperator()
+  0.00      0.00     0.00     4850     0.00     0.00  Logic::Operator::getSymbol()
+  0.00      0.00     0.00     4038     0.00     0.00  Logic::Operator::addRightChild(Logic::Operator*)
+  0.00      0.00     0.00     3234     0.00     0.00  Logic::Operator::addLeftChild(Logic::Operator*)
+  0.00      0.00     0.00     2692     0.00     0.00  int const& std::max<int>(int const&, int const&)
+  0.00      0.00     0.00        6     0.00     0.00  clearScreen()
+  0.00      0.00     0.00        4     0.00     0.00  Logic::infixToPrefix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.00     0.00        4     0.00     0.00  Stack<char>::Stack(int)
+  0.00      0.00     0.00        3     0.00     0.00  Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.00     0.00        3     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
   0.00      0.00     0.00        2     0.00     0.00  Logic::getParseTreeHeight(Logic::Operator*)
   0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I_isDebugMode
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  Logic::printParseTree(Logic::Operator*, int, int*)
+  0.00      0.00     0.00        1     0.00     0.00  Logic::displayParseTree(Logic::Operator*)
+  0.00      0.00     0.00        1     0.00     0.00  Logic::parseTreeToInfix[abi:cxx11](Logic::Operator*)
+  0.00      0.00     0.00        1     0.00     0.00  Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
 
  %         the percentage of the total running time of the
 time       program used by this function.

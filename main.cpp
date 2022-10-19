@@ -11,6 +11,13 @@
 #define YELLOW  "\033[33m"      /* Yellow */
 #define BLUE    "\033[34m"      /* Blue */
 
+// #define RESET   ""
+// #define BLACK   ""      /* Black */
+// #define RED     ""      /* Red */
+// #define GREEN   ""      /* Green */
+// #define YELLOW  ""      /* Yellow */
+// #define BLUE    ""     /* Blue */
+
 using namespace std;
 
 int main() {
