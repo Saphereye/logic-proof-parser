@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_94',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test.cpp']]]
+  ['operator_85',['Operator',['../classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6',1,'Operator::Operator(char sym)'],['../classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa',1,'Operator::Operator(char sym, Operator *rChild)'],['../classOperator.html#ae85dc366ddd292823069c29225780698',1,'Operator::Operator(char sym, Operator *lChild, Operator *rChild)']]]
 ];

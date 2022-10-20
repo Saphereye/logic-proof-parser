@@ -7,7 +7,7 @@
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded 
 # by quotes) that should identify the project.
 
-PROJECT_NAME           = LogicAssignment
+PROJECT_NAME           = "Logic Assignment Documentation"
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
@@ -73,6 +73,10 @@ FILE_PATTERNS          = *.c \
                          *.h \
                          *.hpp \
                          *.md \
+
+EXCLUDE_PATTERNS = markdown \
+                    test.cpp \
+                    helper.h
 
 # The RECURSIVE tag can be used to turn specify whether or not subdirectories 
 # should be searched for input files as well. Possible values are YES and NO. 

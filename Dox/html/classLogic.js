@@ -7,5 +7,6 @@ var classLogic =
     [ "getParseTreeVal", "classLogic.html#a82e00b9bdf7e3f52f2613bef6bd66e8d", null ],
     [ "infixToPrefix", "classLogic.html#a9b397f8e92ada8dadcd3ddf52d82f552", null ],
     [ "parseTreeToInfix", "classLogic.html#aeac16e179a2dfcf4a76f546291670428", null ],
-    [ "prefixToParseTree", "classLogic.html#af106176cce748456c93ff9654255fb04", null ]
+    [ "prefixToParseTree", "classLogic.html#af106176cce748456c93ff9654255fb04", null ],
+    [ "printParseTree", "classLogic.html#aa6da529591888b91829491fba631d362", null ]
 ];

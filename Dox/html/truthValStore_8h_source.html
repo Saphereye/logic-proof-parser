@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LogicAssignment: truthValStore.h Source File</title>
+<title>Logic Assignment Documentation: truthValStore.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">LogicAssignment
+   <div id="projectname">Logic Assignment Documentation
    </div>
   </td>
  </tr>
@@ -87,65 +87,99 @@ $(document).ready(function(){initNavTree('truthValStore_8h_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a href="truthValStore_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classTruthValStore.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTruthValStore.html">TruthValStore</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordtype">string</span> _atomArray = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">int</span> _truthValArray = 0b0; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">   17</a></span>&#160;        <a class="code" href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">TruthValStore</a>(<span class="keywordtype">string</span> atomArray, <span class="keywordtype">int</span> truthValArray) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            _atomArray = atomArray;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            _truthValArray = truthValArray;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">   27</a></span>&#160;        <a class="code" href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">TruthValStore</a>(<span class="keywordtype">string</span> atomArray) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            _atomArray = atomArray;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">   36</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">setAtomArray</a>(<span class="keywordtype">string</span> atomArray) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            _atomArray = atomArray;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">   45</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">getAtomArray</a>() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> _atomArray;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">   56</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">getTruthVal</a>(<span class="keywordtype">char</span> atom) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// Get index of atom in atom array</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordtype">int</span> index = _atomArray.find(atom);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// All cases where atom is not </span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// Return the nth element of truthValArray from the right where n = index</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// Cheeky bitwise operation</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> (_truthValArray &amp; (1 &lt;&lt; index)) &gt;&gt; index;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classTruthValStore.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTruthValStore.html">TruthValStore</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">string</span> _atomArray = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">size_t</span> _truthValArray = 0b0; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638">   14</a></span>&#160;        <a class="code" href="classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638">TruthValStore</a>() {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">   24</a></span>&#160;        <a class="code" href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">TruthValStore</a>(<span class="keywordtype">string</span> atomArray, <span class="keywordtype">int</span> truthValArray) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            _atomArray = atomArray;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            _truthValArray = truthValArray;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">   34</a></span>&#160;        <a class="code" href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">TruthValStore</a>(<span class="keywordtype">string</span> atomArray) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            _atomArray = atomArray;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">   43</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">setAtomArray</a>(<span class="keywordtype">string</span> atomArray) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _atomArray = atomArray;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">   52</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">getAtomArray</a>() {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> _atomArray;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">   63</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">getTruthVal</a>(<span class="keywordtype">char</span> atom) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// Get index of atom in atom array</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">size_t</span> index = _atomArray.find(atom);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">   75</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">setTruthVal</a>(<span class="keywordtype">char</span> atom, <span class="keywordtype">bool</span> truthVal) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// Get index of atom in array</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">int</span> index = _atomArray.find(atom);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">// Make mask to help replace</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordtype">int</span> mask = 1 &lt;&lt; index;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">// Set value in truthValArray using bitwise magic</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            _truthValArray = (_truthValArray &amp; ~mask) | ((truthVal &lt;&lt; index) &amp; mask);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">// All cases where atom is not </span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// Return the nth element of truthValArray from the right where n = index</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// Cheeky bitwise operation</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> (_truthValArray &amp; (1 &lt;&lt; index)) &gt;&gt; index;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">   82</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">setTruthVal</a>(<span class="keywordtype">char</span> atom, <span class="keywordtype">bool</span> truthVal) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// Get index of atom in array</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordtype">size_t</span> index = _atomArray.find(atom);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// Make mask to help replace</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">size_t</span> mask = 1 &lt;&lt; index;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// Set value in truthValArray using bitwise magic</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            _truthValArray = (_truthValArray &amp; ~mask) | ((truthVal &lt;&lt; index) &amp; mask);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classTruthValStore.html#ae1dab5a373d65380656eeab6a37686a5">   93</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#ae1dab5a373d65380656eeab6a37686a5">setTruthVal</a>(<span class="keywordtype">size_t</span> index, <span class="keywordtype">bool</span> truthVal) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// Make mask to help replace</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">size_t</span> mask = 1 &lt;&lt; index;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Set value in truthValArray using bitwise magic</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            _truthValArray = (_truthValArray &amp; ~mask) | ((truthVal &lt;&lt; index) &amp; mask);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            debug(<span class="stringliteral">&quot;Index to setter&quot;</span>, index);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            debug(<span class="stringliteral">&quot;truth val array to setter&quot;</span>, _truthValArray);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a2b41f9ee3fd4a99640af3f43f7a43791">  104</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classTruthValStore.html#a2b41f9ee3fd4a99640af3f43f7a43791">addAtom</a>(<span class="keywordtype">char</span> atom) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            _atomArray += atom;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a6072c5933a186643ba851ea89c4269d9">  108</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="classTruthValStore.html#a6072c5933a186643ba851ea89c4269d9">getAtom</a>(<span class="keywordtype">size_t</span> index) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> _atomArray[index];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a0d3ea32e495188a044c00eb9c148be81">  112</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classTruthValStore.html#a0d3ea32e495188a044c00eb9c148be81">getTruthValArray</a>() {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> _truthValArray;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classTruthValStore.html#a51b23ad51f33a83ff88ae44990476c1a">  116</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classTruthValStore.html#a51b23ad51f33a83ff88ae44990476c1a">getAtomIndex</a>(<span class="keywordtype">char</span> atom) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> _atomArray.find(atom);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassTruthValStore_html_a8408b635d2018a0935d44ed6c289b165"><div class="ttname"><a href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">TruthValStore::TruthValStore</a></div><div class="ttdeci">TruthValStore(string atomArray, int truthValArray)</div><div class="ttdoc">Construct a new Truth Val Store object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:17</div></div>
-<div class="ttc" id="aclassTruthValStore_html_ae97fd169e9c18dd0878cc712aec16040"><div class="ttname"><a href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">TruthValStore::getTruthVal</a></div><div class="ttdeci">bool getTruthVal(char atom)</div><div class="ttdoc">Get the truth value of corresoponding atom in O(n)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:56</div></div>
-<div class="ttc" id="aclassTruthValStore_html_af19f38162365e1a365c4d4785663e789"><div class="ttname"><a href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">TruthValStore::setTruthVal</a></div><div class="ttdeci">void setTruthVal(char atom, bool truthVal)</div><div class="ttdoc">Set the truth value of corresoponding atom in O(n)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:75</div></div>
-<div class="ttc" id="aclassTruthValStore_html"><div class="ttname"><a href="classTruthValStore.html">TruthValStore</a></div><div class="ttdef"><b>Definition:</b> truthValStore.h:5</div></div>
-<div class="ttc" id="aclassTruthValStore_html_abe0b0bde8c094bf9c72aea46f0e1260c"><div class="ttname"><a href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">TruthValStore::TruthValStore</a></div><div class="ttdeci">TruthValStore(string atomArray)</div><div class="ttdoc">Construct a new Truth Val Store object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:27</div></div>
-<div class="ttc" id="aclassTruthValStore_html_aa93136f781a901c1fb5e792a08ba121f"><div class="ttname"><a href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">TruthValStore::getAtomArray</a></div><div class="ttdeci">string getAtomArray()</div><div class="ttdoc">Get the Atom Array object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:45</div></div>
-<div class="ttc" id="aclassTruthValStore_html_a5265d28716fb30813d60e18e2b545acb"><div class="ttname"><a href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">TruthValStore::setAtomArray</a></div><div class="ttdeci">void setAtomArray(string atomArray)</div><div class="ttdoc">Set the Atom Array object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:36</div></div>
+<div class="ttc" id="aclassTruthValStore_html_ae1dab5a373d65380656eeab6a37686a5"><div class="ttname"><a href="classTruthValStore.html#ae1dab5a373d65380656eeab6a37686a5">TruthValStore::setTruthVal</a></div><div class="ttdeci">void setTruthVal(size_t index, bool truthVal)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:93</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a2b41f9ee3fd4a99640af3f43f7a43791"><div class="ttname"><a href="classTruthValStore.html#a2b41f9ee3fd4a99640af3f43f7a43791">TruthValStore::addAtom</a></div><div class="ttdeci">void addAtom(char atom)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:104</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a8408b635d2018a0935d44ed6c289b165"><div class="ttname"><a href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">TruthValStore::TruthValStore</a></div><div class="ttdeci">TruthValStore(string atomArray, int truthValArray)</div><div class="ttdoc">Construct a new Truth Val Store object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:24</div></div>
+<div class="ttc" id="aclassTruthValStore_html_ae97fd169e9c18dd0878cc712aec16040"><div class="ttname"><a href="classTruthValStore.html#ae97fd169e9c18dd0878cc712aec16040">TruthValStore::getTruthVal</a></div><div class="ttdeci">bool getTruthVal(char atom)</div><div class="ttdoc">Get the truth value of corresoponding atom in O(n)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:63</div></div>
+<div class="ttc" id="aclassTruthValStore_html_af19f38162365e1a365c4d4785663e789"><div class="ttname"><a href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">TruthValStore::setTruthVal</a></div><div class="ttdeci">void setTruthVal(char atom, bool truthVal)</div><div class="ttdoc">Set the truth value of corresoponding atom in O(n)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:82</div></div>
+<div class="ttc" id="aclassTruthValStore_html"><div class="ttname"><a href="classTruthValStore.html">TruthValStore</a></div><div class="ttdoc">truth val store class</div><div class="ttdef"><b>Definition:</b> truthValStore.h:8</div></div>
+<div class="ttc" id="aclassTruthValStore_html_abe0b0bde8c094bf9c72aea46f0e1260c"><div class="ttname"><a href="classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c">TruthValStore::TruthValStore</a></div><div class="ttdeci">TruthValStore(string atomArray)</div><div class="ttdoc">Construct a new Truth Val Store object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:34</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a0d3ea32e495188a044c00eb9c148be81"><div class="ttname"><a href="classTruthValStore.html#a0d3ea32e495188a044c00eb9c148be81">TruthValStore::getTruthValArray</a></div><div class="ttdeci">size_t getTruthValArray()</div><div class="ttdef"><b>Definition:</b> truthValStore.h:112</div></div>
+<div class="ttc" id="aclassTruthValStore_html_ab5410d49eaf07eb5e1446aba1bf4a638"><div class="ttname"><a href="classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638">TruthValStore::TruthValStore</a></div><div class="ttdeci">TruthValStore()</div><div class="ttdef"><b>Definition:</b> truthValStore.h:14</div></div>
+<div class="ttc" id="aclassTruthValStore_html_aa93136f781a901c1fb5e792a08ba121f"><div class="ttname"><a href="classTruthValStore.html#aa93136f781a901c1fb5e792a08ba121f">TruthValStore::getAtomArray</a></div><div class="ttdeci">string getAtomArray()</div><div class="ttdoc">Get the Atom Array object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:52</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a6072c5933a186643ba851ea89c4269d9"><div class="ttname"><a href="classTruthValStore.html#a6072c5933a186643ba851ea89c4269d9">TruthValStore::getAtom</a></div><div class="ttdeci">char getAtom(size_t index)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:108</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a51b23ad51f33a83ff88ae44990476c1a"><div class="ttname"><a href="classTruthValStore.html#a51b23ad51f33a83ff88ae44990476c1a">TruthValStore::getAtomIndex</a></div><div class="ttdeci">size_t getAtomIndex(char atom)</div><div class="ttdef"><b>Definition:</b> truthValStore.h:116</div></div>
+<div class="ttc" id="aclassTruthValStore_html_a5265d28716fb30813d60e18e2b545acb"><div class="ttname"><a href="classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb">TruthValStore::setAtomArray</a></div><div class="ttdeci">void setAtomArray(string atomArray)</div><div class="ttdoc">Set the Atom Array object.</div><div class="ttdef"><b>Definition:</b> truthValStore.h:43</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

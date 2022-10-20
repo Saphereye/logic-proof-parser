@@ -194,14 +194,6 @@ class Logic {
 		 * @brief Displays parse tree
 		 * 
 		 * @param op 
-		 * 
-		 * Example: (a+(b*(c>d))) with Height = 3
-		 * 
-		 * + ─┐
-		 * │  * ─┐
-		 * a  │  > ─┐
-		 *    b  │  d
-		 *       c
 		 */
 		
 		static void displayParseTree(Operator* op) {
@@ -238,10 +230,10 @@ class Logic {
 
 			rec[depth]=1;
 
-			printParseTree(op->getRightChild(), depth+1, rec);
+			printParseTree(op->getRightChild(), depth + 1, rec);
 
 			rec[depth]=0;
 
-			printParseTree(op->getLeftChild(), depth+1, rec);
+			printParseTree(op->getLeftChild(), depth + 1, rec);
 		}
 };

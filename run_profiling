@@ -8,7 +8,7 @@
 # (e.g. gprof test.exe gmon.out > logic.output)
 echo "[Compiling Tests...]"
 
-if g++ -pipe -O0 -Wall -o prof.exe main.cpp -pg; then
+if g++ -pipe -O3 -Wall -o prof.exe main.cpp -pg; then
     echo "[Compilation Successful :)]";
     echo "[Generating gmon.out...]";
 
@@ -16,7 +16,7 @@ if g++ -pipe -O0 -Wall -o prof.exe main.cpp -pg; then
 	    echo "[Generation Succesful :)]";
         echo "[Writing to file...]";
 
-        if gprof prof.exe gmon.out > logic.output -p; then
+        if gprof prof.exe gmon.out > logic.output; then
             echo "[Writing to file succesful :)]"
         else
             echo "[Writing to file unsuccesful :()]"

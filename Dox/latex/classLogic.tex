@@ -27,6 +27,8 @@ static int \mbox{\hyperlink{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}{get\+P
 static bool \mbox{\hyperlink{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}{get\+Parse\+Tree\+Val}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, \mbox{\hyperlink{classTruthValStore}{Truth\+Val\+Store}} value\+Map)
 \begin{DoxyCompactList}\small\item\em Get the Parse Tree Val object using a dictionary of symbols and their values. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}{display\+Parse\+Tree}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
+\begin{DoxyCompactList}\small\item\em Displays parse tree. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classLogic_aa6da529591888b91829491fba631d362}{print\+Parse\+Tree}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, int depth, int $\ast$rec)
 \end{DoxyCompactItemize}
 
 
@@ -77,6 +79,15 @@ Operator$\ast$
 \doxysubsubsection{\texorpdfstring{displayParseTree()}{displayParseTree()}}
 {\footnotesize\ttfamily static void Logic\+::display\+Parse\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+Displays parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}\label{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}} 
 \index{Logic@{Logic}!getParseTreeHeight@{getParseTreeHeight}}
 \index{getParseTreeHeight@{getParseTreeHeight}!Logic@{Logic}}
@@ -173,6 +184,12 @@ Prefic to parse tree.
 \begin{DoxyReturn}{Returns}
 Operator$\ast$ 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classLogic_aa6da529591888b91829491fba631d362}\label{classLogic_aa6da529591888b91829491fba631d362}} 
+\index{Logic@{Logic}!printParseTree@{printParseTree}}
+\index{printParseTree@{printParseTree}!Logic@{Logic}}
+\doxysubsubsection{\texorpdfstring{printParseTree()}{printParseTree()}}
+{\footnotesize\ttfamily static void Logic\+::print\+Parse\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOperator}{Operator}} $\ast$}]{op,  }\item[{int}]{depth,  }\item[{int $\ast$}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

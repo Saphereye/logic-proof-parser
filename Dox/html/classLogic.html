@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LogicAssignment: Logic Class Reference</title>
+<title>Logic Assignment Documentation: Logic Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">LogicAssignment
+   <div id="projectname">Logic Assignment Documentation
    </div>
   </td>
  </tr>
@@ -119,7 +119,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a82e00b9bdf7e3f52f2613bef6bd66e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Parse Tree Val object using a dictionary of symbols and their values.  <a href="classLogic.html#a82e00b9bdf7e3f52f2613bef6bd66e8d">More...</a><br /></td></tr>
 <tr class="separator:a82e00b9bdf7e3f52f2613bef6bd66e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b55ff6163a18c9b6c0affa91977de2e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogic.html#a5b55ff6163a18c9b6c0affa91977de2e">displayParseTree</a> (<a class="el" href="classOperator.html">Operator</a> *op)</td></tr>
+<tr class="memdesc:a5b55ff6163a18c9b6c0affa91977de2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays parse tree.  <a href="classLogic.html#a5b55ff6163a18c9b6c0affa91977de2e">More...</a><br /></td></tr>
 <tr class="separator:a5b55ff6163a18c9b6c0affa91977de2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6da529591888b91829491fba631d362"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogic.html#aa6da529591888b91829491fba631d362">printParseTree</a> (<a class="el" href="classOperator.html">Operator</a> *op, int depth, int *rec)</td></tr>
+<tr class="separator:aa6da529591888b91829491fba631d362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of logic methods. </p>
@@ -237,6 +240,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Displays parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -426,6 +437,48 @@ false </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operator* </dd></dl>
+
+</div>
+</div>
+<a id="aa6da529591888b91829491fba631d362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6da529591888b91829491fba631d362">&#9670;&nbsp;</a></span>printParseTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Logic::printParseTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classOperator.html">Operator</a> *&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>rec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

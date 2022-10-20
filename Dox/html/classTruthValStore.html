@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LogicAssignment: TruthValStore Class Reference</title>
+<title>Logic Assignment Documentation: TruthValStore Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">LogicAssignment
+   <div id="projectname">Logic Assignment Documentation
    </div>
   </td>
  </tr>
@@ -90,10 +90,15 @@ $(document).ready(function(){initNavTree('classTruthValStore.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>truth val store class  
+ <a href="classTruthValStore.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="truthValStore_8h_source.html">truthValStore.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab5410d49eaf07eb5e1446aba1bf4a638"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638">TruthValStore</a> ()</td></tr>
+<tr class="separator:ab5410d49eaf07eb5e1446aba1bf4a638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8408b635d2018a0935d44ed6c289b165"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">TruthValStore</a> (string atomArray, int truthValArray)</td></tr>
 <tr class="memdesc:a8408b635d2018a0935d44ed6c289b165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Truth Val Store object.  <a href="classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165">More...</a><br /></td></tr>
 <tr class="separator:a8408b635d2018a0935d44ed6c289b165"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,10 +117,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af19f38162365e1a365c4d4785663e789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">setTruthVal</a> (char atom, bool truthVal)</td></tr>
 <tr class="memdesc:af19f38162365e1a365c4d4785663e789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the truth value of corresoponding atom in O(n)  <a href="classTruthValStore.html#af19f38162365e1a365c4d4785663e789">More...</a><br /></td></tr>
 <tr class="separator:af19f38162365e1a365c4d4785663e789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1dab5a373d65380656eeab6a37686a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#ae1dab5a373d65380656eeab6a37686a5">setTruthVal</a> (size_t index, bool truthVal)</td></tr>
+<tr class="separator:ae1dab5a373d65380656eeab6a37686a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b41f9ee3fd4a99640af3f43f7a43791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#a2b41f9ee3fd4a99640af3f43f7a43791">addAtom</a> (char atom)</td></tr>
+<tr class="separator:a2b41f9ee3fd4a99640af3f43f7a43791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6072c5933a186643ba851ea89c4269d9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#a6072c5933a186643ba851ea89c4269d9">getAtom</a> (size_t index)</td></tr>
+<tr class="separator:a6072c5933a186643ba851ea89c4269d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3ea32e495188a044c00eb9c148be81"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#a0d3ea32e495188a044c00eb9c148be81">getTruthValArray</a> ()</td></tr>
+<tr class="separator:a0d3ea32e495188a044c00eb9c148be81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b23ad51f33a83ff88ae44990476c1a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTruthValStore.html#a51b23ad51f33a83ff88ae44990476c1a">getAtomIndex</a> (char atom)</td></tr>
+<tr class="separator:a51b23ad51f33a83ff88ae44990476c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>truth val store class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab5410d49eaf07eb5e1446aba1bf4a638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5410d49eaf07eb5e1446aba1bf4a638">&#9670;&nbsp;</a></span>TruthValStore() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TruthValStore::TruthValStore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8408b635d2018a0935d44ed6c289b165"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8408b635d2018a0935d44ed6c289b165">&#9670;&nbsp;</a></span>TruthValStore() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8408b635d2018a0935d44ed6c289b165">&#9670;&nbsp;</a></span>TruthValStore() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +202,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abe0b0bde8c094bf9c72aea46f0e1260c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe0b0bde8c094bf9c72aea46f0e1260c">&#9670;&nbsp;</a></span>TruthValStore() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0b0bde8c094bf9c72aea46f0e1260c">&#9670;&nbsp;</a></span>TruthValStore() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,6 +236,58 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2b41f9ee3fd4a99640af3f43f7a43791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b41f9ee3fd4a99640af3f43f7a43791">&#9670;&nbsp;</a></span>addAtom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TruthValStore::addAtom </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>atom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6072c5933a186643ba851ea89c4269d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6072c5933a186643ba851ea89c4269d9">&#9670;&nbsp;</a></span>getAtom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char TruthValStore::getAtom </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa93136f781a901c1fb5e792a08ba121f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa93136f781a901c1fb5e792a08ba121f">&#9670;&nbsp;</a></span>getAtomArray()</h2>
 
@@ -219,6 +313,32 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the Atom Array object. </p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a id="a51b23ad51f33a83ff88ae44990476c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b23ad51f33a83ff88ae44990476c1a">&#9670;&nbsp;</a></span>getAtomIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t TruthValStore::getAtomIndex </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>atom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -259,6 +379,31 @@ false </dd></dl>
 
 </div>
 </div>
+<a id="a0d3ea32e495188a044c00eb9c148be81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3ea32e495188a044c00eb9c148be81">&#9670;&nbsp;</a></span>getTruthValArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t TruthValStore::getTruthValArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5265d28716fb30813d60e18e2b545acb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5265d28716fb30813d60e18e2b545acb">&#9670;&nbsp;</a></span>setAtomArray()</h2>
 
@@ -294,7 +439,7 @@ false </dd></dl>
 </div>
 </div>
 <a id="af19f38162365e1a365c4d4785663e789"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af19f38162365e1a365c4d4785663e789">&#9670;&nbsp;</a></span>setTruthVal()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af19f38162365e1a365c4d4785663e789">&#9670;&nbsp;</a></span>setTruthVal() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,6 +483,42 @@ false </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+</div>
+</div>
+<a id="ae1dab5a373d65380656eeab6a37686a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dab5a373d65380656eeab6a37686a5">&#9670;&nbsp;</a></span>setTruthVal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TruthValStore::setTruthVal </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>truthVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

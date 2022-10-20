@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['red_42',['RED',['../helper_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;helper.h'],['../main_8cpp.html#a8d23feea868a983c8c2b661e1e16972f',1,'RED():&#160;main.cpp']]],
-  ['reset_43',['RESET',['../helper_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;helper.h'],['../main_8cpp.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;main.cpp']]]
+  ['truthvalstore_48',['TruthValStore',['../classTruthValStore.html',1,'TruthValStore'],['../classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638',1,'TruthValStore::TruthValStore()'],['../classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165',1,'TruthValStore::TruthValStore(string atomArray, int truthValArray)'],['../classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c',1,'TruthValStore::TruthValStore(string atomArray)']]],
+  ['truthvalstore_2eh_49',['truthValStore.h',['../truthValStore_8h.html',1,'']]]
 ];

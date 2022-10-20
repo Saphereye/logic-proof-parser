@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['setatomarray_102',['setAtomArray',['../classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb',1,'TruthValStore']]],
-  ['settruthval_103',['setTruthVal',['../classTruthValStore.html#af19f38162365e1a365c4d4785663e789',1,'TruthValStore']]],
-  ['stack_104',['Stack',['../classStack.html#adaae7700876392c39fd797d685463b86',1,'Stack']]]
+  ['truthvalstore_96',['TruthValStore',['../classTruthValStore.html#ab5410d49eaf07eb5e1446aba1bf4a638',1,'TruthValStore::TruthValStore()'],['../classTruthValStore.html#a8408b635d2018a0935d44ed6c289b165',1,'TruthValStore::TruthValStore(string atomArray, int truthValArray)'],['../classTruthValStore.html#abe0b0bde8c094bf9c72aea46f0e1260c',1,'TruthValStore::TruthValStore(string atomArray)']]]
 ];

@@ -1,6 +1,10 @@
 #include <string>
 using namespace std;
 
+/**
+ * @brief truth val store class
+ * 
+ */
 class TruthValStore {
     private:
         string _atomArray = "";

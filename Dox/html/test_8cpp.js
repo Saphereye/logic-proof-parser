@@ -6,5 +6,6 @@ var test_8cpp =
     [ "testParseTreeToInfix", "test_8cpp.html#a99b09d6b51ffe37b1180cc11b6733c78", null ],
     [ "testParseTreeVal", "test_8cpp.html#ad87532fa9e69e11635e6f636b5571261", null ],
     [ "testprefixToParseTree", "test_8cpp.html#a0c7e81fee9dba5ab9df81a2490e3e951", null ],
+    [ "testPrinting", "test_8cpp.html#ad545b753ac36bdb75d947521047a0127", null ],
     [ "testValStore", "test_8cpp.html#a9bf89675bfb5f8cea1d5645ae4a69d1c", null ]
 ];

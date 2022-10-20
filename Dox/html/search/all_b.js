@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['personal_20comments_32',['Personal Comments',['../md_markdown_PersonalComments.html',1,'']]],
-  ['profiling_33',['Profiling',['../md_markdown_Profiing.html',1,'']]],
-  ['parsetreetoinfix_34',['parseTreeToInfix',['../classLogic.html#aeac16e179a2dfcf4a76f546291670428',1,'Logic']]],
-  ['peek_35',['peek',['../classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a',1,'Stack']]],
-  ['personalcomments_2emd_36',['PersonalComments.md',['../PersonalComments_8md.html',1,'']]],
-  ['pop_37',['pop',['../classStack.html#aa2ea0e8c3293648589dd734d52487408',1,'Stack']]],
-  ['precedencemap_38',['precedenceMap',['../logic_8h.html#a5bc2c665bdc86bd916ac0b2229cf3d57',1,'logic.h']]],
-  ['prefixtoparsetree_39',['prefixToParseTree',['../classLogic.html#af106176cce748456c93ff9654255fb04',1,'Logic']]],
-  ['profiing_2emd_40',['Profiing.md',['../Profiing_8md.html',1,'']]],
-  ['push_41',['push',['../classStack.html#a5a2ea647b801e0cbac7baa190f35e50c',1,'Stack']]]
+  ['setatomarray_44',['setAtomArray',['../classTruthValStore.html#a5265d28716fb30813d60e18e2b545acb',1,'TruthValStore']]],
+  ['settruthval_45',['setTruthVal',['../classTruthValStore.html#af19f38162365e1a365c4d4785663e789',1,'TruthValStore::setTruthVal(char atom, bool truthVal)'],['../classTruthValStore.html#ae1dab5a373d65380656eeab6a37686a5',1,'TruthValStore::setTruthVal(size_t index, bool truthVal)']]],
+  ['stack_46',['Stack',['../classStack.html',1,'Stack&lt; T &gt;'],['../classStack.html#adaae7700876392c39fd797d685463b86',1,'Stack::Stack()']]],
+  ['stack_2eh_47',['stack.h',['../stack_8h.html',1,'']]]
 ];
