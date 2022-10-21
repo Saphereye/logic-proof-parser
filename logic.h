@@ -27,11 +27,11 @@ int precedenceMap(char symbol) {
  */
 class Logic {
     public:
-		/**
-		 * @brief Converts infix into prefix using stack
+		 /**
+		 * @brief Task 1. Converts infix into prefix using stack.h 
 		 * 
-		 * @param infix 
-		 * @return string 
+		 * @param infix String containing infix expression of a logical sequent
+		 * @return String containing the corresponding prefix expression of the given infix form
 		 */
 		static string infixToPrefix(string infix) {
 			size_t index = infix.length() - 1;
@@ -65,23 +65,23 @@ class Logic {
 		
 		#include "operators.h"
 		/**
-		 * @brief Prefic to parse tree
+		 * @brief Task 2. Prefix to parse tree
 		 * 
-		 * @param prefix 
-		 * @return Operator* 
+		 * @param prefix String containing prefix expression of logical sequent
+		 * @return Operator* Pointer to parse tree
 		 */
 		static Operator* prefixToParseTree(string prefix) {
 			long unsigned int index = 0;
 			return calcprefixToParseTree(prefix, &index);
 		}
 		
-		/**
-		 * @brief calc Prefix to parse tree
+		 /**
+		 * @brief Task 2. Prefix to parse tree
 		 * 
-		 * @param prefix 
-		 * @return Operator* 
-		 */
-		static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
+		 * @param prefix String returned by task 1 containing prefix expression of the logical sequent
+		 * @param index Pointer to index of the prefix string expression  
+		 * @return Head of respective parse tree in each recursive call
+		 */static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
 			debug("prefix coming to calcprefixToParseTree", prefix);
 			debug("index coming to calcprefixToParseTree", *index);
 
@@ -109,7 +109,7 @@ class Logic {
 		};
 
 		/**
-		 * @brief Traverses binary tree in order and evaluates infix
+		 * @brief Task 3. Traverses binary tree in order and evaluates infix
 		 * 
 		 * @param op 
 		 * @return string 
@@ -121,11 +121,12 @@ class Logic {
 		}
 
 		/**
-		 * @brief Traverses binary tree in order and evaluates infix, but requires string pointer to write to
+		 * @brief Task 3. Traverses binary tree in order and evaluates infix
 		 * 
-		 * @param op 
-		 * @param output 
+		 * @param op Pointer to parse tree
+		 * @param output Pointer to string output which is updated to give the infix expression string in each recursive call
 		 */
+
 		static void calcparseTreeToInfix(Operator* op, string* output) {
 			if (op->isAtom()) {
 				*output += op->getSymbol();
@@ -140,10 +141,10 @@ class Logic {
 		};
 
 		/**
-		 * @brief Get the Parse Tree Height object. Performs recursive evaluation on each child in O(n).
+		 * @brief Task 4. Get the Parse Tree Height object. Performs recursive evaluation on each child in O(n).
 		 * 
-		 * @param op 
-		 * @return int 
+		 * @param op Pointer to parse tree
+		 * @return Tree height upto that particular node
 		 */
 		static int getParseTreeHeight(Operator* op) {
 			if (op->isAtom()) {
@@ -162,7 +163,7 @@ class Logic {
 		}
 
 		/**
-		 * @brief Get the Parse Tree Val object using a dictionary of symbols and their values
+		 * @brief Task 5. Get the Parse Tree Val object using a dictionary of symbols and their values
 		 * 
 		 * @param op Pointer to parse tree
 		 * @param valueMap Dictionary mappiing symbols to their truth values
@@ -193,7 +194,7 @@ class Logic {
 		/**
 		 * @brief Displays parse tree
 		 * 
-		 * @param op 
+		 * @param op Pointer to parse tree
 		 */
 		
 		static void displayParseTree(Operator* op) {
