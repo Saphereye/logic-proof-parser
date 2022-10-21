@@ -23,27 +23,16 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Logic Assignment", "index.html", [
-    [ "Personal Comments", "md_PersonalComments.html", [
-      [ "Adarsh Das", "md_PersonalComments.html#autotoc_md1", [
-        [ "Thought behind selecting C++", "md_PersonalComments.html#autotoc_md2", null ],
-        [ "Adventures With Profiling", "md_PersonalComments.html#autotoc_md3", null ],
-        [ "Thought behind Operator class", "md_PersonalComments.html#autotoc_md4", null ],
-        [ "Thoughts behind TruthValStore class", "md_PersonalComments.html#autotoc_md5", null ]
-      ] ],
-      [ "Prachi Shah", "md_PersonalComments.html#autotoc_md6", null ],
-      [ "Maheswar Bora", "md_PersonalComments.html#autotoc_md7", null ],
-      [ "Anushka Agnihotri", "md_PersonalComments.html#autotoc_md8", null ]
-    ] ],
     [ "Profiling", "md_Profiling.html", [
-      [ "Goal", "md_Profiling.html#autotoc_md10", null ],
-      [ "Tools", "md_Profiling.html#autotoc_md11", null ],
-      [ "Input", "md_Profiling.html#autotoc_md12", null ],
-      [ "Execution", "md_Profiling.html#autotoc_md13", null ],
-      [ "Profiler Output", "md_Profiling.html#autotoc_md14", [
-        [ "Call Table", "md_Profiling.html#autotoc_md15", null ],
-        [ "Call Graph", "md_Profiling.html#autotoc_md16", null ]
+      [ "Goal", "md_Profiling.html#autotoc_md1", null ],
+      [ "Tools", "md_Profiling.html#autotoc_md2", null ],
+      [ "Input", "md_Profiling.html#autotoc_md3", null ],
+      [ "Execution", "md_Profiling.html#autotoc_md4", null ],
+      [ "Profiler Output", "md_Profiling.html#autotoc_md5", [
+        [ "Call Table", "md_Profiling.html#autotoc_md6", null ],
+        [ "Call Graph", "md_Profiling.html#autotoc_md7", null ]
       ] ],
-      [ "Analysis", "md_Profiling.html#autotoc_md17", null ]
+      [ "Analysis", "md_Profiling.html#autotoc_md8", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

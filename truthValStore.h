@@ -94,7 +94,12 @@ class TruthValStore {
             _truthValArray = (_truthValArray & ~mask) | ((truthVal << index) & mask);
         }
     
-
+        /**
+         * @brief Set the Truth Val object
+         * 
+         * @param index Index of respective atom
+         * @param truthVal Truth value of atom  
+         */
         void setTruthVal(size_t index, bool truthVal) {
             // Make mask to help replace
             size_t mask = 1 << index;
@@ -122,10 +127,21 @@ class TruthValStore {
             return _atomArray[index];
         }
 
+        /**
+         * @brief Getter for truth value array
+         * 
+         * @return size_t 
+         */
         size_t getTruthValArray() {
             return _truthValArray;
         }
 
+        /**
+         * @brief Returns index of atom in truth value array
+         * 
+         * @param atom 
+         * @return size_t 
+         */
         size_t getAtomIndex(char atom) {
             return _atomArray.find(atom);
         }

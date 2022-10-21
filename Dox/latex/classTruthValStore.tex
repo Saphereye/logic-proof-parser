@@ -27,15 +27,15 @@ bool \mbox{\hyperlink{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}{get\
 void \mbox{\hyperlink{classTruthValStore_af19f38162365e1a365c4d4785663e789}{set\+Truth\+Val}} (char atom, bool truth\+Val)
 \begin{DoxyCompactList}\small\item\em Set the truth value of corresoponding atom in O(n) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTruthValStore_ae1dab5a373d65380656eeab6a37686a5}{set\+Truth\+Val}} (size\+\_\+t index, bool truth\+Val)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the Truth Val object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTruthValStore_a2b41f9ee3fd4a99640af3f43f7a43791}{add\+Atom}} (char atom)
 \begin{DoxyCompactList}\small\item\em Function to add propositional atom to the string. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{classTruthValStore_a6072c5933a186643ba851ea89c4269d9}{get\+Atom}} (size\+\_\+t index)
 \begin{DoxyCompactList}\small\item\em Function to find propositional atom at required index in the string. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}{get\+Truth\+Val\+Array}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for truth value array. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTruthValStore_a51b23ad51f33a83ff88ae44990476c1a}{get\+Atom\+Index}} (char atom)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns index of atom in truth value array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -134,6 +134,18 @@ String of propositional atoms
 \doxysubsubsection{\texorpdfstring{getAtomIndex()}{getAtomIndex()}}
 {\footnotesize\ttfamily size\+\_\+t Truth\+Val\+Store\+::get\+Atom\+Index (\begin{DoxyParamCaption}\item[{char}]{atom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Returns index of atom in truth value array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}\label{classTruthValStore_ae97fd169e9c18dd0878cc712aec16040}} 
 \index{TruthValStore@{TruthValStore}!getTruthVal@{getTruthVal}}
 \index{getTruthVal@{getTruthVal}!TruthValStore@{TruthValStore}}
@@ -164,6 +176,13 @@ Return the nth element of truth\+Val\+Array from the right where n = index\mbox{
 \doxysubsubsection{\texorpdfstring{getTruthValArray()}{getTruthValArray()}}
 {\footnotesize\ttfamily size\+\_\+t Truth\+Val\+Store\+::get\+Truth\+Val\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Getter for truth value array. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}\label{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}} 
 \index{TruthValStore@{TruthValStore}!setAtomArray@{setAtomArray}}
 \index{setAtomArray@{setAtomArray}!TruthValStore@{TruthValStore}}
@@ -207,6 +226,18 @@ false
 \doxysubsubsection{\texorpdfstring{setTruthVal()}{setTruthVal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Truth\+Val\+Store\+::set\+Truth\+Val (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{bool}]{truth\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Set the Truth Val object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of respective atom \\
+\hline
+{\em truth\+Val} & Truth value of atom ~\newline
+ \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

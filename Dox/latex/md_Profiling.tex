@@ -1,8 +1,8 @@
-\hypertarget{md_Profiling_autotoc_md10}{}\doxysection{Goal}\label{md_Profiling_autotoc_md10}
+\hypertarget{md_Profiling_autotoc_md1}{}\doxysection{Goal}\label{md_Profiling_autotoc_md1}
 The of this exercise is to optimise the code but also keeping in mind the size. A popular method of compiling usually is to replace a function call with body of function. But this can lead to large files if the function has been called numerous times.
 
-Using above mentioned techniques, {\ttfamily g++} is able to compile our {\ttfamily C++} code. \hypertarget{md_Profiling_autotoc_md11}{}\doxysection{Tools}\label{md_Profiling_autotoc_md11}
-We have used {\ttfamily gprof} as our profiler. {\ttfamily gprof} is a profiling program which collects and arranges statistics of the program. \hypertarget{md_Profiling_autotoc_md12}{}\doxysection{Input}\label{md_Profiling_autotoc_md12}
+Using above mentioned techniques, {\ttfamily g++} is able to compile our {\ttfamily C++} code. \hypertarget{md_Profiling_autotoc_md2}{}\doxysection{Tools}\label{md_Profiling_autotoc_md2}
+We have used {\ttfamily gprof} as our profiler. {\ttfamily gprof} is a profiling program which collects and arranges statistics of the program. \hypertarget{md_Profiling_autotoc_md3}{}\doxysection{Input}\label{md_Profiling_autotoc_md3}
 A randomised input({\ttfamily 1000} character long) was generated, each time using a small python script 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{import os}
@@ -20,13 +20,13 @@ A randomised input({\ttfamily 1000} character long) was generated, each time usi
 \end{DoxyCode}
 
 
-which was later written into a text file using {\ttfamily python3 $<$name-\/of-\/above-\/file$>$ $>$ $<$output text-\/file$>$} in bash. \hypertarget{md_Profiling_autotoc_md13}{}\doxysection{Execution}\label{md_Profiling_autotoc_md13}
+which was later written into a text file using {\ttfamily python3 $<$name-\/of-\/above-\/file$>$ $>$ $<$output text-\/file$>$} in bash. \hypertarget{md_Profiling_autotoc_md4}{}\doxysection{Execution}\label{md_Profiling_autotoc_md4}
 The program was executed with the {\ttfamily -\/Os -\/Ofast} as the final execution.
 
 The {\ttfamily -\/Os} flag optimizes the size of the code. It disables some aggresive optimizations done by {\ttfamily -\/Ofast} to save memory. For example replacing with body of code instead of a call function.
 
-The program was run completely i.\+e. all the options in the menu were executed once and all truth values were given {\ttfamily 1})\hypertarget{md_Profiling_autotoc_md14}{}\doxysection{Profiler Output}\label{md_Profiling_autotoc_md14}
-\hypertarget{md_Profiling_autotoc_md15}{}\doxysubsection{Call Table}\label{md_Profiling_autotoc_md15}
+The program was run completely i.\+e. all the options in the menu were executed once and all truth values were given {\ttfamily 1})\hypertarget{md_Profiling_autotoc_md5}{}\doxysection{Profiler Output}\label{md_Profiling_autotoc_md5}
+\hypertarget{md_Profiling_autotoc_md6}{}\doxysubsection{Call Table}\label{md_Profiling_autotoc_md6}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
 \hline
@@ -42,6 +42,6 @@ The program was run completely i.\+e. all the options in the menu were executed 
 4 &0.\+00 &0.\+00 &Logic\+::calcprefix\+To\+Parse\+Tree(std\+::\+\_\+\+\_\+cxx11\+::basic\+\_\+string, std\+::allocator $>$, unsigned long$\ast$)  \\\cline{1-4}
 1 &0.\+00 &0.\+00 &\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+\_\+sub\+\_\+\+I\+\_\+is\+Debug\+Mode  \\\cline{1-4}
 \end{longtabu}
-\hypertarget{md_Profiling_autotoc_md16}{}\doxysubsection{Call Graph}\label{md_Profiling_autotoc_md16}
-\href{https://mermaid.live/edit\#pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q}{\texttt{ }} \hypertarget{md_Profiling_autotoc_md17}{}\doxysection{Analysis}\label{md_Profiling_autotoc_md17}
+\hypertarget{md_Profiling_autotoc_md7}{}\doxysubsection{Call Graph}\label{md_Profiling_autotoc_md7}
+\href{https://mermaid.live/edit\#pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q}{\texttt{ }} \hypertarget{md_Profiling_autotoc_md8}{}\doxysection{Analysis}\label{md_Profiling_autotoc_md8}
 All the functions after the optimisation are user made function. This points us to the fact that we can improve the efficiency of the program by improving the functions given in the table. 
