@@ -10,10 +10,11 @@ class Operator {
 
     public:
 		/**
-		 * @brief Construct a new Operator object
+		 * @brief Constructor of new Operator object in case of propositional atom which has no children
 		 * 
-		 * @param sym 
+		 * @param sym Can be a propositional atom or a binary or unary operator 
 		 */
+
 		Operator(char sym) {
 			_symbol = sym;
 			_leftChild = nullptr;
@@ -21,10 +22,10 @@ class Operator {
 		}
 
 		/**
-		 * @brief Construct a new Operator object
+		 * @brief Constructor of new Operator object used in case of negation operator which has one child (one propositional atom)
 		 * 
-		 * @param sym 
-		 * @param rChild 
+		 * @param sym Negation operator
+		 * @param rChild Propositional atom whose negation is taken 
 		 */
 		Operator(char sym, Operator* rChild) {
 			_symbol = sym;
@@ -33,11 +34,11 @@ class Operator {
 		}
 
 		/**
-		 * @brief Construct a new Operator object
+		 * @brief Constructor of new Operator object used in case of binary operators which have both left and right children (two propositional atoms )
 		 * 
-		 * @param sym 
-		 * @param lChild 
-		 * @param rChild 
+		 * @param sym Binary operators
+		 * @param lChild Pointer to left child which can be either propositional atom or other operator
+		 * @param rChild Pointer to right child which can be either propositional atom or other operator
 		 */
 		Operator(char sym, Operator* lChild, Operator* rChild) {
 			_symbol = sym;
@@ -48,7 +49,7 @@ class Operator {
 		/**
 		 * @brief Get the Left Child object
 		 * 
-		 * @return Operator* 
+		 * @return Operator* Left child object
 		 */
 		Operator* getLeftChild() {
 			return _leftChild;
@@ -57,7 +58,7 @@ class Operator {
 		/**
 		 * @brief Get the Right Child object
 		 * 
-		 * @return Operator* 
+		 * @return Operator* Right child object
 		 */
 		Operator* getRightChild() {
 			return _rightChild;
@@ -75,7 +76,7 @@ class Operator {
 		/**
 		 * @brief Adds left child
 		 * 
-		 * @param child 
+		 * @param child Pointer to operator object
 		 */
 		void addLeftChild(Operator* child) {
 			_leftChild = child;
@@ -84,7 +85,7 @@ class Operator {
 		/**
 		 * @brief Adds right child
 		 * 
-		 * @param child 
+		 * @param child Pointer to operator object
 		 */
 		void addRightChild(Operator* child) {
 			_rightChild = child;
@@ -93,8 +94,8 @@ class Operator {
 		/**
 		 * @brief Adds both children simultaneosly
 		 * 
-		 * @param lChild 
-		 * @param rChild 
+		 * @param lChild Pointer to operator object
+		 * @param rChild Pointer to operator object
 		 */
 		void addChildren(Operator* lChild, Operator* rChild) {
 			_leftChild = lChild;
@@ -102,20 +103,20 @@ class Operator {
 		}
 
 		/**
-		 * @brief Returns true if self is propositional atom
+		 * @brief To check if it is propositional atom
 		 * 
-		 * @return true 
-		 * @return false 
+		 * @return true If it is propositional atom
+		 * @return false If it is not a propositional atom 
 		 */
 		bool isAtom() {
 			return (_leftChild == nullptr) && (_rightChild == nullptr);
 		}
 
 		/**
-		 * @brief Returns if it's a unary operator, i.e. is of the form <none> <operator> <operand>, unlike common operators <left operand> <operator> <right operand>
+		 * @brief Checks if it's a unary operator, i.e. is of the form <none> <operator> <operand>, unlike common operators <left operand> <operator> <right operand>
 		 * 
-		 * @return true 
-		 * @return false 
+		 * @return true In case it is unary operator
+		 * @return false In case it is unary operator
 		 */
 		bool isUnaryOperator() {
 			return (_leftChild == nullptr) && (_rightChild != nullptr);
