@@ -78,7 +78,7 @@ class Stack {
         };
 
         /**
-         * @brief Returns true if stack ios full
+         * @brief Returns true if stack is full
          * 
          * @return true 
          * @return false 
