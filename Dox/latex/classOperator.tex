@@ -13,11 +13,11 @@ Node of parse tree.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classOperator_a9d1bb447e3215a4b927dd4c5fc932ae6}{Operator}} (char sym)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object in case of propositional atom which has no children. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classOperator_a229d95b80e8f12cc26fbd9c6685e77aa}{Operator}} (char sym, \mbox{\hyperlink{classOperator}{Operator}} $\ast$r\+Child)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object used in case of negation operator which has one child (one propositional atom) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classOperator_ae85dc366ddd292823069c29225780698}{Operator}} (char sym, \mbox{\hyperlink{classOperator}{Operator}} $\ast$l\+Child, \mbox{\hyperlink{classOperator}{Operator}} $\ast$r\+Child)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object used in case of binary operators which have both left and right children (two propositional atoms ) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classOperator_af0bc63ef2feef7745e0e116c89ad93d6}{get\+Left\+Child}} ()
 \begin{DoxyCompactList}\small\item\em Get the Left Child object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classOperator_a0183eab9f025e54da6529bd1cd887b73}{get\+Right\+Child}} ()
@@ -31,9 +31,9 @@ void \mbox{\hyperlink{classOperator_a0972a4cd344d791b1468351576e9d80f}{add\+Righ
 void \mbox{\hyperlink{classOperator_ac5a08c8ef4437a14d7be49b0aa908307}{add\+Children}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$l\+Child, \mbox{\hyperlink{classOperator}{Operator}} $\ast$r\+Child)
 \begin{DoxyCompactList}\small\item\em Adds both children simultaneosly. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classOperator_a094b0166b5f27f1324757648a94dbff5}{is\+Atom}} ()
-\begin{DoxyCompactList}\small\item\em Returns true if self is propositional atom. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em To check if it is propositional atom. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classOperator_a19312e15f37b303f7f89308ca0f4e229}{is\+Unary\+Operator}} ()
-\begin{DoxyCompactList}\small\item\em Returns if it\textquotesingle{}s a unary operator, i.\+e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if it\textquotesingle{}s a unary operator, i.\+e. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,11 +50,11 @@ Contains a symbol, pointer to left child, poitner to right child
 
 
 
-Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. 
+Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object in case of propositional atom which has no children. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em sym} & \\
+{\em sym} & Can be a propositional atom or a binary or unary operator \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOperator_a229d95b80e8f12cc26fbd9c6685e77aa}\label{classOperator_a229d95b80e8f12cc26fbd9c6685e77aa}} 
@@ -65,13 +65,13 @@ Construct a new \mbox{\hyperlink{classOperator}{Operator}} object.
 
 
 
-Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. 
+Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object used in case of negation operator which has one child (one propositional atom) 
 
 
 \begin{DoxyParams}{Parameters}
-{\em sym} & \\
+{\em sym} & Negation operator \\
 \hline
-{\em r\+Child} & \\
+{\em r\+Child} & Propositional atom whose negation is taken \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOperator_ae85dc366ddd292823069c29225780698}\label{classOperator_ae85dc366ddd292823069c29225780698}} 
@@ -82,15 +82,15 @@ Construct a new \mbox{\hyperlink{classOperator}{Operator}} object.
 
 
 
-Construct a new \mbox{\hyperlink{classOperator}{Operator}} object. 
+Constructor of new \mbox{\hyperlink{classOperator}{Operator}} object used in case of binary operators which have both left and right children (two propositional atoms ) 
 
 
 \begin{DoxyParams}{Parameters}
-{\em sym} & \\
+{\em sym} & Binary operators \\
 \hline
-{\em l\+Child} & \\
+{\em l\+Child} & Pointer to left child which can be either propositional atom or other operator \\
 \hline
-{\em r\+Child} & \\
+{\em r\+Child} & Pointer to right child which can be either propositional atom or other operator \\
 \hline
 \end{DoxyParams}
 
@@ -108,9 +108,9 @@ Adds both children simultaneosly.
 
 
 \begin{DoxyParams}{Parameters}
-{\em l\+Child} & \\
+{\em l\+Child} & Pointer to operator object \\
 \hline
-{\em r\+Child} & \\
+{\em r\+Child} & Pointer to operator object \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOperator_a13629606c1c0f28c6f930292244ac7bf}\label{classOperator_a13629606c1c0f28c6f930292244ac7bf}} 
@@ -125,7 +125,7 @@ Adds left child.
 
 
 \begin{DoxyParams}{Parameters}
-{\em child} & \\
+{\em child} & Pointer to operator object \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOperator_a0972a4cd344d791b1468351576e9d80f}\label{classOperator_a0972a4cd344d791b1468351576e9d80f}} 
@@ -140,7 +140,7 @@ Adds right child.
 
 
 \begin{DoxyParams}{Parameters}
-{\em child} & \\
+{\em child} & Pointer to operator object \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOperator_af0bc63ef2feef7745e0e116c89ad93d6}\label{classOperator_af0bc63ef2feef7745e0e116c89ad93d6}} 
@@ -154,7 +154,7 @@ Adds right child.
 Get the Left Child object. 
 
 \begin{DoxyReturn}{Returns}
-Operator$\ast$ 
+Operator$\ast$ Left child object 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOperator_a0183eab9f025e54da6529bd1cd887b73}\label{classOperator_a0183eab9f025e54da6529bd1cd887b73}} 
 \index{Operator@{Operator}!getRightChild@{getRightChild}}
@@ -167,7 +167,7 @@ Operator$\ast$
 Get the Right Child object. 
 
 \begin{DoxyReturn}{Returns}
-Operator$\ast$ 
+Operator$\ast$ Right child object 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOperator_a0bc70e32492c38d2cb8f53af82c7d872}\label{classOperator_a0bc70e32492c38d2cb8f53af82c7d872}} 
 \index{Operator@{Operator}!getSymbol@{getSymbol}}
@@ -190,12 +190,12 @@ char
 
 
 
-Returns true if self is propositional atom. 
+To check if it is propositional atom. 
 
 \begin{DoxyReturn}{Returns}
-true 
+true If it is propositional atom 
 
-false 
+false If it is not a propositional atom 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOperator_a19312e15f37b303f7f89308ca0f4e229}\label{classOperator_a19312e15f37b303f7f89308ca0f4e229}} 
 \index{Operator@{Operator}!isUnaryOperator@{isUnaryOperator}}
@@ -205,14 +205,14 @@ false
 
 
 
-Returns if it\textquotesingle{}s a unary operator, i.\+e. 
+Checks if it\textquotesingle{}s a unary operator, i.\+e. 
 
 is of the form $<$none$>$ $<$operator$>$ $<$operand$>$, unlike common operators $<$left operand$>$ $<$operator$>$ $<$right operand$>$
 
 \begin{DoxyReturn}{Returns}
-true 
+true In case it is unary operator 
 
-false 
+false In case it is unary operator 
 \end{DoxyReturn}
 
 

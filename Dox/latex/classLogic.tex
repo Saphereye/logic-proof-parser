@@ -13,19 +13,19 @@ Implementation of logic methods.
 \begin{DoxyCompactItemize}
 \item 
 static string \mbox{\hyperlink{classLogic_a9b397f8e92ada8dadcd3ddf52d82f552}{infix\+To\+Prefix}} (string infix)
-\begin{DoxyCompactList}\small\item\em Converts infix into prefix using stack. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 1. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classLogic_af106176cce748456c93ff9654255fb04}{prefix\+To\+Parse\+Tree}} (string prefix)
-\begin{DoxyCompactList}\small\item\em Prefic to parse tree. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 2. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classOperator}{Operator}} $\ast$ \mbox{\hyperlink{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}{calcprefix\+To\+Parse\+Tree}} (string prefix, long unsigned int $\ast$index)
-\begin{DoxyCompactList}\small\item\em calc Prefix to parse tree \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 2. \end{DoxyCompactList}\item 
 static string \mbox{\hyperlink{classLogic_aeac16e179a2dfcf4a76f546291670428}{parse\+Tree\+To\+Infix}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
-\begin{DoxyCompactList}\small\item\em Traverses binary tree in order and evaluates infix. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 3. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classLogic_a57bfe3e96789275045a98503c484e2b6}{calcparse\+Tree\+To\+Infix}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, string $\ast$output)
-\begin{DoxyCompactList}\small\item\em Traverses binary tree in order and evaluates infix, but requires string pointer to write to. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 3. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}{get\+Parse\+Tree\+Height}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
-\begin{DoxyCompactList}\small\item\em Get the Parse Tree Height object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 4. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}{get\+Parse\+Tree\+Val}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, \mbox{\hyperlink{classTruthValStore}{Truth\+Val\+Store}} value\+Map)
-\begin{DoxyCompactList}\small\item\em Get the Parse Tree Val object using a dictionary of symbols and their values. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Task 5. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}{display\+Parse\+Tree}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op)
 \begin{DoxyCompactList}\small\item\em Displays parse tree. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classLogic_aa6da529591888b91829491fba631d362}{print\+Parse\+Tree}} (\mbox{\hyperlink{classOperator}{Operator}} $\ast$op, int depth, int $\ast$rec)
@@ -46,13 +46,15 @@ Implementation of logic methods.
 
 
 
-Traverses binary tree in order and evaluates infix, but requires string pointer to write to. 
+Task 3. 
+
+Traverses binary tree in order and evaluates infix
 
 
 \begin{DoxyParams}{Parameters}
-{\em op} & \\
+{\em op} & Pointer to parse tree \\
 \hline
-{\em output} & \\
+{\em output} & Pointer to string output which is updated to give the infix expression string in each recursive call \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}\label{classLogic_a5f153fb2f3569645f7c1f12f34dd9656}} 
@@ -63,15 +65,20 @@ Traverses binary tree in order and evaluates infix, but requires string pointer 
 
 
 
-calc Prefix to parse tree 
+Task 2. 
+
+Prefix to parse tree
 
 
 \begin{DoxyParams}{Parameters}
-{\em prefix} & \\
+{\em prefix} & String returned by task 1 containing prefix expression of the logical sequent \\
+\hline
+{\em index} & Pointer to index of the prefix string expression ~\newline
+ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Operator$\ast$ 
+Head of respective parse tree in each recursive call 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}\label{classLogic_a5b55ff6163a18c9b6c0affa91977de2e}} 
 \index{Logic@{Logic}!displayParseTree@{displayParseTree}}
@@ -85,7 +92,7 @@ Displays parse tree.
 
 
 \begin{DoxyParams}{Parameters}
-{\em op} & \\
+{\em op} & Pointer to parse tree \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}\label{classLogic_a0912fcf6c1c67d7317af82cdb39b1774}} 
@@ -96,17 +103,17 @@ Displays parse tree.
 
 
 
-Get the Parse Tree Height object. 
+Task 4. 
 
-Performs recursive evaluation on each child in O(n).
+Get the Parse Tree Height object. Performs recursive evaluation on each child in O(n).
 
 
 \begin{DoxyParams}{Parameters}
-{\em op} & \\
+{\em op} & Pointer to parse tree \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-int 
+Tree height upto that particular node 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}\label{classLogic_a82e00b9bdf7e3f52f2613bef6bd66e8d}} 
 \index{Logic@{Logic}!getParseTreeVal@{getParseTreeVal}}
@@ -116,7 +123,9 @@ int
 
 
 
-Get the Parse Tree Val object using a dictionary of symbols and their values. 
+Task 5. 
+
+Get the Parse Tree Val object using a dictionary of symbols and their values
 
 
 \begin{DoxyParams}{Parameters}
@@ -138,15 +147,17 @@ false
 
 
 
-Converts infix into prefix using stack. 
+Task 1. 
+
+Converts infix into prefix using \mbox{\hyperlink{stack_8h}{stack.\+h}}
 
 
 \begin{DoxyParams}{Parameters}
-{\em infix} & \\
+{\em infix} & String containing infix expression of a logical sequent \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-string 
+String containing the corresponding prefix expression of the given infix form 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classLogic_aeac16e179a2dfcf4a76f546291670428}\label{classLogic_aeac16e179a2dfcf4a76f546291670428}} 
 \index{Logic@{Logic}!parseTreeToInfix@{parseTreeToInfix}}
@@ -156,7 +167,9 @@ string
 
 
 
-Traverses binary tree in order and evaluates infix. 
+Task 3. 
+
+Traverses binary tree in order and evaluates infix
 
 
 \begin{DoxyParams}{Parameters}
@@ -174,15 +187,17 @@ string
 
 
 
-Prefic to parse tree. 
+Task 2. 
+
+Prefix to parse tree
 
 
 \begin{DoxyParams}{Parameters}
-{\em prefix} & \\
+{\em prefix} & String containing prefix expression of logical sequent \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Operator$\ast$ 
+Operator$\ast$ Pointer to parse tree 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classLogic_aa6da529591888b91829491fba631d362}\label{classLogic_aa6da529591888b91829491fba631d362}} 
 \index{Logic@{Logic}!printParseTree@{printParseTree}}

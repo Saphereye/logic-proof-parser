@@ -2,7 +2,7 @@
 \label{classTruthValStore}\index{TruthValStore@{TruthValStore}}
 
 
-truth val store class  
+Contains parameters and methods for calculating the truth value of the propositional logic formula in task 5.  
 
 
 
@@ -15,9 +15,9 @@ truth val store class
 \mbox{\hyperlink{classTruthValStore_ab5410d49eaf07eb5e1446aba1bf4a638}{Truth\+Val\+Store}} ()
 \item 
 \mbox{\hyperlink{classTruthValStore_a8408b635d2018a0935d44ed6c289b165}{Truth\+Val\+Store}} (string atom\+Array, int truth\+Val\+Array)
-\begin{DoxyCompactList}\small\item\em Construct a new Truth Val Store object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Truth Val Store object(using two parameters) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}{Truth\+Val\+Store}} (string atom\+Array)
-\begin{DoxyCompactList}\small\item\em Construct a new Truth Val Store object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Truth Val store object(using one parameter) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTruthValStore_a5265d28716fb30813d60e18e2b545acb}{set\+Atom\+Array}} (string atom\+Array)
 \begin{DoxyCompactList}\small\item\em Set the Atom Array object. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}{get\+Atom\+Array}} ()
@@ -29,9 +29,9 @@ void \mbox{\hyperlink{classTruthValStore_af19f38162365e1a365c4d4785663e789}{set\
 void \mbox{\hyperlink{classTruthValStore_ae1dab5a373d65380656eeab6a37686a5}{set\+Truth\+Val}} (size\+\_\+t index, bool truth\+Val)
 \item 
 void \mbox{\hyperlink{classTruthValStore_a2b41f9ee3fd4a99640af3f43f7a43791}{add\+Atom}} (char atom)
-\item 
+\begin{DoxyCompactList}\small\item\em Function to add propositional atom to the string. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{classTruthValStore_a6072c5933a186643ba851ea89c4269d9}{get\+Atom}} (size\+\_\+t index)
-\item 
+\begin{DoxyCompactList}\small\item\em Function to find propositional atom at required index in the string. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}{get\+Truth\+Val\+Array}} ()
 \item 
 size\+\_\+t \mbox{\hyperlink{classTruthValStore_a51b23ad51f33a83ff88ae44990476c1a}{get\+Atom\+Index}} (char atom)
@@ -39,7 +39,7 @@ size\+\_\+t \mbox{\hyperlink{classTruthValStore_a51b23ad51f33a83ff88ae44990476c1
 
 
 \doxysubsection{Detailed Description}
-truth val store class 
+Contains parameters and methods for calculating the truth value of the propositional logic formula in task 5. 
 
 
 
@@ -58,13 +58,13 @@ truth val store class
 
 
 
-Construct a new Truth Val Store object. 
+Construct a new Truth Val Store object(using two parameters) 
 
 
 \begin{DoxyParams}{Parameters}
-{\em atom\+Array} & \\
+{\em atom\+Array} & It contains the string of propositional atoms only \\
 \hline
-{\em truth\+Val\+Array} & \\
+{\em truth\+Val\+Array} & It contains the corresponding truth values \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}\label{classTruthValStore_abe0b0bde8c094bf9c72aea46f0e1260c}} 
@@ -75,11 +75,11 @@ Construct a new Truth Val Store object.
 
 
 
-Construct a new Truth Val Store object. 
+Construct a new Truth Val store object(using one parameter) 
 
 
 \begin{DoxyParams}{Parameters}
-{\em atom\+Array} & \\
+{\em atom\+Array} & It contains the string of propositional atoms only \\
 \hline
 \end{DoxyParams}
 
@@ -91,12 +91,30 @@ Construct a new Truth Val Store object.
 \doxysubsubsection{\texorpdfstring{addAtom()}{addAtom()}}
 {\footnotesize\ttfamily void Truth\+Val\+Store\+::add\+Atom (\begin{DoxyParamCaption}\item[{char}]{atom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Function to add propositional atom to the string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atom} & Propositional atom \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTruthValStore_a6072c5933a186643ba851ea89c4269d9}\label{classTruthValStore_a6072c5933a186643ba851ea89c4269d9}} 
 \index{TruthValStore@{TruthValStore}!getAtom@{getAtom}}
 \index{getAtom@{getAtom}!TruthValStore@{TruthValStore}}
 \doxysubsubsection{\texorpdfstring{getAtom()}{getAtom()}}
 {\footnotesize\ttfamily char Truth\+Val\+Store\+::get\+Atom (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Function to find propositional atom at required index in the string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & index \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}\label{classTruthValStore_aa93136f781a901c1fb5e792a08ba121f}} 
 \index{TruthValStore@{TruthValStore}!getAtomArray@{getAtomArray}}
 \index{getAtomArray@{getAtomArray}!TruthValStore@{TruthValStore}}
@@ -108,7 +126,7 @@ Construct a new Truth Val Store object.
 Get the Atom Array object. 
 
 \begin{DoxyReturn}{Returns}
-string 
+String of propositional atoms 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTruthValStore_a51b23ad51f33a83ff88ae44990476c1a}\label{classTruthValStore_a51b23ad51f33a83ff88ae44990476c1a}} 
 \index{TruthValStore@{TruthValStore}!getAtomIndex@{getAtomIndex}}
@@ -128,7 +146,7 @@ Get the truth value of corresoponding atom in O(n)
 
 
 \begin{DoxyParams}{Parameters}
-{\em atom} & \\
+{\em atom} & Propositional atom \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -136,7 +154,11 @@ true
 
 false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}\label{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}} 
+Get index of atom in atom array
+
+All cases where atom is not present
+
+Return the nth element of truth\+Val\+Array from the right where n = index\mbox{\Hypertarget{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}\label{classTruthValStore_a0d3ea32e495188a044c00eb9c148be81}} 
 \index{TruthValStore@{TruthValStore}!getTruthValArray@{getTruthValArray}}
 \index{getTruthValArray@{getTruthValArray}!TruthValStore@{TruthValStore}}
 \doxysubsubsection{\texorpdfstring{getTruthValArray()}{getTruthValArray()}}
@@ -154,7 +176,7 @@ Set the Atom Array object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em atom\+Array} & \\
+{\em atom\+Array} & It contains the string of propositional atoms only \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classTruthValStore_af19f38162365e1a365c4d4785663e789}\label{classTruthValStore_af19f38162365e1a365c4d4785663e789}} 
@@ -169,9 +191,9 @@ Set the truth value of corresoponding atom in O(n)
 
 
 \begin{DoxyParams}{Parameters}
-{\em atom} & \\
+{\em atom} & Propositional atom \\
 \hline
-{\em truth\+Val} & \\
+{\em truth\+Val} & Truth value of propositional atom \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

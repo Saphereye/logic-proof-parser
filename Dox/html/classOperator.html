@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Logic Assignment Documentation: Operator Class Reference</title>
+<title>Logic Assignment: Operator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Logic Assignment Documentation
+   <div id="projectname">Logic Assignment
    </div>
+   <div id="projectbrief">Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -98,13 +99,13 @@ $(document).ready(function(){initNavTree('classOperator.html',''); initResizable
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d1bb447e3215a4b927dd4c5fc932ae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">Operator</a> (char sym)</td></tr>
-<tr class="memdesc:a9d1bb447e3215a4b927dd4c5fc932ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object.  <a href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">More...</a><br /></td></tr>
+<tr class="memdesc:a9d1bb447e3215a4b927dd4c5fc932ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object in case of propositional atom which has no children.  <a href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">More...</a><br /></td></tr>
 <tr class="separator:a9d1bb447e3215a4b927dd4c5fc932ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229d95b80e8f12cc26fbd9c6685e77aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">Operator</a> (char sym, <a class="el" href="classOperator.html">Operator</a> *rChild)</td></tr>
-<tr class="memdesc:a229d95b80e8f12cc26fbd9c6685e77aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object.  <a href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">More...</a><br /></td></tr>
+<tr class="memdesc:a229d95b80e8f12cc26fbd9c6685e77aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object used in case of negation operator which has one child (one propositional atom)  <a href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">More...</a><br /></td></tr>
 <tr class="separator:a229d95b80e8f12cc26fbd9c6685e77aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85dc366ddd292823069c29225780698"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#ae85dc366ddd292823069c29225780698">Operator</a> (char sym, <a class="el" href="classOperator.html">Operator</a> *lChild, <a class="el" href="classOperator.html">Operator</a> *rChild)</td></tr>
-<tr class="memdesc:ae85dc366ddd292823069c29225780698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object.  <a href="classOperator.html#ae85dc366ddd292823069c29225780698">More...</a><br /></td></tr>
+<tr class="memdesc:ae85dc366ddd292823069c29225780698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object used in case of binary operators which have both left and right children (two propositional atoms )  <a href="classOperator.html#ae85dc366ddd292823069c29225780698">More...</a><br /></td></tr>
 <tr class="separator:ae85dc366ddd292823069c29225780698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0bc63ef2feef7745e0e116c89ad93d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOperator.html">Operator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">getLeftChild</a> ()</td></tr>
 <tr class="memdesc:af0bc63ef2feef7745e0e116c89ad93d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Left Child object.  <a href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">More...</a><br /></td></tr>
@@ -125,10 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac5a08c8ef4437a14d7be49b0aa908307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds both children simultaneosly.  <a href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">More...</a><br /></td></tr>
 <tr class="separator:ac5a08c8ef4437a14d7be49b0aa908307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a094b0166b5f27f1324757648a94dbff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">isAtom</a> ()</td></tr>
-<tr class="memdesc:a094b0166b5f27f1324757648a94dbff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if self is propositional atom.  <a href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">More...</a><br /></td></tr>
+<tr class="memdesc:a094b0166b5f27f1324757648a94dbff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check if it is propositional atom.  <a href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">More...</a><br /></td></tr>
 <tr class="separator:a094b0166b5f27f1324757648a94dbff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19312e15f37b303f7f89308ca0f4e229"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">isUnaryOperator</a> ()</td></tr>
-<tr class="memdesc:a19312e15f37b303f7f89308ca0f4e229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if it's a unary operator, i.e.  <a href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">More...</a><br /></td></tr>
+<tr class="memdesc:a19312e15f37b303f7f89308ca0f4e229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if it's a unary operator, i.e.  <a href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">More...</a><br /></td></tr>
 <tr class="separator:a19312e15f37b303f7f89308ca0f4e229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -159,10 +160,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object. </p>
+<p>Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object in case of propositional atom which has no children. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sym</td><td></td></tr>
+    <tr><td class="paramname">sym</td><td>Can be a propositional atom or a binary or unary operator </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,11 +204,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object. </p>
+<p>Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object used in case of negation operator which has one child (one propositional atom) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sym</td><td></td></tr>
-    <tr><td class="paramname">rChild</td><td></td></tr>
+    <tr><td class="paramname">sym</td><td>Negation operator </td></tr>
+    <tr><td class="paramname">rChild</td><td>Propositional atom whose negation is taken </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,12 +255,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object. </p>
+<p>Constructor of new <a class="el" href="classOperator.html" title="Node of parse tree.">Operator</a> object used in case of binary operators which have both left and right children (two propositional atoms ) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sym</td><td></td></tr>
-    <tr><td class="paramname">lChild</td><td></td></tr>
-    <tr><td class="paramname">rChild</td><td></td></tr>
+    <tr><td class="paramname">sym</td><td>Binary operators </td></tr>
+    <tr><td class="paramname">lChild</td><td>Pointer to left child which can be either propositional atom or other operator </td></tr>
+    <tr><td class="paramname">rChild</td><td>Pointer to right child which can be either propositional atom or other operator </td></tr>
   </table>
   </dd>
 </dl>
@@ -304,8 +305,8 @@ Public Member Functions</h2></td></tr>
 <p>Adds both children simultaneosly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lChild</td><td></td></tr>
-    <tr><td class="paramname">rChild</td><td></td></tr>
+    <tr><td class="paramname">lChild</td><td>Pointer to operator object </td></tr>
+    <tr><td class="paramname">rChild</td><td>Pointer to operator object </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +340,7 @@ Public Member Functions</h2></td></tr>
 <p>Adds left child. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">child</td><td></td></tr>
+    <tr><td class="paramname">child</td><td>Pointer to operator object </td></tr>
   </table>
   </dd>
 </dl>
@@ -373,7 +374,7 @@ Public Member Functions</h2></td></tr>
 <p>Adds right child. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">child</td><td></td></tr>
+    <tr><td class="paramname">child</td><td>Pointer to operator object </td></tr>
   </table>
   </dd>
 </dl>
@@ -404,7 +405,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the Left Child object. </p>
-<dl class="section return"><dt>Returns</dt><dd>Operator* </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Operator* Left child object </dd></dl>
 
 </div>
 </div>
@@ -432,7 +433,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the Right Child object. </p>
-<dl class="section return"><dt>Returns</dt><dd>Operator* </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Operator* Right child object </dd></dl>
 
 </div>
 </div>
@@ -487,10 +488,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns true if self is propositional atom. </p>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<p>To check if it is propositional atom. </p>
+<dl class="section return"><dt>Returns</dt><dd>true If it is propositional atom </dd>
 <dd>
-false </dd></dl>
+false If it is not a propositional atom </dd></dl>
 
 </div>
 </div>
@@ -517,11 +518,11 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Returns if it's a unary operator, i.e. </p>
+<p>Checks if it's a unary operator, i.e. </p>
 <p>is of the form &lt;none&gt; &lt;operator&gt; &lt;operand&gt;, unlike common operators &lt;left operand&gt; &lt;operator&gt; &lt;right operand&gt;</p>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dl class="section return"><dt>Returns</dt><dd>true In case it is unary operator </dd>
 <dd>
-false </dd></dl>
+false In case it is unary operator </dd></dl>
 
 </div>
 </div>

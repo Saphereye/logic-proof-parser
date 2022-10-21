@@ -1,12 +1,9 @@
 import os
 import random
 from secrets import choice
+import threading
 
-text = ""
-for i in range(10000):
-    if (i % 2 == 0):
-        text += random.choices(list("qwertyuiopasdfghjklzxcvbnm"))[0]
-    else:
-        text += random.choice(list("~+*>"))[0]
-
-print(text, end='')
+infix = ""
+for i in range(1_000_000):
+    infix += ((i+1)%2)*random.choices(list("abcd"))[0] + (i%2)*random.choice(list("~+*>"))[0]
+print(infix, end='')
