@@ -95,71 +95,71 @@ $(document).ready(function(){initNavTree('operators_8h_source.html',''); initRes
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="classOperator.html">Operator</a>* _rightChild;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">   18</a></span>&#160;        <a class="code" href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">Operator</a>(<span class="keywordtype">char</span> sym) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            _symbol = sym;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            _leftChild = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            _rightChild = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">   30</a></span>&#160;        <a class="code" href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">Operator</a>(<span class="keywordtype">char</span> sym, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            _symbol = sym;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            _leftChild = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            _rightChild = rChild;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classOperator.html#ae85dc366ddd292823069c29225780698">   43</a></span>&#160;        <a class="code" href="classOperator.html#ae85dc366ddd292823069c29225780698">Operator</a>(<span class="keywordtype">char</span> sym, <a class="code" href="classOperator.html">Operator</a>* lChild, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _symbol = sym;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            _leftChild = lChild;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            _rightChild = rChild;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">   54</a></span>&#160;        <a class="code" href="classOperator.html">Operator</a>* <a class="code" href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">getLeftChild</a>() {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> _leftChild;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">   63</a></span>&#160;        <a class="code" href="classOperator.html">Operator</a>* <a class="code" href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">getRightChild</a>() {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> _rightChild;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">   72</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">getSymbol</a>() {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> _symbol;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">   81</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">addLeftChild</a>(<a class="code" href="classOperator.html">Operator</a>* child) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            _leftChild = child;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">   90</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">addRightChild</a>(<a class="code" href="classOperator.html">Operator</a>* child) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            _rightChild = child;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">  100</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">addChildren</a>(<a class="code" href="classOperator.html">Operator</a>* lChild, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            _leftChild = lChild;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            _rightChild = rChild;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">  111</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">isAtom</a>() {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> (_leftChild == <span class="keyword">nullptr</span>) &amp;&amp; (_rightChild == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">  121</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">isUnaryOperator</a>() {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> (_leftChild == <span class="keyword">nullptr</span>) &amp;&amp; (_rightChild != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">   17</a></span>&#160;        <a class="code" href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">Operator</a>(<span class="keywordtype">char</span> sym) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            _symbol = sym;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            _leftChild = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            _rightChild = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">   29</a></span>&#160;        <a class="code" href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">Operator</a>(<span class="keywordtype">char</span> sym, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            _symbol = sym;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            _leftChild = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            _rightChild = rChild;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classOperator.html#ae85dc366ddd292823069c29225780698">   42</a></span>&#160;        <a class="code" href="classOperator.html#ae85dc366ddd292823069c29225780698">Operator</a>(<span class="keywordtype">char</span> sym, <a class="code" href="classOperator.html">Operator</a>* lChild, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            _symbol = sym;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _leftChild = lChild;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            _rightChild = rChild;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">   53</a></span>&#160;        <a class="code" href="classOperator.html">Operator</a>* <a class="code" href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">getLeftChild</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> _leftChild;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">   62</a></span>&#160;        <a class="code" href="classOperator.html">Operator</a>* <a class="code" href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">getRightChild</a>() {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> _rightChild;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">   71</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">getSymbol</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> _symbol;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">   80</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">addLeftChild</a>(<a class="code" href="classOperator.html">Operator</a>* child) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            _leftChild = child;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">   89</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">addRightChild</a>(<a class="code" href="classOperator.html">Operator</a>* child) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            _rightChild = child;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">   99</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">addChildren</a>(<a class="code" href="classOperator.html">Operator</a>* lChild, <a class="code" href="classOperator.html">Operator</a>* rChild) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            _leftChild = lChild;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            _rightChild = rChild;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">  110</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">isAtom</a>() {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> (_leftChild == <span class="keyword">nullptr</span>) &amp;&amp; (_rightChild == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">  120</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">isUnaryOperator</a>() {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> (_leftChild == <span class="keyword">nullptr</span>) &amp;&amp; (_rightChild != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassOperator_html_ac5a08c8ef4437a14d7be49b0aa908307"><div class="ttname"><a href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">Operator::addChildren</a></div><div class="ttdeci">void addChildren(Operator *lChild, Operator *rChild)</div><div class="ttdoc">Adds both children simultaneosly.</div><div class="ttdef"><b>Definition:</b> operators.h:100</div></div>
-<div class="ttc" id="aclassOperator_html_a19312e15f37b303f7f89308ca0f4e229"><div class="ttname"><a href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">Operator::isUnaryOperator</a></div><div class="ttdeci">bool isUnaryOperator()</div><div class="ttdoc">Checks if it's a unary operator, i.e.</div><div class="ttdef"><b>Definition:</b> operators.h:121</div></div>
-<div class="ttc" id="aclassOperator_html_a0bc70e32492c38d2cb8f53af82c7d872"><div class="ttname"><a href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">Operator::getSymbol</a></div><div class="ttdeci">char getSymbol()</div><div class="ttdoc">Get the Symbol object.</div><div class="ttdef"><b>Definition:</b> operators.h:72</div></div>
-<div class="ttc" id="aclassOperator_html_a0972a4cd344d791b1468351576e9d80f"><div class="ttname"><a href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">Operator::addRightChild</a></div><div class="ttdeci">void addRightChild(Operator *child)</div><div class="ttdoc">Adds right child.</div><div class="ttdef"><b>Definition:</b> operators.h:90</div></div>
-<div class="ttc" id="aclassOperator_html_a9d1bb447e3215a4b927dd4c5fc932ae6"><div class="ttname"><a href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">Operator::Operator</a></div><div class="ttdeci">Operator(char sym)</div><div class="ttdoc">Constructor of new Operator object in case of propositional atom which has no children.</div><div class="ttdef"><b>Definition:</b> operators.h:18</div></div>
+<div class="ttc" id="aclassOperator_html_ac5a08c8ef4437a14d7be49b0aa908307"><div class="ttname"><a href="classOperator.html#ac5a08c8ef4437a14d7be49b0aa908307">Operator::addChildren</a></div><div class="ttdeci">void addChildren(Operator *lChild, Operator *rChild)</div><div class="ttdoc">Adds both children simultaneosly.</div><div class="ttdef"><b>Definition:</b> operators.h:99</div></div>
+<div class="ttc" id="aclassOperator_html_a19312e15f37b303f7f89308ca0f4e229"><div class="ttname"><a href="classOperator.html#a19312e15f37b303f7f89308ca0f4e229">Operator::isUnaryOperator</a></div><div class="ttdeci">bool isUnaryOperator()</div><div class="ttdoc">Checks if it's a unary operator, i.e.</div><div class="ttdef"><b>Definition:</b> operators.h:120</div></div>
+<div class="ttc" id="aclassOperator_html_a0bc70e32492c38d2cb8f53af82c7d872"><div class="ttname"><a href="classOperator.html#a0bc70e32492c38d2cb8f53af82c7d872">Operator::getSymbol</a></div><div class="ttdeci">char getSymbol()</div><div class="ttdoc">Get the Symbol object.</div><div class="ttdef"><b>Definition:</b> operators.h:71</div></div>
+<div class="ttc" id="aclassOperator_html_a0972a4cd344d791b1468351576e9d80f"><div class="ttname"><a href="classOperator.html#a0972a4cd344d791b1468351576e9d80f">Operator::addRightChild</a></div><div class="ttdeci">void addRightChild(Operator *child)</div><div class="ttdoc">Adds right child.</div><div class="ttdef"><b>Definition:</b> operators.h:89</div></div>
+<div class="ttc" id="aclassOperator_html_a9d1bb447e3215a4b927dd4c5fc932ae6"><div class="ttname"><a href="classOperator.html#a9d1bb447e3215a4b927dd4c5fc932ae6">Operator::Operator</a></div><div class="ttdeci">Operator(char sym)</div><div class="ttdoc">Constructor of new Operator object in case of propositional atom which has no children.</div><div class="ttdef"><b>Definition:</b> operators.h:17</div></div>
 <div class="ttc" id="aclassOperator_html"><div class="ttname"><a href="classOperator.html">Operator</a></div><div class="ttdoc">Node of parse tree.</div><div class="ttdef"><b>Definition:</b> operators.h:5</div></div>
-<div class="ttc" id="aclassOperator_html_a094b0166b5f27f1324757648a94dbff5"><div class="ttname"><a href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">Operator::isAtom</a></div><div class="ttdeci">bool isAtom()</div><div class="ttdoc">To check if it is propositional atom.</div><div class="ttdef"><b>Definition:</b> operators.h:111</div></div>
-<div class="ttc" id="aclassOperator_html_ae85dc366ddd292823069c29225780698"><div class="ttname"><a href="classOperator.html#ae85dc366ddd292823069c29225780698">Operator::Operator</a></div><div class="ttdeci">Operator(char sym, Operator *lChild, Operator *rChild)</div><div class="ttdoc">Constructor of new Operator object used in case of binary operators which have both left and right ch...</div><div class="ttdef"><b>Definition:</b> operators.h:43</div></div>
-<div class="ttc" id="aclassOperator_html_af0bc63ef2feef7745e0e116c89ad93d6"><div class="ttname"><a href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">Operator::getLeftChild</a></div><div class="ttdeci">Operator * getLeftChild()</div><div class="ttdoc">Get the Left Child object.</div><div class="ttdef"><b>Definition:</b> operators.h:54</div></div>
-<div class="ttc" id="aclassOperator_html_a13629606c1c0f28c6f930292244ac7bf"><div class="ttname"><a href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">Operator::addLeftChild</a></div><div class="ttdeci">void addLeftChild(Operator *child)</div><div class="ttdoc">Adds left child.</div><div class="ttdef"><b>Definition:</b> operators.h:81</div></div>
-<div class="ttc" id="aclassOperator_html_a229d95b80e8f12cc26fbd9c6685e77aa"><div class="ttname"><a href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">Operator::Operator</a></div><div class="ttdeci">Operator(char sym, Operator *rChild)</div><div class="ttdoc">Constructor of new Operator object used in case of negation operator which has one child (one proposi...</div><div class="ttdef"><b>Definition:</b> operators.h:30</div></div>
-<div class="ttc" id="aclassOperator_html_a0183eab9f025e54da6529bd1cd887b73"><div class="ttname"><a href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">Operator::getRightChild</a></div><div class="ttdeci">Operator * getRightChild()</div><div class="ttdoc">Get the Right Child object.</div><div class="ttdef"><b>Definition:</b> operators.h:63</div></div>
+<div class="ttc" id="aclassOperator_html_a094b0166b5f27f1324757648a94dbff5"><div class="ttname"><a href="classOperator.html#a094b0166b5f27f1324757648a94dbff5">Operator::isAtom</a></div><div class="ttdeci">bool isAtom()</div><div class="ttdoc">To check if it is propositional atom.</div><div class="ttdef"><b>Definition:</b> operators.h:110</div></div>
+<div class="ttc" id="aclassOperator_html_ae85dc366ddd292823069c29225780698"><div class="ttname"><a href="classOperator.html#ae85dc366ddd292823069c29225780698">Operator::Operator</a></div><div class="ttdeci">Operator(char sym, Operator *lChild, Operator *rChild)</div><div class="ttdoc">Constructor of new Operator object used in case of binary operators which have both left and right ch...</div><div class="ttdef"><b>Definition:</b> operators.h:42</div></div>
+<div class="ttc" id="aclassOperator_html_af0bc63ef2feef7745e0e116c89ad93d6"><div class="ttname"><a href="classOperator.html#af0bc63ef2feef7745e0e116c89ad93d6">Operator::getLeftChild</a></div><div class="ttdeci">Operator * getLeftChild()</div><div class="ttdoc">Get the Left Child object.</div><div class="ttdef"><b>Definition:</b> operators.h:53</div></div>
+<div class="ttc" id="aclassOperator_html_a13629606c1c0f28c6f930292244ac7bf"><div class="ttname"><a href="classOperator.html#a13629606c1c0f28c6f930292244ac7bf">Operator::addLeftChild</a></div><div class="ttdeci">void addLeftChild(Operator *child)</div><div class="ttdoc">Adds left child.</div><div class="ttdef"><b>Definition:</b> operators.h:80</div></div>
+<div class="ttc" id="aclassOperator_html_a229d95b80e8f12cc26fbd9c6685e77aa"><div class="ttname"><a href="classOperator.html#a229d95b80e8f12cc26fbd9c6685e77aa">Operator::Operator</a></div><div class="ttdeci">Operator(char sym, Operator *rChild)</div><div class="ttdoc">Constructor of new Operator object used in case of negation operator which has one child (one proposi...</div><div class="ttdef"><b>Definition:</b> operators.h:29</div></div>
+<div class="ttc" id="aclassOperator_html_a0183eab9f025e54da6529bd1cd887b73"><div class="ttname"><a href="classOperator.html#a0183eab9f025e54da6529bd1cd887b73">Operator::getRightChild</a></div><div class="ttdeci">Operator * getRightChild()</div><div class="ttdoc">Get the Right Child object.</div><div class="ttdef"><b>Definition:</b> operators.h:62</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

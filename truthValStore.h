@@ -11,6 +11,10 @@ class TruthValStore {
         size_t _truthValArray = 0b0; 
         
     public:
+        /**
+         * @brief Construct a new Truth Val Store object(default Contructor)
+         * 
+         */
         TruthValStore() {
 
         }
@@ -21,7 +25,6 @@ class TruthValStore {
          * @param atomArray It contains the string of propositional atoms only
          * @param truthValArray It contains the corresponding truth values
          */
-        
         TruthValStore(string atomArray, int truthValArray) {
             _atomArray = atomArray;
             _truthValArray = truthValArray;
@@ -63,15 +66,12 @@ class TruthValStore {
          * @return false 
          */
         bool getTruthVal(char atom) {
-            /** @brief Get index of atom in atom array*/ 
+            // Get index of atom in atom array
             size_t index = _atomArray.find(atom);
 
-            /** @brief All cases where atom is not present
-             */
+            // All cases where atom is not present
 
-            /** @brief Return the nth element of truthValArray from the right where n = index
-            */ 
-            
+            // Return the nth element of truthValArray from the right where n = index
             return (_truthValArray & (1 << index)) >> index;
         }
 

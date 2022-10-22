@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['infixtoprefix_82',['infixToPrefix',['../classLogic.html#a9b397f8e92ada8dadcd3ddf52d82f552',1,'Logic']]],
-  ['isatom_83',['isAtom',['../classOperator.html#a094b0166b5f27f1324757648a94dbff5',1,'Operator']]],
-  ['isempty_84',['isEmpty',['../classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7',1,'Stack']]],
-  ['isfull_85',['isFull',['../classStack.html#a08446a1871fc17691ce0be249100fc9f',1,'Stack']]],
-  ['isunaryoperator_86',['isUnaryOperator',['../classOperator.html#a19312e15f37b303f7f89308ca0f4e229',1,'Operator']]]
+  ['infixtoprefix_79',['infixToPrefix',['../classLogic.html#a9b397f8e92ada8dadcd3ddf52d82f552',1,'Logic']]],
+  ['isatom_80',['isAtom',['../classOperator.html#a094b0166b5f27f1324757648a94dbff5',1,'Operator']]],
+  ['isempty_81',['isEmpty',['../classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7',1,'Stack']]],
+  ['isfull_82',['isFull',['../classStack.html#a08446a1871fc17691ce0be249100fc9f',1,'Stack']]],
+  ['isunaryoperator_83',['isUnaryOperator',['../classOperator.html#a19312e15f37b303f7f89308ca0f4e229',1,'Operator']]]
 ];

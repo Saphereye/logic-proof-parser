@@ -77,7 +77,8 @@ FILE_PATTERNS          = *.c \
 
 EXCLUDE_PATTERNS = markdown \
                     test.cpp \
-                    helper.h
+                    helper.h \
+                    README.md
 
 # The RECURSIVE tag can be used to turn specify whether or not subdirectories 
 # should be searched for input files as well. Possible values are YES and NO. 
@@ -91,3 +92,6 @@ GENERATE_TREEVIEW      = YES # optional. Also works without treeview
 DISABLE_INDEX = NO
 FULL_SIDEBAR = NO
 HTML_EXTRA_STYLESHEET  = doxygen_css/basic.css
+
+
+IMAGE_PATH = images

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logical_2dassn_106',['logical-assn',['../md_README.html',1,'']]]
+  ['main_20page_103',['Main Page',['../index.html',1,'']]]
 ];

@@ -35,10 +35,6 @@ var NAVTREE =
       ] ],
       [ "Analysis", "md_Profiling.html#autotoc_md8", null ]
     ] ],
-    [ "logical-assn", "md_README.html", [
-      [ "Introduction", "md_README.html#autotoc_md10", null ],
-      [ "How to run the program", "md_README.html#autotoc_md11", null ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

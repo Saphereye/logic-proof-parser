@@ -81,7 +81,8 @@ class Logic {
 		 * @param prefix String returned by task 1 containing prefix expression of the logical sequent
 		 * @param index Pointer to index of the prefix string expression  
 		 * @return Head of respective parse tree in each recursive call
-		 */static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
+		 */
+		static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
 			debug("prefix coming to calcprefixToParseTree", prefix);
 			debug("index coming to calcprefixToParseTree", *index);
 
@@ -126,7 +127,6 @@ class Logic {
 		 * @param op Pointer to parse tree
 		 * @param output Pointer to string output which is updated to give the infix expression string in each recursive call
 		 */
-
 		static void calcparseTreeToInfix(Operator* op, string* output) {
 			if (op->isAtom()) {
 				*output += op->getSymbol();
@@ -148,7 +148,7 @@ class Logic {
 		 */
 		static int getParseTreeHeight(Operator* op) {
 			if (op->isAtom()) {
-				return 0;
+				return 1;
 			}
 			int leftChildHeight = 0;
 			int rightChildHeight = 0;
@@ -196,13 +196,19 @@ class Logic {
 		 * 
 		 * @param op Pointer to parse tree
 		 */
-		
 		static void displayParseTree(Operator* op) {
 			int rec[Logic::getParseTreeHeight(op)];
 			printParseTree(op, 0, rec);
 			
 		}
 
+		/**
+		 * @brief Helper function for displayParseTree
+		 * 
+		 * @param op 
+		 * @param depth 
+		 * @param rec 
+		 */
 		static void printParseTree(Operator* op, int depth, int* rec) {
 			if(op == nullptr)
 				return;

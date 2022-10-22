@@ -14,7 +14,6 @@ class Operator {
 		 * 
 		 * @param sym Can be a propositional atom or a binary or unary operator 
 		 */
-
 		Operator(char sym) {
 			_symbol = sym;
 			_leftChild = nullptr;
