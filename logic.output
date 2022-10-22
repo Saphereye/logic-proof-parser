@@ -5,10 +5,10 @@ Each sample counts as 0.01 seconds.
 
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
-  0.00      0.00     0.00        8     0.00     0.00  Logic::printParseTree(Logic::Operator*, int, int*)
-  0.00      0.00     0.00        7     0.00     0.00  Logic::getParseTreeHeight(Logic::Operator*)
-  0.00      0.00     0.00        3     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
-  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I_isDebugMode
+  0.00      0.00     0.00       34     0.00     0.00  Logic::printParseTree(Logic::Operator*, int, int*)
+  0.00      0.00     0.00       30     0.00     0.00  Logic::getParseTreeHeight(Logic::Operator*)
+  0.00      0.00     0.00       19     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
+  0.00      0.00     0.00        5     0.00     0.00  _GLOBAL__sub_I_isDebugMode
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -49,27 +49,31 @@ notice and this notice are preserved.
 granularity: each sample hit covers 2 byte(s) no time propagated
 
 index % time    self  children    called     name
-                                4852             Logic::printParseTree(Logic::Operator*, int, int*) [9]
-                0.00    0.00       8/8           Logic::displayParseTree(Logic::Operator*) [17]
-[9]      0.0    0.00    0.00       8+4852    Logic::printParseTree(Logic::Operator*, int, int*) [9]
-                                4852             Logic::printParseTree(Logic::Operator*, int, int*) [9]
+                                9242             Logic::printParseTree(Logic::Operator*, int, int*) [9]
+                0.00    0.00      34/34          Logic::displayParseTree(Logic::Operator*) [17]
+[9]      0.0    0.00    0.00      34+9242    Logic::printParseTree(Logic::Operator*, int, int*) [9]
+                                9242             Logic::printParseTree(Logic::Operator*, int, int*) [9]
 -----------------------------------------------
-                                4856             Logic::getParseTreeHeight(Logic::Operator*) [10]
-                0.00    0.00       7/7           Logic::displayParseTree(Logic::Operator*) [17]
-[10]     0.0    0.00    0.00       7+4856    Logic::getParseTreeHeight(Logic::Operator*) [10]
-                                4856             Logic::getParseTreeHeight(Logic::Operator*) [10]
+                                9266             Logic::getParseTreeHeight(Logic::Operator*) [10]
+                0.00    0.00      30/30          Logic::displayParseTree(Logic::Operator*) [17]
+[10]     0.0    0.00    0.00      30+9266    Logic::getParseTreeHeight(Logic::Operator*) [10]
+                                9266             Logic::getParseTreeHeight(Logic::Operator*) [10]
 -----------------------------------------------
-                                7308             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
-                0.00    0.00       3/3           Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [18]
-[11]     0.0    0.00    0.00       3+7308    Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
-                                7308             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
+                               16236             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
+                0.00    0.00      19/19          Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [18]
+[11]     0.0    0.00    0.00      19+16236   Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
+                               16236             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
 -----------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [24]
-[12]     0.0    0.00    0.00       1         _GLOBAL__sub_I_isDebugMode [12]
+                0.00    0.00       5/5           __libc_csu_init [24]
+[12]     0.0    0.00    0.00       5         _GLOBAL__sub_I_isDebugMode [12]
 -----------------------------------------------
-                                1183             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
-[16]     0.0    0.00    0.00       0+1183    Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
-                                1183             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
+                                2275             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
+[16]     0.0    0.00    0.00       0+2275    Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
+                                2275             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
+-----------------------------------------------
+                                2200             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
+[19]     0.0    0.00    0.00       0+2200    Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
+                                2200             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by

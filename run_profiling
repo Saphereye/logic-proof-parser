@@ -16,7 +16,12 @@ if g++ -pipe -Os -Ofast -Wall -o prof.exe main.cpp -pg; then
 	    echo "[Generation Succesful :)]";
         echo "[Writing to file...]";
 
-        if gprof prof.exe gmon.out > logic.output; then
+        if gprof -s prof.exe gmon.out gmon.sum; then
+            echo "[Executable succesfully updated :)]"
+        else
+            echo "[Executable update unsuccesfully :(]"
+        fi
+        if gprof prof.exe gmon.sum > logic.output; then
             echo "[Writing to file succesful :)]"
         else
             echo "[Writing to file unsuccesful :()]"
