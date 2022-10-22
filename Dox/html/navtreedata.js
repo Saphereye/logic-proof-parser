@@ -23,6 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Logic Assignment", "index.html", [
+    [ "Main Page", "index.html", null ],
     [ "Profiling", "md_Profiling.html", [
       [ "Goal", "md_Profiling.html#autotoc_md1", null ],
       [ "Tools", "md_Profiling.html#autotoc_md2", null ],
@@ -33,6 +34,10 @@ var NAVTREE =
         [ "Call Graph", "md_Profiling.html#autotoc_md7", null ]
       ] ],
       [ "Analysis", "md_Profiling.html#autotoc_md8", null ]
+    ] ],
+    [ "logical-assn", "md_README.html", [
+      [ "Introduction", "md_README.html#autotoc_md10", null ],
+      [ "How to run the program", "md_README.html#autotoc_md11", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

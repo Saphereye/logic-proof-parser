@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['profiling_100',['Profiling',['../md_Profiling.html',1,'']]]
+  ['logical_2dassn_106',['logical-assn',['../md_README.html',1,'']]]
 ];
