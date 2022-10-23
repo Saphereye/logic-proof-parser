@@ -56,18 +56,19 @@ class Logic {
 			for(int index = 0; size_t(index) < infixLength; index++) {
 				char currentChar = infix[index];
 				//debug("infixToPrefix currChar", currentChar);
+				debug("Head in for", operandStack.peek());
 
 				if (currentChar == '(') {
 					operatorStack.push(currentChar);
 				} else if (currentChar == ')') {
 					while(!operatorStack.isEmpty() && (operatorStack.peek() != '(')) {
 						if (operatorStack.peek() == '~') {
-							string operator2 = operandStack.pop();
-							operandStack.push(operatorStack.pop() + operator2);
+							string operand2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operand2);
 						} else {
-							string operator1 = operandStack.pop();
-							string operator2 = operandStack.pop();
-							operandStack.push(operatorStack.pop() + operator2 + operator1);
+							string operand1 = operandStack.pop();
+							string operand2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operand2 + operand1);
 						}
 					}
 					operatorStack.pop();
@@ -76,12 +77,12 @@ class Logic {
 				} else {
 					while(!operatorStack.isEmpty() && (precedenceMap(currentChar) <= precedenceMap(operatorStack.peek()))){
 						if (operatorStack.peek() == '~') {
-							string operator2 = operandStack.pop();
-							operandStack.push(operatorStack.pop() + operator2);
+							string operand2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operand2);
 						} else {
-							string operator1 = operandStack.pop();
-							string operator2 = operandStack.pop();
-							operandStack.push(operatorStack.pop() + operator2 + operator1);
+							string operand1 = operandStack.pop();
+							string operand2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operand2 + operand1);
 						}
 					}
 					operatorStack.push(currentChar);
@@ -89,13 +90,21 @@ class Logic {
 			}
 
 			while(!operatorStack.isEmpty()) {
+				debug("Head in while", operandStack.peek());
+				// For some reason brackets were coming?
+				if ((operatorStack.peek() == '(') || (operatorStack.peek() == ')')) {
+					operatorStack.pop();
+					continue;
+				}
+
+				// Checks for ~
 				if (operatorStack.peek() == '~') {
-					string operator2 = operandStack.pop();
-					operandStack.push(operatorStack.pop() + operator2);
+					string operand2 = operandStack.pop();
+					operandStack.push(operatorStack.pop() + operand2);
 				} else {
-					string operator1 = operandStack.pop();
-					string operator2 = operandStack.pop();
-					operandStack.push(operatorStack.pop() + operator2 + operator1);
+					string operand1 = operandStack.pop();
+					string operand2 = operandStack.pop();
+					operandStack.push(operatorStack.pop() + operand2 + operand1);
 				}
 			}
 
@@ -126,9 +135,10 @@ class Logic {
 		static Operator* calcprefixToParseTree(string prefix, long unsigned int* index) {
 			debug("prefix coming to calcprefixToParseTree", prefix);
 			debug("index coming to calcprefixToParseTree", *index);
-
-			if (*index == prefix.length()) {
-				return NULL;
+			debug("prefix length", prefix.length());
+			
+			if (*index >= prefix.length() - 1) {
+				return nullptr;
 			}
 			char currentCharacter = prefix[*index];
 			Operator* head = new Operator(currentCharacter);
@@ -144,6 +154,7 @@ class Logic {
 				case '*':
 					head->addLeftChild(calcprefixToParseTree(prefix, index));
 					head->addRightChild(calcprefixToParseTree(prefix, index));
+					break;
 				default:
 					break;
 			}
@@ -169,6 +180,8 @@ class Logic {
 		 * @param output Pointer to string output which is updated to give the infix expression string in each recursive call
 		 */
 		static void calcparseTreeToInfix(Operator* op, string* output) {
+			if (op == nullptr)
+				return;
 			if (op->isAtom()) {
 				*output += op->getSymbol();
 				debug("output per step", *output);
@@ -188,6 +201,8 @@ class Logic {
 		 * @return Tree height upto that particular node
 		 */
 		static int getParseTreeHeight(Operator* op) {
+			if (op == nullptr)
+				return 0;
 			if (op->isAtom()) {
 				return 1;
 			}

@@ -12,7 +12,7 @@
 
 using namespace std;
 
-bool isDebugMode = true;
+bool isDebugMode = false;
 
 /**
  * @brief Prints debug info

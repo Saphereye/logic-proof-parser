@@ -65,7 +65,10 @@ class Stack {
          * @return T 
          */
         T peek() {
-            return _stack[_top];
+            if (!isEmpty())
+                return _stack[_top];
+            else
+                return T();
         };
 
         /**

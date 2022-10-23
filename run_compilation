@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 echo "[Compiling Tests...]"
 
-if g++ -pipe -O0 -Wall -o main.exe main.cpp; then
+if g++ -pipe -Ofast -Wall -o main.exe main.cpp; then
 
     echo "[Compilation Successful :)]";
     echo "[Execution...]";
