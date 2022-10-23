@@ -88,7 +88,7 @@ This is a comparison between memory taken by a program with input of 1343 and 36
 ### Time Analysis
 Until `4554` atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.
 
-We can explain this linear increase with time complexity. As the algorithms traverse throughg each element/node, one can approximate them to be `O(n)`.
+We can explain this linear increase with time complexity. As the algorithms traverse through each element/node, one can approximate them to be `O(n)`.
 
 Furthermore, from the task dependency graph we can see that task 1 must have the least time, followed by task 2, followed by 3, 4 and 5.
 
@@ -100,6 +100,6 @@ As the program `main.exe` evaluates each component from scratch (as show in 'Tas
 
 Thus memory analysis helped us in uncovering memory leaks in our program.
 ## Conclusion
-This exercise helped us see how our functions are behaving under stress. This helped us find the bottlenecks in out code and find out that naïve methods lead to memory leaks.
+This exercise helped us see how our functions are behaving under stress. This helped us find the bottlenecks in our code and find out that naïve methods lead to memory leaks.
 
 
