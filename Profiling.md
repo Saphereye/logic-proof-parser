@@ -76,11 +76,20 @@ The following data was reveived
 ## Data in Graphical Manner
 ### Number of atoms Vs time taken graph
 ![Number of atoms Vs time taken](task_vs_time.jpeg)
+### Task Dependency Graph
+[![](https://mermaid.ink/img/pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig?type=png)](https://mermaid.live/edit#pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig)
+
+This graph shows the dependency of each function. For example Prefix to parse tree requires the input infix to be converted top prefix first, hence it requires the function of the first task.
 ## Analysis
 ### Time Analysis
 Until `4554` atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.
 
+We can explain this linear increase with time complexity. As the algorithms traverse throughg each element/node, one can approximate them to be `O(n)`.
+
+Furthermore, from the task dependency graph we can see that task 1 must have the least time, followed by task 2, followed by 3, 4 and 5.
+
 One can observe sharp variations in data, which we consider as experimental error.
 
-We can explain this linear increase with time complexity. As the algorithms traverse throughg each element/node, one can approximate them to be `O(n)`.
+## Conclusion
+
 
