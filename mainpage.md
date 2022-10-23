@@ -13,8 +13,8 @@ In this project we decided to use C++ due to the following reasons:
 
 Team Members
 ---
-- Adarsh Das  
-- Maheswar Bora  
-- Prachi Shah  
-- Anushka Agnihotri  
+- Adarsh Das  (2021A7PS1511H)  
+- Maheswar Bora  (2021A7PS1505H)  
+- Prachi Shah  (2021A7PS2589H)  
+- Anushka Agnihotri  (2021A7PS3114H)  
 ![alt text](timc.png)
