@@ -17,4 +17,3 @@ Team Members
 - Maheswar Bora  (2021A7PS1505H)  
 - Prachi Shah  (2021A7PS2589H)  
 - Anushka Agnihotri  (2021A7PS3114H)  
-![alt text](timc.png)
