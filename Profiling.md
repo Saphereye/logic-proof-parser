@@ -26,9 +26,9 @@ print(text, end='')
 ```
 which was later written into a text file using `python3 <name-of-above-file> > <output text-file>` in bash.
 ## Execution
-The program was executed with the `-Os -Ofast`  as the final execution.
+The program was executed with the `-Os -O2`  as the final execution.
 
-The `-Os` flag optimizes the size of the code. It disables some aggresive optimizations done by `-Ofast`  to save memory. For example replacing with body of code instead of a call function.
+The `-Os` flag optimizes the size of the code. It disables some aggresive optimizations done by `-O2`  to save memory. For example replacing with body of code instead of a call function.
 
 The program was run completely i.e. all the options in the menu were executed once and all truth values were given `1`)
 

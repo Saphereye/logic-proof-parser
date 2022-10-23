@@ -5,10 +5,10 @@ Each sample counts as 0.01 seconds.
 
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
-  0.00      0.00     0.00       34     0.00     0.00  Logic::printParseTree(Logic::Operator*, int, int*)
-  0.00      0.00     0.00       30     0.00     0.00  Logic::getParseTreeHeight(Logic::Operator*)
-  0.00      0.00     0.00       19     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
-  0.00      0.00     0.00        5     0.00     0.00  _GLOBAL__sub_I_isDebugMode
+  0.00      0.00     0.00    92488     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+  0.00      0.00     0.00    10940     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      0.00     0.00        8     0.00     0.00  Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
+  0.00      0.00     0.00        2     0.00     0.00  _GLOBAL__sub_I_isDebugMode
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -49,31 +49,42 @@ notice and this notice are preserved.
 granularity: each sample hit covers 2 byte(s) no time propagated
 
 index % time    self  children    called     name
-                                9242             Logic::printParseTree(Logic::Operator*, int, int*) [9]
-                0.00    0.00      34/34          Logic::displayParseTree(Logic::Operator*) [17]
-[9]      0.0    0.00    0.00      34+9242    Logic::printParseTree(Logic::Operator*, int, int*) [9]
-                                9242             Logic::printParseTree(Logic::Operator*, int, int*) [9]
+                0.00    0.00       8/92488       Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [19]
+                0.00    0.00     126/92488       Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [18]
+                0.00    0.00    1634/92488       Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [21]
+                0.00    0.00   30600/92488       Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [10]
+                0.00    0.00   60120/92488       Logic::infixToPrefix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [16]
+[8]      0.0    0.00    0.00   92488         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [8]
 -----------------------------------------------
-                                9266             Logic::getParseTreeHeight(Logic::Operator*) [10]
-                0.00    0.00      30/30          Logic::displayParseTree(Logic::Operator*) [17]
-[10]     0.0    0.00    0.00      30+9266    Logic::getParseTreeHeight(Logic::Operator*) [10]
-                                9266             Logic::getParseTreeHeight(Logic::Operator*) [10]
+                0.00    0.00   10940/10940       Logic::infixToPrefix(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [16]
+[9]      0.0    0.00    0.00   10940         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [9]
 -----------------------------------------------
-                               16236             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
-                0.00    0.00      19/19          Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [18]
-[11]     0.0    0.00    0.00      19+16236   Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
-                               16236             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [11]
+                               15296             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [10]
+                0.00    0.00       8/8           Logic::prefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [19]
+[10]     0.0    0.00    0.00       8+15296   Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [10]
+                0.00    0.00   30600/92488       void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [8]
+                               15296             Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [10]
 -----------------------------------------------
-                0.00    0.00       5/5           __libc_csu_init [24]
-[12]     0.0    0.00    0.00       5         _GLOBAL__sub_I_isDebugMode [12]
+                0.00    0.00       2/2           __libc_csu_init [26]
+[11]     0.0    0.00    0.00       2         _GLOBAL__sub_I_isDebugMode [11]
 -----------------------------------------------
-                                2275             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
-[16]     0.0    0.00    0.00       0+2275    Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
-                                2275             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [16]
+                                7632             Logic::printParseTree(Logic::Operator*, int, int*) [17]
+[17]     0.0    0.00    0.00       0+7632    Logic::printParseTree(Logic::Operator*, int, int*) [17]
+                                7632             Logic::printParseTree(Logic::Operator*, int, int*) [17]
 -----------------------------------------------
-                                2200             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
-[19]     0.0    0.00    0.00       0+2200    Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
-                                2200             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [19]
+                                 126             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [18]
+[18]     0.0    0.00    0.00       0+126     Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [18]
+                0.00    0.00     126/92488       void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [8]
+                                 126             Logic::getParseTreeVal(Logic::Operator*, TruthValStore) [18]
+-----------------------------------------------
+                                7628             Logic::getParseTreeHeight(Logic::Operator*) [20]
+[20]     0.0    0.00    0.00       0+7628    Logic::getParseTreeHeight(Logic::Operator*) [20]
+                                7628             Logic::getParseTreeHeight(Logic::Operator*) [20]
+-----------------------------------------------
+                                3824             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [21]
+[21]     0.0    0.00    0.00       0+3824    Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [21]
+                0.00    0.00    1634/92488       void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [8]
+                                3824             Logic::calcparseTreeToInfix(Logic::Operator*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [21]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -166,5 +177,5 @@ notice and this notice are preserved.
 
 Index by function name
 
-  [12] _GLOBAL__sub_I_isDebugMode [10] Logic::getParseTreeHeight(Logic::Operator*)
-   [9] Logic::printParseTree(Logic::Operator*, int, int*) [11] Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*)
+  [11] _GLOBAL__sub_I_isDebugMode [8] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
+  [10] Logic::calcprefixToParseTree(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long*) [9] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
