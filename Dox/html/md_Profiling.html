@@ -93,49 +93,96 @@ Goal</h1>
 <p>Using above mentioned techniques, <code>g++</code> is able to compile our <code>C++</code> code. </p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Tools</h1>
-<p>We have used <code>gprof</code> as our profiler. <code>gprof</code> is a profiling program which collects and arranges statistics of the program. </p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Input</h1>
-<p>A randomised input(<code>1000</code> character long) was generated, each time using a small python script </p><div class="fragment"><div class="line">import os</div>
-<div class="line">import random</div>
-<div class="line">from secrets import choice</div>
-<div class="line"> </div>
-<div class="line">text = &quot;&quot;</div>
-<div class="line">for i in range(1_000_000):</div>
-<div class="line">    if (i % 2 == 0):</div>
-<div class="line">        text += random.choices(list(&quot;abcd&quot;))[0]</div>
-<div class="line">    else:</div>
-<div class="line">        text += random.choice(list(&quot;~+*&gt;&quot;))[0]</div>
-<div class="line"> </div>
-<div class="line">print(text, end=&#39;&#39;)</div>
-</div><!-- fragment --><p>which was later written into a text file using <code>python3 &lt;name-of-above-file&gt; &gt; &lt;output text-file&gt;</code> in bash. </p>
-<h1><a class="anchor" id="autotoc_md7"></a>
-Execution</h1>
-<p>The program was executed with the <code>-Os -Ofast</code> as the final execution.</p>
-<p>The <code>-Os</code> flag optimizes the size of the code. It disables some aggresive optimizations done by <code>-Ofast</code> to save memory. For example replacing with body of code instead of a call function.</p>
-<p>The program was run completely i.e. all the options in the menu were executed once and all truth values were given <code>1</code>)</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Profiler Output</h1>
-<h2><a class="anchor" id="autotoc_md9"></a>
-Call Table</h2>
+<p>For runtime of each function we used <code>chrono</code> library of C++ on the given system. This library provide high accuracy data, which was useful to record information with even small inputs.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">calls </th><th class="markdownTableHeadNone">Ts/call </th><th class="markdownTableHeadNone">Ts/call </th><th class="markdownTableHeadNone">name  </th></tr>
+<th class="markdownTableHeadLeft">OS Name </th><th class="markdownTableHeadLeft">System Type </th><th class="markdownTableHeadLeft">Processor </th><th class="markdownTableHeadLeft">Usable Ram  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">5 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">Logic::printParseTree(Logic::Operator*, int, int*)  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">Logic::getParseTreeHeight(Logic::Operator*)  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">Logic::calcprefixToParseTree(std::__cxx11::basic_string, std::allocator &gt;, unsigned long*)  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">_GLOBAL__sub_I_isDebugMode  </td></tr>
+<td class="markdownTableBodyLeft">Windows 10 </td><td class="markdownTableBodyLeft">x64-based </td><td class="markdownTableBodyLeft">11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz, 2995 Mhz, 2 Core(s), 4 Logical Processor(s) </td><td class="markdownTableBodyLeft">7.65 GB  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md10"></a>
-Call Graph</h2>
-<p><a href="https://mermaid.live/edit#pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q"><img src="https://mermaid.ink/img/pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q?type=png" alt="" class="inline"/></a> </p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<p>For memory analysis of the program we used inbuilt memory analysis of Visual Studio on the given system. We chose this due to it's high accuracy and descriptive output, which helped us understand the code better.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">OS Name </th><th class="markdownTableHeadLeft">System Type </th><th class="markdownTableHeadLeft">Processor </th><th class="markdownTableHeadLeft">Usable Ram  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Windows 11 </td><td class="markdownTableBodyLeft">x64-based </td><td class="markdownTableBodyLeft">Intel(R) Core(TM) i5-10300H CPU @ 2.50 GHz, 2496 Mhz, 4 Core(S), 8 Logical Processor(s) </td><td class="markdownTableBodyLeft">3.10 GB  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Input</h1>
+<p>A randomised input was generated each time using the given python script</p>
+<div class="fragment"><div class="line">import random</div>
+<div class="line">from tokenize import String</div>
+<div class="line"> </div>
+<div class="line">&quot;&quot;&quot;</div>
+<div class="line">BNF for our expression</div>
+<div class="line">E := I | (E + E) | (E * E) | (E &gt; E) | (~ E)</div>
+<div class="line">&quot;&quot;&quot;</div>
+<div class="line">heightOfParseTree: int = 15</div>
+<div class="line"> </div>
+<div class="line">def randInfix(count: int) -&gt; String:</div>
+<div class="line">    if count &lt;= 1:</div>
+<div class="line">        return random.choice(list(&quot;abcdefghijklmnopqrstuvwxyz&quot;))[0]</div>
+<div class="line">    else:</div>
+<div class="line">        case = random.randint(1, 4)</div>
+<div class="line">        if case == 1:</div>
+<div class="line">                return f&quot;({randInfix(count-1)}*{randInfix(count-1)})&quot;</div>
+<div class="line">        elif case == 2:</div>
+<div class="line">                return f&quot;({randInfix(count-1)}+{randInfix(count-1)})&quot;</div>
+<div class="line">        elif case == 3:</div>
+<div class="line">                return f&quot;({randInfix(count-1)}&gt;{randInfix(count-1)})&quot;</div>
+<div class="line">        elif case == 4:</div>
+<div class="line">                return f&quot;(~{randInfix(count-1)})&quot;</div>
+<div class="line"> </div>
+<div class="line">infix = randInfix(heightOfParseTree)</div>
+<div class="line"> </div>
+<div class="line">with open(&quot;InfixText.txt&quot;,&quot;w&quot;) as file:</div>
+<div class="line">    file.write(infix)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Execution</h1>
+<p>The program was optimised with flags <code>-Os -O2</code>.</p>
+<p>The <code>-Os</code> flag optimizes the size of the code. Whereas <code>-O2</code> optimizes for speed. Size optimization happens at the cost of speed. For example replacing with body of code instead of a call function.</p>
+<p>For time analysis, each task was run <code>1000</code> times and the average was considered. The following data was reveived</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Tree Height </th><th class="markdownTableHeadLeft">No. of Atoms </th><th class="markdownTableHeadLeft">Task 1 (ms) </th><th class="markdownTableHeadLeft">Task 2 (ms) </th><th class="markdownTableHeadLeft">Task 3 (ms) </th><th class="markdownTableHeadLeft">Task 4 (ms) </th><th class="markdownTableHeadLeft">Task 5 (ms)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">5 </td><td class="markdownTableBodyLeft">10 </td><td class="markdownTableBodyLeft">0.0047605 </td><td class="markdownTableBodyLeft">0.0079753 </td><td class="markdownTableBodyLeft">0.005358 </td><td class="markdownTableBodyLeft">0.008284 </td><td class="markdownTableBodyLeft">0.0054994  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">5 </td><td class="markdownTableBodyLeft">12 </td><td class="markdownTableBodyLeft">0.0028622 </td><td class="markdownTableBodyLeft">0.0055984 </td><td class="markdownTableBodyLeft">0.009877 </td><td class="markdownTableBodyLeft">0.0060635 </td><td class="markdownTableBodyLeft">0.0086048  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">10 </td><td class="markdownTableBodyLeft">119 </td><td class="markdownTableBodyLeft">0.0347532 </td><td class="markdownTableBodyLeft">0.0581992 </td><td class="markdownTableBodyLeft">0.0647751 </td><td class="markdownTableBodyLeft">0.0625164 </td><td class="markdownTableBodyLeft">0.0591974  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">10 </td><td class="markdownTableBodyLeft">191 </td><td class="markdownTableBodyLeft">0.0478533 </td><td class="markdownTableBodyLeft">0.0898297 </td><td class="markdownTableBodyLeft">0.0969904 </td><td class="markdownTableBodyLeft">0.090525 </td><td class="markdownTableBodyLeft">0.0993498  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">15 </td><td class="markdownTableBodyLeft">2425 </td><td class="markdownTableBodyLeft">0.189015 </td><td class="markdownTableBodyLeft">0.549159 </td><td class="markdownTableBodyLeft">0.615554 </td><td class="markdownTableBodyLeft">0.625281 </td><td class="markdownTableBodyLeft">0.609831  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">15 </td><td class="markdownTableBodyLeft">3425 </td><td class="markdownTableBodyLeft">0.488783 </td><td class="markdownTableBodyLeft">0.9894795 </td><td class="markdownTableBodyLeft">1.60096 </td><td class="markdownTableBodyLeft">1.51223 </td><td class="markdownTableBodyLeft">1.44321  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">17 </td><td class="markdownTableBodyLeft">4554 </td><td class="markdownTableBodyLeft">0.545341 </td><td class="markdownTableBodyLeft">1.4298 </td><td class="markdownTableBodyLeft">1.62267 </td><td class="markdownTableBodyLeft">1.4522 </td><td class="markdownTableBodyLeft">1.54193  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">17 </td><td class="markdownTableBodyLeft">8894 </td><td class="markdownTableBodyLeft">0.500103 </td><td class="markdownTableBodyLeft">1.51216 </td><td class="markdownTableBodyLeft">1.62874 </td><td class="markdownTableBodyLeft">1.55287 </td><td class="markdownTableBodyLeft">1.555075  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">18 </td><td class="markdownTableBodyLeft">11137 </td><td class="markdownTableBodyLeft">0.528771 </td><td class="markdownTableBodyLeft">1.99178 </td><td class="markdownTableBodyLeft">1.67444 </td><td class="markdownTableBodyLeft">1.53555 </td><td class="markdownTableBodyLeft">1.6110075  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">20 </td><td class="markdownTableBodyLeft">46394 </td><td class="markdownTableBodyLeft">0.686642 </td><td class="markdownTableBodyLeft">1.47442 </td><td class="markdownTableBodyLeft">1.70191 </td><td class="markdownTableBodyLeft">1.61959 </td><td class="markdownTableBodyLeft">1.66694  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">20 </td><td class="markdownTableBodyLeft">65619 </td><td class="markdownTableBodyLeft">0.513933 </td><td class="markdownTableBodyLeft">1.45734 </td><td class="markdownTableBodyLeft">1.73145 </td><td class="markdownTableBodyLeft">1.55454 </td><td class="markdownTableBodyLeft">1.50251  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Data in Graphical Manner</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Number of atoms Vs time taken graph</h2>
+<div class="image">
+<img src="task_vs_time.jpeg" alt=""/>
+<div class="caption">
+Number of atoms Vs time taken</div></div>
+   <h1><a class="anchor" id="autotoc_md10"></a>
 Analysis</h1>
-<p>All the functions after the optimisation are user made function. This points us to the fact that we can improve the efficiency of the program by improving the functions given in the table. </p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Time Analysis</h2>
+<p>Until <code>4554</code> atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.</p>
+<p>One can observe sharp variations in data, which we consider as experimental error.</p>
+<p>We can explain this linear increase with time complexity. As the algorithms traverse throughg each element/node, one can approximate them to be <code>O(n)</code>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

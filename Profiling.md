@@ -6,42 +6,81 @@ But this can lead to large files if the function has been called numerous times.
 
 Using above mentioned techniques, `g++` is able to compile our `C++` code.
 ## Tools
-We have used `gprof` as our profiler.
-`gprof` is a profiling program which collects and arranges statistics of the program.
+For runtime of each function we used `chrono` library of C++ on the given system. This library provide high accuracy data, which was useful to record information with even small inputs.
+
+|OS Name|System Type|Processor|Usable Ram|
+|:----|:----|:----|:----|
+|Windows 10|x64-based|11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz, 2995 Mhz, 2 Core(s), 4 Logical Processor(s)|7.65 GB|
+
+For memory analysis of the program we used inbuilt memory analysis of Visual Studio on the given system. We chose this due to it's high accuracy and descriptive output, which helped us understand the code better.
+
+|OS Name|System Type|Processor|Usable Ram|
+|:----|:----|:----|:----|
+|Windows 11|x64-based|Intel(R) Core(TM) i5-10300H CPU @ 2.50 GHz, 2496 Mhz, 4 Core(S), 8 Logical Processor(s)|3.10 GB|
+
 ## Input
-A randomised input(`1000` character long) was generated, each time using a small python script
+A randomised input was generated each time using the given python script
+
 ```python
-import os
 import random
-from secrets import choice
+from tokenize import String
 
-text = ""
-for i in range(1_000_000):
-    if (i % 2 == 0):
-        text += random.choices(list("abcd"))[0]
+"""
+BNF for our expression
+E := I | (E + E) | (E * E) | (E > E) | (~ E)
+"""
+heightOfParseTree: int = 15
+
+def randInfix(count: int) -> String:
+    if count <= 1:
+        return random.choice(list("abcdefghijklmnopqrstuvwxyz"))[0]
     else:
-        text += random.choice(list("~+*>"))[0]
+        case = random.randint(1, 4)
+        if case == 1:
+                return f"({randInfix(count-1)}*{randInfix(count-1)})"
+        elif case == 2:
+                return f"({randInfix(count-1)}+{randInfix(count-1)})"
+        elif case == 3:
+                return f"({randInfix(count-1)}>{randInfix(count-1)})"
+        elif case == 4:
+                return f"(~{randInfix(count-1)})"
 
-print(text, end='')
+infix = randInfix(heightOfParseTree)
+
+with open("InfixText.txt","w") as file:
+    file.write(infix)
 ```
-which was later written into a text file using `python3 <name-of-above-file> > <output text-file>` in bash.
+
 ## Execution
-The program was executed with the `-Os -O2`  as the final execution.
+The program was optimised with flags `-Os -O2`.
 
-The `-Os` flag optimizes the size of the code. It disables some aggresive optimizations done by `-O2`  to save memory. For example replacing with body of code instead of a call function.
+The `-Os` flag optimizes the size of the code. Whereas `-O2` optimizes for speed. Size optimization happens at the cost of speed. For example replacing with body of code instead of a call function.
 
-The program was run completely i.e. all the options in the menu were executed once and all truth values were given `1`)
+For time analysis, each task was run `1000` times and the average was considered.
+The following data was reveived
+  
+|Tree Height|No. of Atoms|Task 1 (ms)|Task 2 (ms)|Task 3 (ms)|Task 4 (ms)|Task 5 (ms)|  
+|:----|:----|:----|:----|:----|:----|:----|  
+|5|10|0.0047605|0.0079753|0.005358|0.008284|0.0054994|  
+|5|12|0.0028622|0.0055984|0.009877|0.0060635|0.0086048|  
+|10|119|0.0347532|0.0581992|0.0647751|0.0625164|0.0591974|  
+|10|191|0.0478533|0.0898297|0.0969904|0.090525|0.0993498|  
+|15|2425|0.189015|0.549159|0.615554|0.625281|0.609831|  
+|15|3425|0.488783|0.9894795|1.60096|1.51223|1.44321|  
+|17|4554|0.545341|1.4298|1.62267|1.4522|1.54193|  
+|17|8894|0.500103|1.51216|1.62874|1.55287|1.555075|  
+|18|11137|0.528771|1.99178|1.67444|1.53555|1.6110075|  
+|20|46394|0.686642|1.47442|1.70191|1.61959|1.66694|  
+|20|65619|0.513933|1.45734|1.73145|1.55454|1.50251|  
 
-## Profiler Output
-### Call Table
-| calls | Ts/call | Ts/call | name                                                                                       |
-|-------|---------|---------|--------------------------------------------------------------------------------------------|
-| 5     | 0.00    | 0.00    | Logic::printParseTree(Logic::Operator*, int, int*)                                         |
-| 4     | 0.00    | 0.00    | Logic::getParseTreeHeight(Logic::Operator*)                                                |
-| 4     | 0.00    | 0.00    | Logic::calcprefixToParseTree(std::__cxx11::basic_string, std::allocator >, unsigned long*) |
-| 1     | 0.00    | 0.00    | _GLOBAL__sub_I_isDebugMode                                                                 |
-
-### Call Graph
-[![](https://mermaid.ink/img/pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q?type=png)](https://mermaid.live/edit#pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q)
+## Data in Graphical Manner
+### Number of atoms Vs time taken graph
+![Number of atoms Vs time taken](task_vs_time.jpeg)
 ## Analysis
-All the functions after the optimisation are user made function. This points us to the fact that we can improve the efficiency of the program by improving the functions given in the table.
+### Time Analysis
+Until `4554` atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.
+
+One can observe sharp variations in data, which we consider as experimental error.
+
+We can explain this linear increase with time complexity. As the algorithms traverse throughg each element/node, one can approximate them to be `O(n)`.
+

@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('stack_8h_source.html',''); initResizab
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        };</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classStack.html#a5a2ea647b801e0cbac7baa190f35e50c">   36</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classStack.html#a5a2ea647b801e0cbac7baa190f35e50c">push</a>(T newElement) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (_top &gt;= (<span class="keywordtype">int</span>(_MAX) - 1)) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (_top &gt;= (<span class="keywordtype">int</span>(_MAX))) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                error(<span class="stringliteral">&quot;Stack Overflow&quot;</span>, _top);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
@@ -119,31 +119,35 @@ $(document).ready(function(){initNavTree('stack_8h_source.html',''); initResizab
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classStack.html#aa2ea0e8c3293648589dd734d52487408">   53</a></span>&#160;        T <a class="code" href="classStack.html#aa2ea0e8c3293648589dd734d52487408">pop</a>() {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (_top &lt; 0) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                error(<span class="stringliteral">&quot;Stack Underflow&quot;</span>, _top);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">return</span> _stack[_top--];</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        };</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">   66</a></span>&#160;        T <a class="code" href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">peek</a>() {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> _stack[_top];</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">   76</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">isEmpty</a>() {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">// If _top is -1, the stack is empty</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> _top &lt; 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        };</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classStack.html#a08446a1871fc17691ce0be249100fc9f">   87</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classStack.html#a08446a1871fc17691ce0be249100fc9f">isFull</a>() {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// If _top is pointing to the top-most index</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> _top == (int(_MAX) - 1); <span class="comment">// TODO : Make this comparison more generic</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        };</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">//error(&quot;Stack Underflow&quot;, _top);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">return</span> T();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">return</span> _stack[_top--];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">   67</a></span>&#160;        T <a class="code" href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">peek</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (!isEmpty())</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> _stack[_top];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">return</span> T();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">   80</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">isEmpty</a>() {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">// If _top is -1, the stack is empty</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> _top &lt; 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classStack.html#a08446a1871fc17691ce0be249100fc9f">   91</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classStack.html#a08446a1871fc17691ce0be249100fc9f">isFull</a>() {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">// If _top is pointing to the top-most index</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> _top == (int(_MAX) - 1); <span class="comment">// TODO : Make this comparison more generic</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassStack_html_a08446a1871fc17691ce0be249100fc9f"><div class="ttname"><a href="classStack.html#a08446a1871fc17691ce0be249100fc9f">Stack::isFull</a></div><div class="ttdeci">bool isFull()</div><div class="ttdoc">Returns true if stack is full.</div><div class="ttdef"><b>Definition:</b> stack.h:87</div></div>
-<div class="ttc" id="aclassStack_html_ad0db0d9b249e871bb7504ed89a99d3a7"><div class="ttname"><a href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">Stack::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">Return true if stack is empty.</div><div class="ttdef"><b>Definition:</b> stack.h:76</div></div>
-<div class="ttc" id="aclassStack_html_adcb4774ac8aa94cbc19b461da9bdee3a"><div class="ttname"><a href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">Stack::peek</a></div><div class="ttdeci">T peek()</div><div class="ttdoc">Returns top most object of stack.</div><div class="ttdef"><b>Definition:</b> stack.h:66</div></div>
+<div class="ttc" id="aclassStack_html_a08446a1871fc17691ce0be249100fc9f"><div class="ttname"><a href="classStack.html#a08446a1871fc17691ce0be249100fc9f">Stack::isFull</a></div><div class="ttdeci">bool isFull()</div><div class="ttdoc">Returns true if stack is full.</div><div class="ttdef"><b>Definition:</b> stack.h:91</div></div>
+<div class="ttc" id="aclassStack_html_ad0db0d9b249e871bb7504ed89a99d3a7"><div class="ttname"><a href="classStack.html#ad0db0d9b249e871bb7504ed89a99d3a7">Stack::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">Return true if stack is empty.</div><div class="ttdef"><b>Definition:</b> stack.h:80</div></div>
+<div class="ttc" id="aclassStack_html_adcb4774ac8aa94cbc19b461da9bdee3a"><div class="ttname"><a href="classStack.html#adcb4774ac8aa94cbc19b461da9bdee3a">Stack::peek</a></div><div class="ttdeci">T peek()</div><div class="ttdoc">Returns top most object of stack.</div><div class="ttdef"><b>Definition:</b> stack.h:67</div></div>
 <div class="ttc" id="aclassStack_html_aa2f74d9aa361dd67b493939f25a81c5d"><div class="ttname"><a href="classStack.html#aa2f74d9aa361dd67b493939f25a81c5d">Stack::Stack</a></div><div class="ttdeci">Stack(size_t stackSize)</div><div class="ttdoc">Construct a new Stack object.</div><div class="ttdef"><b>Definition:</b> stack.h:23</div></div>
 <div class="ttc" id="aclassStack_html_a5a2ea647b801e0cbac7baa190f35e50c"><div class="ttname"><a href="classStack.html#a5a2ea647b801e0cbac7baa190f35e50c">Stack::push</a></div><div class="ttdeci">bool push(T newElement)</div><div class="ttdoc">Pushes object of type T on stack.</div><div class="ttdef"><b>Definition:</b> stack.h:36</div></div>
 <div class="ttc" id="aclassStack_html"><div class="ttname"><a href="classStack.html">Stack</a></div><div class="ttdoc">Generic stack implementation using array.</div><div class="ttdef"><b>Definition:</b> stack.h:11</div></div>

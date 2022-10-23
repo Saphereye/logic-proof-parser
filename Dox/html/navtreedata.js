@@ -23,21 +23,22 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Logic Assignment", "index.html", [
-    [ "Main Page", "index.html", [
-      [ "Introduction", "index.html#autotoc_md0", null ],
-      [ "Thoughts behind selecting the Language", "index.html#autotoc_md1", null ],
-      [ "Team Members", "index.html#autotoc_md2", null ]
+    [ "Main Page", "md_mainpage.html", [
+      [ "Introduction", "md_mainpage.html#autotoc_md0", null ],
+      [ "Thoughts behind selecting the Language", "md_mainpage.html#autotoc_md1", null ],
+      [ "Team Members", "md_mainpage.html#autotoc_md2", null ]
     ] ],
     [ "Profiling", "md_Profiling.html", [
       [ "Goal", "md_Profiling.html#autotoc_md4", null ],
       [ "Tools", "md_Profiling.html#autotoc_md5", null ],
       [ "Input", "md_Profiling.html#autotoc_md6", null ],
       [ "Execution", "md_Profiling.html#autotoc_md7", null ],
-      [ "Profiler Output", "md_Profiling.html#autotoc_md8", [
-        [ "Call Table", "md_Profiling.html#autotoc_md9", null ],
-        [ "Call Graph", "md_Profiling.html#autotoc_md10", null ]
+      [ "Data in Graphical Manner", "md_Profiling.html#autotoc_md8", [
+        [ "Number of atoms Vs time taken graph", "md_Profiling.html#autotoc_md9", null ]
       ] ],
-      [ "Analysis", "md_Profiling.html#autotoc_md11", null ]
+      [ "Analysis", "md_Profiling.html#autotoc_md10", [
+        [ "Time Analysis", "md_Profiling.html#autotoc_md11", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
