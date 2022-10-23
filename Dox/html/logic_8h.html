@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('logic_8h.html',''); initResizable(); }
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="stack_8h_source.html">stack.h</a>&quot;</code><br />
-<code>#include &quot;helper.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="truthValStore_8h_source.html">truthValStore.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="operators_8h_source.html">operators.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -100,13 +99,13 @@ Include dependency graph for logic.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="logic_8h__incl.png" border="0" usemap="#logic_8h" alt=""/></div>
 <map name="logic_8h" id="logic_8h">
-<area shape="rect" title=" " alt="" coords="159,5,225,32"/>
-<area shape="rect" title=" " alt="" coords="196,155,255,181"/>
-<area shape="rect" href="stack_8h.html" title=" " alt="" coords="11,80,80,107"/>
-<area shape="rect" title=" " alt="" coords="155,80,229,107"/>
-<area shape="rect" href="truthValStore_8h.html" title=" " alt="" coords="254,80,373,107"/>
-<area shape="rect" href="operators_8h.html" title=" " alt="" coords="397,80,493,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,85,181"/>
+<area shape="rect" title=" " alt="" coords="109,5,175,32"/>
+<area shape="rect" title=" " alt="" coords="10,155,69,181"/>
+<area shape="rect" href="stack_8h.html" title=" " alt="" coords="167,80,237,107"/>
+<area shape="rect" href="truthValStore_8h.html" title=" " alt="" coords="24,80,143,107"/>
+<area shape="rect" href="operators_8h.html" title=" " alt="" coords="261,80,357,107"/>
+<area shape="rect" title=" " alt="" coords="103,155,183,181"/>
+<area shape="rect" title=" " alt="" coords="207,155,282,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -132,8 +131,28 @@ Functions</h2></td></tr>
 <tr class="memitem:a5bc2c665bdc86bd916ac0b2229cf3d57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8h.html#a5bc2c665bdc86bd916ac0b2229cf3d57">precedenceMap</a> (char symbol)</td></tr>
 <tr class="memdesc:a5bc2c665bdc86bd916ac0b2229cf3d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns precedence map of symbol.  <a href="logic_8h.html#a5bc2c665bdc86bd916ac0b2229cf3d57">More...</a><br /></td></tr>
 <tr class="separator:a5bc2c665bdc86bd916ac0b2229cf3d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755886ca7f69ee4922c87d1d9f5d8536"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8h.html#a755886ca7f69ee4922c87d1d9f5d8536">isOperator</a> (char symbol)</td></tr>
+<tr class="separator:a755886ca7f69ee4922c87d1d9f5d8536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a755886ca7f69ee4922c87d1d9f5d8536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755886ca7f69ee4922c87d1d9f5d8536">&#9670;&nbsp;</a></span>isOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isOperator </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5bc2c665bdc86bd916ac0b2229cf3d57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bc2c665bdc86bd916ac0b2229cf3d57">&#9670;&nbsp;</a></span>precedenceMap()</h2>
 

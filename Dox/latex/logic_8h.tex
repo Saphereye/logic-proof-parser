@@ -2,14 +2,13 @@
 \label{logic_8h}\index{logic.h@{logic.h}}
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include \char`\"{}stack.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}helper.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}truth\+Val\+Store.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}operators.\+h\char`\"{}}\newline
 Include dependency graph for logic.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{logic_8h__incl}
+\includegraphics[width=343pt]{logic_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -28,10 +27,18 @@ class \mbox{\hyperlink{classLogic}{Logic}}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{logic_8h_a5bc2c665bdc86bd916ac0b2229cf3d57}{precedence\+Map}} (char symbol)
-\begin{DoxyCompactList}\small\item\em Returns precedence map of symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns precedence map of symbol. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{logic_8h_a755886ca7f69ee4922c87d1d9f5d8536}{is\+Operator}} (char symbol)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logic_8h_a755886ca7f69ee4922c87d1d9f5d8536}\label{logic_8h_a755886ca7f69ee4922c87d1d9f5d8536}} 
+\index{logic.h@{logic.h}!isOperator@{isOperator}}
+\index{isOperator@{isOperator}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{isOperator()}{isOperator()}}
+{\footnotesize\ttfamily bool is\+Operator (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{logic_8h_a5bc2c665bdc86bd916ac0b2229cf3d57}\label{logic_8h_a5bc2c665bdc86bd916ac0b2229cf3d57}} 
 \index{logic.h@{logic.h}!precedenceMap@{precedenceMap}}
 \index{precedenceMap@{precedenceMap}!logic.h@{logic.h}}

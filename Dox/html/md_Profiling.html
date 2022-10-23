@@ -87,14 +87,14 @@ $(document).ready(function(){initNavTree('md_Profiling.html',''); initResizable(
 <div class="title">Profiling </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md4"></a>
 Goal</h1>
 <p>The of this exercise is to optimise the code but also keeping in mind the size. A popular method of compiling usually is to replace a function call with body of function. But this can lead to large files if the function has been called numerous times.</p>
 <p>Using above mentioned techniques, <code>g++</code> is able to compile our <code>C++</code> code. </p>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Tools</h1>
 <p>We have used <code>gprof</code> as our profiler. <code>gprof</code> is a profiling program which collects and arranges statistics of the program. </p>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Input</h1>
 <p>A randomised input(<code>1000</code> character long) was generated, each time using a small python script </p><div class="fragment"><div class="line">import os</div>
 <div class="line">import random</div>
@@ -109,14 +109,14 @@ Input</h1>
 <div class="line"> </div>
 <div class="line">print(text, end=&#39;&#39;)</div>
 </div><!-- fragment --><p>which was later written into a text file using <code>python3 &lt;name-of-above-file&gt; &gt; &lt;output text-file&gt;</code> in bash. </p>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Execution</h1>
 <p>The program was executed with the <code>-Os -Ofast</code> as the final execution.</p>
 <p>The <code>-Os</code> flag optimizes the size of the code. It disables some aggresive optimizations done by <code>-Ofast</code> to save memory. For example replacing with body of code instead of a call function.</p>
 <p>The program was run completely i.e. all the options in the menu were executed once and all truth values were given <code>1</code>)</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Profiler Output</h1>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Call Table</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -130,10 +130,10 @@ Call Table</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">0.00 </td><td class="markdownTableBodyNone">_GLOBAL__sub_I_isDebugMode  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Call Graph</h2>
 <p><a href="https://mermaid.live/edit#pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q"><img src="https://mermaid.ink/img/pako:eNptkM0KwjAQhF-l7FlfIAfBfwUF0eLFeFiStQ22SUlTUMR3N7qW4k9O2d1vZmBuoJwmEJB5rPJktZU2iW94WLnMKCG0qasCrxv0NaWe6Jj0-4Nk1J4rb2zojiweMfN2eg3jVpBRhy_IZHl4iyadJZ3MJXVfkdP2rrBQvwybTBnlYfYvc48F-80Ymn_YtlTqljYGMDmHHpTkSzQ69nR76iSEnEqSIOJXoz9LkPYeOWyC212tAhF8Qz1oKo2BJgZjvSWIExZ13JI2wfk1F__q__4AXgR_-Q?type=png" alt="" class="inline"/></a> </p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Analysis</h1>
 <p>All the functions after the optimisation are user made function. This points us to the fact that we can improve the efficiency of the program by improving the functions given in the table. </p>
 </div></div><!-- contents -->
