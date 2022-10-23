@@ -80,6 +80,8 @@ The following data was reveived
 [![](https://mermaid.ink/img/pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig?type=png)](https://mermaid.live/edit#pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig)
 
 This graph shows the dependency of each function. For example Prefix to parse tree requires the input infix to be converted top prefix first, hence it requires the function of the first task.
+### Memory Usage Graph
+![Memory Usage Graph](memory_profile.jpeg)
 ## Analysis
 ### Time Analysis
 Until `4554` atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.
