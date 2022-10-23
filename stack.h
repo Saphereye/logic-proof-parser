@@ -34,7 +34,7 @@ class Stack {
          * @return false 
          */
         bool push(T newElement) {
-            if (_top >= (int(_MAX) - 1)) {
+            if (_top >= (int(_MAX))) {
                 error("Stack Overflow", _top);
                 return false;
             }
@@ -52,7 +52,8 @@ class Stack {
          */
         T pop() {
             if (_top < 0) {
-                error("Stack Underflow", _top);
+                //error("Stack Underflow", _top);
+                return T();
             } else {
                 return _stack[_top--];
             }

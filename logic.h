@@ -53,9 +53,9 @@ class Logic {
 			Stack<char> operatorStack(infixLength);
 			Stack<string> operandStack(infixLength);
 
-			for(int index = 0; index < infixLength; index++) {
+			for(int index = 0; size_t(index) < infixLength; index++) {
 				char currentChar = infix[index];
-				debug("infixToPrefix currChar", currentChar);
+				//debug("infixToPrefix currChar", currentChar);
 
 				if (currentChar == '(') {
 					operatorStack.push(currentChar);

@@ -5,7 +5,7 @@ from tokenize import String
 BNF for our expression
 E := I | (E + E) | (E * E) | (E > E) | (~ E)
 """
-heightOfParseTree: int = 5
+heightOfParseTree: int = 15
 
 def randInfix(count: int) -> String:
     if count <= 1:
