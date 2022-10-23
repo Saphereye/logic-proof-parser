@@ -36,12 +36,14 @@ var NAVTREE =
       [ "Data in Graphical Manner", "md_Profiling.html#autotoc_md8", [
         [ "Number of atoms Vs time taken graph", "md_Profiling.html#autotoc_md9", null ],
         [ "Task Dependency Graph", "md_Profiling.html#autotoc_md10", null ],
-        [ "Memory Usage Graph", "md_Profiling.html#autotoc_md11", null ]
+        [ "Memory Usage (1343 atoms, Height 12)", "md_Profiling.html#autotoc_md11", null ],
+        [ "Call comparison between 1343 and 360 atoms", "md_Profiling.html#autotoc_md12", null ]
       ] ],
-      [ "Analysis", "md_Profiling.html#autotoc_md12", [
-        [ "Time Analysis", "md_Profiling.html#autotoc_md13", null ]
+      [ "Analysis", "md_Profiling.html#autotoc_md13", [
+        [ "Time Analysis", "md_Profiling.html#autotoc_md14", null ],
+        [ "Memory Analysis", "md_Profiling.html#autotoc_md15", null ]
       ] ],
-      [ "Conclusion", "md_Profiling.html#autotoc_md14", null ]
+      [ "Conclusion", "md_Profiling.html#autotoc_md16", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

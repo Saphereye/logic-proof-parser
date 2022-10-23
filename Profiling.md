@@ -1,10 +1,8 @@
 # Profiling
 ## Goal
-The of this exercise is to optimise the code but also keeping in mind the size.
-A popular method of compiling usually is to replace a function call with body of function.
-But this can lead to large files if the function has been called numerous times.
-
-Using above mentioned techniques, `g++` is able to compile our `C++` code.
+The goal is to
+- Find spots in our program which are slow, and thus helping us identify the real weak points
+- Identify memory leaks, in order to stop building up of junk memory
 ## Tools
 For runtime of each function we used `chrono` library of C++ on the given system. This library provide high accuracy data, which was useful to record information with even small inputs.
 
@@ -80,8 +78,12 @@ The following data was reveived
 [![](https://mermaid.ink/img/pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig?type=png)](https://mermaid.live/edit#pako:eNp1kV1LwzAUhv9KONdtaLY0WXMh7AsUFETFC1svwnq2FtdmZClslv1303YVBc3VOed93jdfLWxMjqBgZ_WhIPdPWU38mqeMkrt6W56IM-TRoq_eB2mRTuh10mvaHpG8WESvXwkShjdkPrbLdEp_YJ2pT_7mlz2_GNtVyim5xXJXOGK2f22w-m1YpzH1QOMK8qr3Df7jWo8uCKBCW-ky9_duOzEDV2CFGShf5tp-ZJDVF881h1w7XOelMxaUsw0GoBtnns_1ZuwHZlVq_4QVqK3eH_30oGtQLZxAhbMZFUkUSy54nCSCBXAGxSMaC84ZT-Qsmsgp55cAPo3xCYwyKeVUCBnHzBs7h49768VrPPZHehj-rv_CyxdUX4ig)
 
 This graph shows the dependency of each function. For example Prefix to parse tree requires the input infix to be converted top prefix first, hence it requires the function of the first task.
-### Memory Usage Graph
-![Memory Usage Graph](memory_profile.jpeg)
+### Memory Usage (1343 atoms, Height 12)
+![Memory Usage Table](memory_profile_1343.jpeg)
+Each blue down arrow (▼) and the ID are the snapshots of the memory before the respective task.
+### Call comparison between 1343 and 360 atoms
+![Call comparison between 1343 and 360 atoms](call_comparison.jpeg)
+This is a comparison between memory taken by a program with input of 1343 and 360 atoms repectively.
 ## Analysis
 ### Time Analysis
 Until `4554` atoms, the time taken rises sharply. This is followed by decrease in the rate of change and it levels down to a linear relation with constant increase in time taken as number of atoms increase.
@@ -91,7 +93,13 @@ We can explain this linear increase with time complexity. As the algorithms trav
 Furthermore, from the task dependency graph we can see that task 1 must have the least time, followed by task 2, followed by 3, 4 and 5.
 
 One can observe sharp variations in data, which we consider as experimental error.
+### Memory Analysis
+In the above image "Memory Usage", one can see a sudden increase heap memory between ID 3 and 4 which corresponds to allocation of heap memory for the pointers of the binary parse tree.
 
+As the program `main.exe` evaluates each component from scratch (as show in 'Task Dependency Graph'), it leads to multiple allocation of heap memory, which hasn't been freed.
+
+Thus memory analysis helped us in uncovering memory leaks in our program.
 ## Conclusion
+This exercise helped us see how our functions are behaving under stress. This helped us find the bottlenecks in out code and find out that naïve methods lead to memory leaks.
 
 
