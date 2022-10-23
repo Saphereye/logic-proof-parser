@@ -137,7 +137,7 @@ class Logic {
 			debug("index coming to calcprefixToParseTree", *index);
 			debug("prefix length", prefix.length());
 			
-			if (*index >= prefix.length() - 1) {
+			if (*index >= prefix.length()) {
 				return nullptr;
 			}
 			char currentCharacter = prefix[*index];
