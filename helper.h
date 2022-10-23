@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 // This all is linux specific!!
 #define RESET   "\033[0m"
@@ -11,7 +12,7 @@
 
 using namespace std;
 
-bool isDebugMode = false;
+bool isDebugMode = true;
 
 /**
  * @brief Prints debug info
@@ -46,14 +47,16 @@ inline void todo(string comment) {
 inline void error(string comment) {
     // throw invalid_argument("[ERROR!] " + comment);
     if (isDebugMode) cerr << RED << "[ERROR!] " <<  comment << RESET << endl;
+    exit(1);
 }
 
 template <typename T>
 inline void error(string comment, T data) {
 	//throw invalid_argument("[ERROR!] " + comment + " : " + data);
     if (isDebugMode) cerr << RED << "[ERROR!] " <<  comment << " : " << data << RESET << endl;
+    exit(1);
 }
 
 inline void clearScreen() {
-    cout << "\033[2J\033[1;1H";
+    if (!isDebugMode) cout << "\033[2J\033[1;1H";
 }

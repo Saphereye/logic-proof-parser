@@ -3,13 +3,9 @@ from tokenize import String
 
 """
 BNF for our expression
-E := I
-E := (E + E)
-E := (E * E)
-E := (E > E)
-E := (~ E)
+E := I | (E + E) | (E * E) | (E > E) | (~ E)
 """
-heightOfParseTree = 10
+heightOfParseTree: int = 5
 
 def randInfix(count: int) -> String:
     if count <= 1:

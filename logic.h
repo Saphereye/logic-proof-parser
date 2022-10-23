@@ -1,6 +1,5 @@
 #include <string>
 #include "stack.h"
-#include "helper.h"
 #include "truthValStore.h"
 
 using namespace std;
@@ -21,6 +20,21 @@ int precedenceMap(char symbol) {
 	}
 }
 
+bool isOperator(char symbol) {
+	switch (symbol)
+	{
+	case '~':
+	case '*':
+	case '+':
+	case '>':
+		return true;
+		break;
+	default:
+		return false;
+		break;
+	}
+}
+
 /**
  * @brief Implementation of logic methods
  * 
@@ -34,32 +48,59 @@ class Logic {
 		 * @return String containing the corresponding prefix expression of the given infix form
 		 */
 		static string infixToPrefix(string infix) {
-			size_t index = infix.length() - 1;
-			string outputPrefix = "";
-			Stack<char> stck(int(infix.length()));
+			size_t infixLength = infix.length();
 
-			while(int(index) >= -1) {
-				if (infix[index] == ' ') {
-					index--;
-					continue;
-				} else if (infix[index] == '(') {
-					char stackElement = stck.pop();
-					while(stackElement != ')') {
-						outputPrefix = stackElement  + outputPrefix;
-						stackElement = stck.pop();
+			Stack<char> operatorStack(infixLength);
+			Stack<string> operandStack(infixLength);
+
+			for(int index = 0; index < infixLength; index++) {
+				char currentChar = infix[index];
+				debug("infixToPrefix currChar", currentChar);
+
+				if (currentChar == '(') {
+					operatorStack.push(currentChar);
+				} else if (currentChar == ')') {
+					while(!operatorStack.isEmpty() && (operatorStack.peek() != '(')) {
+						if (operatorStack.peek() == '~') {
+							string operator2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operator2);
+						} else {
+							string operator1 = operandStack.pop();
+							string operator2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operator2 + operator1);
+						}
 					}
-				}
-				else if(isalpha(infix[index])) {
-					outputPrefix = infix[index] + outputPrefix;
-				} else if (stck.isEmpty() || (precedenceMap(infix[index]) >= precedenceMap(stck.peek())) || (infix[index] == ')')) {
-					stck.push(infix[index]);
+					operatorStack.pop();
+				} else if (!isOperator(currentChar)) {
+					operandStack.push(string(1, currentChar));
 				} else {
-					outputPrefix = stck.pop() + outputPrefix;
-					continue;
+					while(!operatorStack.isEmpty() && (precedenceMap(currentChar) <= precedenceMap(operatorStack.peek()))){
+						if (operatorStack.peek() == '~') {
+							string operator2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operator2);
+						} else {
+							string operator1 = operandStack.pop();
+							string operator2 = operandStack.pop();
+							operandStack.push(operatorStack.pop() + operator2 + operator1);
+						}
+					}
+					operatorStack.push(currentChar);
 				}
-				index--;
 			}
-			return outputPrefix;
+
+			while(!operatorStack.isEmpty()) {
+				if (operatorStack.peek() == '~') {
+					string operator2 = operandStack.pop();
+					operandStack.push(operatorStack.pop() + operator2);
+				} else {
+					string operator1 = operandStack.pop();
+					string operator2 = operandStack.pop();
+					operandStack.push(operatorStack.pop() + operator2 + operator1);
+				}
+			}
+
+			
+			return operandStack.peek();
 		};
 
 		

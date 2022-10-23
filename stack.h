@@ -1,4 +1,5 @@
 #include <iostream>
+#include "helper.h"
 using namespace std;
 
 /**
@@ -11,7 +12,7 @@ class Stack {
     private:
         int _top;
         T *_stack;
-        int _MAX;
+        size_t _MAX;
     
     public:
         /**
@@ -19,7 +20,7 @@ class Stack {
          * 
          * @param stackSize 
          */
-        Stack(int stackSize) {
+        Stack(size_t stackSize) {
             _top = -1;
             _MAX = stackSize;
             _stack = new T[_MAX];
@@ -33,8 +34,8 @@ class Stack {
          * @return false 
          */
         bool push(T newElement) {
-            if (_top >= (_MAX - 1)) {
-                cout << "Stack Overflow" << endl;
+            if (_top >= (int(_MAX) - 1)) {
+                error("Stack Overflow", _top);
                 return false;
             }
 
@@ -51,7 +52,7 @@ class Stack {
          */
         T pop() {
             if (_top < 0) {
-                cout << "Stack Underflow" << endl;
+                error("Stack Underflow", _top);
             } else {
                 return _stack[_top--];
             }
@@ -85,6 +86,6 @@ class Stack {
          */
         bool isFull() {
             // If _top is pointing to the top-most index
-            return _top == (_MAX - 1); // TODO : Make this comparison more generic
+            return _top == (int(_MAX) - 1); // TODO : Make this comparison more generic
         };
 };
