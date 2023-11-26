@@ -1,4 +1,5 @@
-# logical-assn
+# Logic Assignment
+This project implements a program that verifies whether a logical proof is syntactically and logically correct.
 
 Introduction
 ---
